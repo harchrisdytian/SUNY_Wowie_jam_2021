@@ -1,1 +1,1 @@
-# SUNY_Wowie_jam_2021
+# SUNY Wowie jam 2021
