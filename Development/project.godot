@@ -19,6 +19,10 @@ config/name="Wowie_Jam_2021"
 run/main_scene="res://Collectable Stuff/Collectable.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 forward={
