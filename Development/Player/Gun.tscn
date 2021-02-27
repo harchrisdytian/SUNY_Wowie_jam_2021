@@ -8,5 +8,8 @@ texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="Spawn" type="Position2D" parent="."]
-position = Vector2( 0, -40 )
+position = Vector2( 48.4157, 0.478722 )
 rotation = 0.766532
+
+[node name="Timer" type="Timer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="can_shoot"]
