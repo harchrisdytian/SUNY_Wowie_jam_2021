@@ -1,18 +1,18 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Silent Reaction.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Button.gd" type="Script" id=2]
+[ext_resource path="res://Menu+Settings/Button.gd" type="Script" id=2]
 [ext_resource path="res://HSlider.gd" type="Script" id=3]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 63
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 42
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 size = 61
 font_data = ExtResource( 1 )
 
@@ -29,7 +29,7 @@ anchor_right = 1.0
 margin_left = -200.0
 margin_top = 19.0
 margin_bottom = 85.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Volume"
 align = 1
 valign = 1
@@ -63,11 +63,12 @@ anchor_bottom = 0.5
 margin_top = -36.0
 margin_right = 228.0
 margin_bottom = 31.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "Main Menue"
 align = 1
 valign = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -78,7 +79,7 @@ margin_left = 8.0
 margin_top = -152.0
 margin_right = 192.0
 margin_bottom = -87.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 text = "Controls"
 __meta__ = {
 "_edit_use_anchors_": false

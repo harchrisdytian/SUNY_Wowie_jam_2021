@@ -74,92 +74,143 @@ func _on_OnMiss_U1__Button_mouse_entered():
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
 	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	# Button Sound Effect
+	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
+	$MenuBackground/ButtonPrepSound.play()
 	pass # Replace with function body.
 
 
 func _on_OnMiss_U2_Button_mouse_entered():
+	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
 	$MenuBackground/DescriptionLabel.text = " Hello you are on my other Button, please stop this !"
+	# Button Sound Effect
+	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
+	$MenuBackground/ButtonPrepSound.play()
 	pass # Replace with function body.
 
 
 func _on_OnMiss_U3_Button_mouse_entered():
+	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
 	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	# Button Sound Effect
+	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
+	$MenuBackground/ButtonPrepSound.play()
 	pass # Replace with function body.
 
 
 func _on_OnMiss_U4_Button_mouse_entered():
+	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
 	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	# Button Sound Effect
+	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
+	$MenuBackground/ButtonPrepSound.play()
 	pass # Replace with function body.
 
 
 func _on_OnHit_U1_Button_mouse_entered():
+	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
 	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	# Button Sound Effect
+	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
+	$MenuBackground/ButtonPrepSound.play()
 	pass # Replace with function body.
 
 
 func _on_OnHit_U2_Button_mouse_entered():
+	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
 	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	# Button Sound Effect
+	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
+	$MenuBackground/ButtonPrepSound.play()
 	pass # Replace with function body.
 
 
 func _on_OnHit_U3_Button_mouse_entered():
+	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
 	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	# Button Sound Effect
+	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
+	$MenuBackground/ButtonPrepSound.play()
 	pass # Replace with function body.
 
 
 func _on_OnHit_U4_Button_mouse_entered():
+	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
 	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	# Button Sound Effect
+	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
+	$MenuBackground/ButtonPrepSound.play()
 	pass # Replace with function body.
 
 
 func _on_OnDeath_U1_Button_mouse_entered():
+	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
 	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	# Button Sound Effect
+	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
+	$MenuBackground/ButtonPrepSound.play()
 	pass # Replace with function body.
 
 
 func _on_OnDeath_U2_Button_mouse_entered():
+	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
 	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	# Button Sound Effect
+	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
+	$MenuBackground/ButtonPrepSound.play()
 	pass # Replace with function body.
 
 
 func _on_OnDeath_U3_Button_mouse_entered():
+	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
 	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	# Button Sound Effect
+	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
+	$MenuBackground/ButtonPrepSound.play()
 	pass # Replace with function body.
 
 
 func _on_OnDeath_U4_Button_mouse_entered():
+	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
 	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	# Button Sound Effect
+	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
+	$MenuBackground/ButtonPrepSound.play()
 	pass # Replace with function body.
 
 #_____________________________________________________________________________#
 
 
 func _on_ExitButton_mouse_entered():
+	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
 	$MenuBackground/DescriptionLabel.text = " Leave this Menu"
+	# Button Sound Effect
+	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
+	$MenuBackground/ButtonPrepSound.play()
 	pass # Replace with function body.
 
 
