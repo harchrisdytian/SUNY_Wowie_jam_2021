@@ -30,28 +30,26 @@ func fillSlotsRandomly():
 	#(This also is an index to check when the loop has filled enough spots)
 	slotsStillToFill = amountOfSlotsRandomlyFilled
 	
+	var index = 0
+	
 	#While loop to fill random spots in the spawnPositionArray
 	while(slotsStillToFill > 0):
 		
 		#Obtains a random number to randomize the position
 		var randomPosition = rng.randi_range(0,$SpawnLocations.get_child_count())
-		var index = 0
 		
 		#If the random position selected is not prevoiusly choosen 
 		if not randomPosition in usedPositions:
 			
 			#Spawn Item to spawn Here(Enemy, chest, coin etc.)
 			var c = test.instance()
-			c.position = spawnPositionArray[index]
+			c.position = spawnPositionArray[randomPosition]
 			
-			print(index)
+			add_child(c)
 			
-			index+=1
+			print(c.position)
 			
-			
-			#add_child(c)
-			
-			
+			index += 1
 			
 			#Saves the position filled into an array to avoid spawning multiple
 			#in the same location
