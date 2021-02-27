@@ -10,7 +10,7 @@ func _process(delta):
 
 
 func _on_Bullet_body_entered(body):
-	if body.is_in_group("Player"):
+	if body.is_in_group("Enemies"):
 		emit_signal("hit")
 	else:
 		emit_signal("miss")
