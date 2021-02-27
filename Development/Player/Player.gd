@@ -31,8 +31,3 @@ func _process(delta):
 	
 	move_and_slide(velocity)
 	print(velocity)
-
-
-func take_damage():
-	#damage the 
-	pass
