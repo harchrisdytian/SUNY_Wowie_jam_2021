@@ -5,7 +5,7 @@ export(PackedScene) var guns
 export(Array, PackedScene) var mods = []
 export(float) var max_speed = 2000
 export(float) var acceleration = 3000
-export(float) var friction = 30
+export(float) var friction = 10
 
 #internal
 var velocity = Vector2()
