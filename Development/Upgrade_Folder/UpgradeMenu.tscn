@@ -203,6 +203,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="DescriptionLabel_ColorRect" type="ColorRect" parent="MenuBackground/DescriptionLabel"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.937255, 0.117647, 0.117647, 0.647059 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="ExitButton" type="Button" parent="MenuBackground" groups=[
 "Button",
 ]]
@@ -217,14 +226,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="GoldLabel" type="Label" parent="."]
-margin_left = 101.708
-margin_top = 66.909
-margin_right = 202.708
-margin_bottom = 80.909
+[node name="GoldLabel" type="Label" parent="MenuBackground"]
+margin_left = 14.708
+margin_top = 16.909
+margin_right = 123.708
+margin_bottom = 30.909
 text = "Current Gold Is : "
 __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="mouse_entered" from="MenuBackground/OnMiss_U1_ Button" to="." method="_on_OnMiss_U1__Button_mouse_entered"]
 [connection signal="mouse_entered" from="MenuBackground/OnMiss_U2_Button" to="." method="_on_OnMiss_U2_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnMiss_U3_Button" to="." method="_on_OnMiss_U3_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnMiss_U4_Button" to="." method="_on_OnMiss_U4_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnHit_U1_Button" to="." method="_on_OnHit_U1_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnHit_U2_Button" to="." method="_on_OnHit_U2_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnHit_U3_Button" to="." method="_on_OnHit_U3_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnHit_U4_Button" to="." method="_on_OnHit_U4_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnDeath_U1_Button" to="." method="_on_OnDeath_U1_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnDeath_U2_Button" to="." method="_on_OnDeath_U2_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnDeath_U3_Button" to="." method="_on_OnDeath_U3_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnDeath_U4_Button" to="." method="_on_OnDeath_U4_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/ExitButton" to="." method="_on_ExitButton_mouse_entered"]
+[connection signal="pressed" from="MenuBackground/ExitButton" to="." method="_on_ExitButton_pressed"]

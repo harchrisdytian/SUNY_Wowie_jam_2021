@@ -23,6 +23,8 @@ export var on_death_u2_cost = 200
 export var on_death_u3_cost = 300
 export var on_death_u4_cost = 400
 
+var adjusted_position = Vector2(-50,-50)
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -65,16 +67,102 @@ func _process(delta):
 	
 	pass
 
+# The following code would show a description of the upgrade when the player has
+# Their mouse over the Button
 
 func _on_OnMiss_U1__Button_mouse_entered():
-	$MenuBackground/DescriptionLabel.rect_position = get_viewport().get_mouse_position()
+	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
 	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
 	pass # Replace with function body.
 
 
 func _on_OnMiss_U2_Button_mouse_entered():
-	$MenuBackground/DescriptionLabel.rect_position = get_viewport().get_mouse_position()
+	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
 	$MenuBackground/DescriptionLabel.text = " Hello you are on my other Button, please stop this !"
+	pass # Replace with function body.
+
+
+func _on_OnMiss_U3_Button_mouse_entered():
+	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
+	$MenuBackground/DescriptionLabel.visible = true
+	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	pass # Replace with function body.
+
+
+func _on_OnMiss_U4_Button_mouse_entered():
+	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
+	$MenuBackground/DescriptionLabel.visible = true
+	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	pass # Replace with function body.
+
+
+func _on_OnHit_U1_Button_mouse_entered():
+	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
+	$MenuBackground/DescriptionLabel.visible = true
+	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	pass # Replace with function body.
+
+
+func _on_OnHit_U2_Button_mouse_entered():
+	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
+	$MenuBackground/DescriptionLabel.visible = true
+	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	pass # Replace with function body.
+
+
+func _on_OnHit_U3_Button_mouse_entered():
+	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
+	$MenuBackground/DescriptionLabel.visible = true
+	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	pass # Replace with function body.
+
+
+func _on_OnHit_U4_Button_mouse_entered():
+	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
+	$MenuBackground/DescriptionLabel.visible = true
+	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	pass # Replace with function body.
+
+
+func _on_OnDeath_U1_Button_mouse_entered():
+	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
+	$MenuBackground/DescriptionLabel.visible = true
+	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	pass # Replace with function body.
+
+
+func _on_OnDeath_U2_Button_mouse_entered():
+	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
+	$MenuBackground/DescriptionLabel.visible = true
+	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	pass # Replace with function body.
+
+
+func _on_OnDeath_U3_Button_mouse_entered():
+	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
+	$MenuBackground/DescriptionLabel.visible = true
+	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	pass # Replace with function body.
+
+
+func _on_OnDeath_U4_Button_mouse_entered():
+	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
+	$MenuBackground/DescriptionLabel.visible = true
+	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	pass # Replace with function body.
+
+#_____________________________________________________________________________#
+
+
+func _on_ExitButton_mouse_entered():
+	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
+	$MenuBackground/DescriptionLabel.visible = true
+	$MenuBackground/DescriptionLabel.text = " Leave this Menu"
+	pass # Replace with function body.
+
+
+func _on_ExitButton_pressed():
+	$MenuBackground.visible = false
 	pass # Replace with function body.
