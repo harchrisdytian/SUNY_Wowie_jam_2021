@@ -15,7 +15,9 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 26.7722, 26.1972 )
 
-[node name="Suicidebomber" type="KinematicBody2D"]
+[node name="Suicidebomber" type="KinematicBody2D" groups=[
+"Enemies",
+]]
 collision_layer = 2
 script = ExtResource( 2 )
 
@@ -27,3 +29,4 @@ shape = SubResource( 2 )
 
 [node name="Playerdetectionzone" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, -0.735092 )
+scale = Vector2( 2.23714, 1.99668 )

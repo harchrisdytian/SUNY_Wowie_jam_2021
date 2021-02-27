@@ -16,6 +16,10 @@ _global_script_class_icons={
 [application]
 
 config/name="Wowie_Jam_2021"
+<<<<<<< Updated upstream
+=======
+run/main_scene="res://Collectable Stuff/Collectable.tscn"
+>>>>>>> Stashed changes
 config/icon="res://icon.png"
 
 [autoload]
