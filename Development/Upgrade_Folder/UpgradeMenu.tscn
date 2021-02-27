@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Upgrade_Folder/Assets/Fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Upgrade_Folder/UpgradeMenu.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFont" id=1]
 size = 36
 font_data = ExtResource( 1 )
 
 [node name="UpgradeMenu" type="CanvasLayer"]
+script = ExtResource( 2 )
 
 [node name="MenuBackground" type="ColorRect" parent="."]
 anchor_left = 0.5
@@ -24,9 +26,9 @@ __meta__ = {
 
 [node name="OnMissLabel" type="Label" parent="MenuBackground"]
 margin_left = 80.644
-margin_top = 74.0825
+margin_top = 54.4827
 margin_right = 235.644
-margin_bottom = 118.083
+margin_bottom = 98.4832
 custom_fonts/font = SubResource( 1 )
 text = "On Miss"
 align = 1
@@ -38,9 +40,9 @@ __meta__ = {
 "Button",
 ]]
 margin_left = 80.644
-margin_top = 144.945
+margin_top = 121.782
 margin_right = 233.644
-margin_bottom = 212.945
+margin_bottom = 189.782
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -49,9 +51,9 @@ __meta__ = {
 "Button",
 ]]
 margin_left = 80.644
-margin_top = 256.629
+margin_top = 220.102
 margin_right = 233.644
-margin_bottom = 324.629
+margin_bottom = 288.102
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -60,18 +62,29 @@ __meta__ = {
 "Button",
 ]]
 margin_left = 80.644
-margin_top = 367.257
+margin_top = 312.912
 margin_right = 233.644
-margin_bottom = 435.257
+margin_bottom = 380.912
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OnMiss_U4_Button" type="Button" parent="MenuBackground" groups=[
+"Button",
+]]
+margin_left = 80.644
+margin_top = 407.348
+margin_right = 233.644
+margin_bottom = 475.348
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="OnHitLabel" type="Label" parent="MenuBackground"]
 margin_left = 319.444
-margin_top = 74.0825
+margin_top = 54.4827
 margin_right = 474.444
-margin_bottom = 118.083
+margin_bottom = 98.4832
 custom_fonts/font = SubResource( 1 )
 text = "On Hit"
 align = 1
@@ -83,9 +96,9 @@ __meta__ = {
 "Button",
 ]]
 margin_left = 319.444
-margin_top = 144.945
+margin_top = 121.782
 margin_right = 472.444
-margin_bottom = 212.945
+margin_bottom = 189.782
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -94,9 +107,9 @@ __meta__ = {
 "Button",
 ]]
 margin_left = 319.444
-margin_top = 256.629
+margin_top = 220.102
 margin_right = 472.444
-margin_bottom = 324.629
+margin_bottom = 288.102
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -105,18 +118,29 @@ __meta__ = {
 "Button",
 ]]
 margin_left = 319.444
-margin_top = 367.257
+margin_top = 312.912
 margin_right = 472.444
-margin_bottom = 435.257
+margin_bottom = 380.912
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OnHit_U4_Button" type="Button" parent="MenuBackground" groups=[
+"Button",
+]]
+margin_left = 319.444
+margin_top = 407.348
+margin_right = 472.444
+margin_bottom = 475.348
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="OnDeathLabel" type="Label" parent="MenuBackground"]
 margin_left = 541.255
-margin_top = 74.0825
-margin_right = 696.255
-margin_bottom = 118.083
+margin_top = 54.4827
+margin_right = 719.255
+margin_bottom = 98.4832
 custom_fonts/font = SubResource( 1 )
 text = "On Death"
 align = 1
@@ -128,9 +152,9 @@ __meta__ = {
 "Button",
 ]]
 margin_left = 558.206
-margin_top = 144.945
+margin_top = 121.782
 margin_right = 711.206
-margin_bottom = 212.945
+margin_bottom = 189.782
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -139,9 +163,9 @@ __meta__ = {
 "Button",
 ]]
 margin_left = 558.206
-margin_top = 256.629
+margin_top = 220.102
 margin_right = 711.206
-margin_bottom = 324.629
+margin_bottom = 288.102
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -150,9 +174,20 @@ __meta__ = {
 "Button",
 ]]
 margin_left = 558.206
-margin_top = 367.257
+margin_top = 312.912
 margin_right = 711.206
-margin_bottom = 435.257
+margin_bottom = 380.912
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OnDeath_U4_Button" type="Button" parent="MenuBackground" groups=[
+"Button",
+]]
+margin_left = 558.206
+margin_top = 407.348
+margin_right = 711.206
+margin_bottom = 475.348
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -164,6 +199,15 @@ margin_right = 949.082
 margin_bottom = 195.076
 text = "Description Label : I should appear only when the mouse is over a button, I will then display a text depending on what Button the mouse in covering"
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DescriptionLabel_ColorRect" type="ColorRect" parent="MenuBackground/DescriptionLabel"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.937255, 0.117647, 0.117647, 0.647059 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -182,12 +226,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="GoldLabel" type="Label" parent="."]
-margin_left = 101.708
-margin_top = 66.909
-margin_right = 202.708
-margin_bottom = 80.909
+[node name="GoldLabel" type="Label" parent="MenuBackground"]
+margin_left = 14.708
+margin_top = 16.909
+margin_right = 123.708
+margin_bottom = 30.909
 text = "Current Gold Is : "
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="mouse_entered" from="MenuBackground/OnMiss_U1_ Button" to="." method="_on_OnMiss_U1__Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnMiss_U2_Button" to="." method="_on_OnMiss_U2_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnMiss_U3_Button" to="." method="_on_OnMiss_U3_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnMiss_U4_Button" to="." method="_on_OnMiss_U4_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnHit_U1_Button" to="." method="_on_OnHit_U1_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnHit_U2_Button" to="." method="_on_OnHit_U2_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnHit_U3_Button" to="." method="_on_OnHit_U3_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnHit_U4_Button" to="." method="_on_OnHit_U4_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnDeath_U1_Button" to="." method="_on_OnDeath_U1_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnDeath_U2_Button" to="." method="_on_OnDeath_U2_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnDeath_U3_Button" to="." method="_on_OnDeath_U3_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/OnDeath_U4_Button" to="." method="_on_OnDeath_U4_Button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuBackground/ExitButton" to="." method="_on_ExitButton_mouse_entered"]
+[connection signal="pressed" from="MenuBackground/ExitButton" to="." method="_on_ExitButton_pressed"]
