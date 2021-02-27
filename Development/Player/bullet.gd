@@ -3,7 +3,7 @@ extends Area2D
 signal miss
 signal hit
 
-var velocity = Vector2()
+var velocity = Vector2(1,0)
 
 func _process(delta):
 	position += velocity

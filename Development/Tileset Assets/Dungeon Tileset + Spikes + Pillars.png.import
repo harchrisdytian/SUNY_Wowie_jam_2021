@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Coin.png-f9edd39819b72868099841de45eb7631.stex"
+path="res://.import/Dungeon Tileset + Spikes + Pillars.png-ce4f86e3690f4d055c2f91022c081801.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Coin.png"
-dest_files=[ "res://.import/Coin.png-f9edd39819b72868099841de45eb7631.stex" ]
+source_file="res://Tileset Assets/Dungeon Tileset + Spikes + Pillars.png"
+dest_files=[ "res://.import/Dungeon Tileset + Spikes + Pillars.png-ce4f86e3690f4d055c2f91022c081801.stex" ]
 
 [params]
 
