@@ -11,6 +11,11 @@ func _ready():
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
+func _on_settingsButton_pressed():
+	get_tree().change_scene("res://Settings.tscn")
+
+
+func _on_playButton_pressed():
+#	get_tree().change_scene(#Main Scene)
+	pass

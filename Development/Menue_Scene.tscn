@@ -98,3 +98,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="settingsButton" to="settingsButton" method="_on_settingsButton_pressed"]
+[connection signal="pressed" from="playButton" to="settingsButton" method="_on_playButton_pressed"]
