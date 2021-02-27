@@ -4,15 +4,16 @@ var rng = RandomNumberGenerator.new()
 export (int) var amountOfSlotsRandomlyFilled
 var slotsStillToFill = 0
 var spawnPositionArray = []
-#packed scnene (ImageTexture) var thingToSpawn
+export (PackedScene) var test
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#Randomizes rng
 	rng.randomize()
 	
-	for child in $SpawnLocations.get_children():
-		spawnPositionArray += child.position
+	##Fix This
+	#for child in $SpawnLocations.get_children():
+		#spawnPositionArray += child.position
 
 #Fills the slots randomly. Function checks to make sure the
 #same slot is not filled twice
@@ -31,7 +32,9 @@ func fillSlotsRandomly():
 		
 		if not randomPosition in usedPositions:
 			
-			#Spawn the thing
+			
+			##Fix This
+			add_child(test)
 			
 			slotsStillToFill -= 1
 			pass
