@@ -1,4 +1,4 @@
-extends Control
+extends Button
 
 
 # Declare member variables here. Examples:
@@ -16,7 +16,5 @@ func _ready():
 #	pass
 
 
-
-
-func _on_settingsButton_pressed():
-	get_tree().change_scene("res://Settings.tscn")
+func _on_backButton_pressed():
+	get_tree().change_scene("res://Menue_Scene.tscn")

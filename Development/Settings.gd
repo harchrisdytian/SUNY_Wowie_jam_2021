@@ -1,9 +1,6 @@
 extends Control
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+get_tree().change_scene("res://Menue_Scene.tscn")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -14,9 +11,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-
-
-func _on_settingsButton_pressed():
-	get_tree().change_scene("res://Settings.tscn")
