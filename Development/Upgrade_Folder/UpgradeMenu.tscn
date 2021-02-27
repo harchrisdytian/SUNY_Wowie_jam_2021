@@ -243,6 +243,9 @@ stream = ExtResource( 4 )
 
 [node name="ButtonPressSound" type="AudioStreamPlayer2D" parent="MenuBackground"]
 stream = ExtResource( 3 )
+
+[node name="IconsTileMap" type="TileMap" parent="MenuBackground"]
+format = 1
 [connection signal="mouse_entered" from="MenuBackground/OnMiss_U1_ Button" to="." method="_on_OnMiss_U1__Button_mouse_entered"]
 [connection signal="mouse_entered" from="MenuBackground/OnMiss_U2_Button" to="." method="_on_OnMiss_U2_Button_mouse_entered"]
 [connection signal="mouse_entered" from="MenuBackground/OnMiss_U3_Button" to="." method="_on_OnMiss_U3_Button_mouse_entered"]
