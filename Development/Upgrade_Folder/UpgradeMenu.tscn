@@ -34,7 +34,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="OnMiss_U1_ Button" type="Button" parent="MenuBackground"]
+[node name="OnMiss_U1_ Button" type="Button" parent="MenuBackground" groups=[
+"Button",
+]]
 margin_left = 80.644
 margin_top = 144.945
 margin_right = 233.644
@@ -43,7 +45,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="OnMiss_U2_Button" type="Button" parent="MenuBackground"]
+[node name="OnMiss_U2_Button" type="Button" parent="MenuBackground" groups=[
+"Button",
+]]
 margin_left = 80.644
 margin_top = 256.629
 margin_right = 233.644
@@ -52,23 +56,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="OnMiss_U3_Button" type="Button" parent="MenuBackground"]
+[node name="OnMiss_U3_Button" type="Button" parent="MenuBackground" groups=[
+"Button",
+]]
 margin_left = 80.644
 margin_top = 367.257
 margin_right = 233.644
 margin_bottom = 435.257
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ExitButton" type="Button" parent="MenuBackground"]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -99.9177
-margin_top = 16.909
-margin_right = -24.9177
-margin_bottom = 66.909
-text = "Exit"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -85,7 +79,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="OnHit_U1_Button" type="Button" parent="MenuBackground"]
+[node name="OnHit_U1_Button" type="Button" parent="MenuBackground" groups=[
+"Button",
+]]
 margin_left = 319.444
 margin_top = 144.945
 margin_right = 472.444
@@ -94,7 +90,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="OnHit_U2_Button" type="Button" parent="MenuBackground"]
+[node name="OnHit_U2_Button" type="Button" parent="MenuBackground" groups=[
+"Button",
+]]
 margin_left = 319.444
 margin_top = 256.629
 margin_right = 472.444
@@ -103,7 +101,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="OnHit_U3_Button" type="Button" parent="MenuBackground"]
+[node name="OnHit_U3_Button" type="Button" parent="MenuBackground" groups=[
+"Button",
+]]
 margin_left = 319.444
 margin_top = 367.257
 margin_right = 472.444
@@ -120,6 +120,74 @@ margin_bottom = 118.083
 custom_fonts/font = SubResource( 1 )
 text = "On Death"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OnDeath_U1_Button" type="Button" parent="MenuBackground" groups=[
+"Button",
+]]
+margin_left = 558.206
+margin_top = 144.945
+margin_right = 711.206
+margin_bottom = 212.945
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OnDeath_U2_Button" type="Button" parent="MenuBackground" groups=[
+"Button",
+]]
+margin_left = 558.206
+margin_top = 256.629
+margin_right = 711.206
+margin_bottom = 324.629
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OnDeath_U3_Button" type="Button" parent="MenuBackground" groups=[
+"Button",
+]]
+margin_left = 558.206
+margin_top = 367.257
+margin_right = 711.206
+margin_bottom = 435.257
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DescriptionLabel" type="Label" parent="MenuBackground"]
+margin_left = 750.082
+margin_top = 96.0761
+margin_right = 949.082
+margin_bottom = 195.076
+text = "Description Label : I should appear only when the mouse is over a button, I will then display a text depending on what Button the mouse in covering"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitButton" type="Button" parent="MenuBackground" groups=[
+"Button",
+]]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -99.9177
+margin_top = 16.909
+margin_right = -24.9177
+margin_bottom = 66.909
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GoldLabel" type="Label" parent="."]
+margin_left = 101.708
+margin_top = 66.909
+margin_right = 202.708
+margin_bottom = 80.909
+text = "Current Gold Is : "
 __meta__ = {
 "_edit_use_anchors_": false
 }
