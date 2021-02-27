@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Coin Sound.wav-36a6e4ad08ebad8a16e4a00ad94e38ac.sample"
+path="res://.import/Coin Sound.wav-c10ea39cd66b4bffd0d5ba53f5c68592.sample"
 
 [deps]
 
-source_file="res://Coin Sound.wav"
-dest_files=[ "res://.import/Coin Sound.wav-36a6e4ad08ebad8a16e4a00ad94e38ac.sample" ]
+source_file="res://Collectable Stuff/Coin Sound.wav"
+dest_files=[ "res://.import/Coin Sound.wav-c10ea39cd66b4bffd0d5ba53f5c68592.sample" ]
 
 [params]
 
