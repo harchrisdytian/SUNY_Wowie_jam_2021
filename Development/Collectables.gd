@@ -9,9 +9,7 @@ func ready():
 #Function for when the player collects the powerup
 func _on_Coin_body_entered(body):
 	
-	#IF statement to check that collision was with the player
-	#if(body = player)
-	
+
 	#Play sound triggered
 	$PickupSound.play()
 	
