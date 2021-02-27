@@ -9,4 +9,4 @@ script = ExtResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 bullet = ExtResource( 3 )
-bullet_speed = 2.0
+bullet_speed = 6.0

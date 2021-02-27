@@ -1,10 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Upgrade_Folder/Assets/Fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Upgrade_Folder/UpgradeMenu.gd" type="Script" id=2]
-[ext_resource path="res://Upgrade_Folder/Assets/Sound/game-sound-selection.wav" type="AudioStream" id=3]
-[ext_resource path="res://Upgrade_Folder/Assets/Sound/Click_Tick.wav" type="AudioStream" id=4]
-[ext_resource path="res://Upgrade_Folder/Assets/Icons/Runaway_Icon.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 36
@@ -49,11 +46,6 @@ margin_bottom = 189.782
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="RunAway" type="Sprite" parent="MenuBackground/OnMiss_U1_ Button"]
-position = Vector2( 27.1352, 35 )
-scale = Vector2( 1.5, 1.5 )
-texture = ExtResource( 5 )
 
 [node name="OnMiss_U2_Button" type="Button" parent="MenuBackground" groups=[
 "Button",
@@ -243,12 +235,6 @@ text = "Current Gold Is : "
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="ButtonPrepSound" type="AudioStreamPlayer2D" parent="MenuBackground"]
-stream = ExtResource( 4 )
-
-[node name="ButtonPressSound" type="AudioStreamPlayer2D" parent="MenuBackground"]
-stream = ExtResource( 3 )
 [connection signal="mouse_entered" from="MenuBackground/OnMiss_U1_ Button" to="." method="_on_OnMiss_U1__Button_mouse_entered"]
 [connection signal="mouse_entered" from="MenuBackground/OnMiss_U2_Button" to="." method="_on_OnMiss_U2_Button_mouse_entered"]
 [connection signal="mouse_entered" from="MenuBackground/OnMiss_U3_Button" to="." method="_on_OnMiss_U3_Button_mouse_entered"]
