@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 export(float) var health = 100
+export(float) var MaxHealth = 100
 export(PackedScene) var guns
 export(Array, PackedScene) var mods = []
 export(float) var max_speed = 2000
@@ -31,3 +32,10 @@ func _process(delta):
 	
 	move_and_slide(velocity)
 	print(velocity)
+
+func take_damage(value):
+	health = clamp(health - value, 0 ,100)
+	#do damage effect
+	
+	
+

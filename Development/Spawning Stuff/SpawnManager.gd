@@ -4,7 +4,7 @@ var rng = RandomNumberGenerator.new()
 export (int) var amountOfSlotsRandomlyFilled
 var slotsStillToFill = 0
 var spawnPositionArray = []
-export (PackedScene) var test
+export (PackedScene) var itemToSpawn
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -30,8 +30,6 @@ func fillSlotsRandomly():
 	#(This also is an index to check when the loop has filled enough spots)
 	slotsStillToFill = amountOfSlotsRandomlyFilled
 	
-	var index = 0
-	
 	#While loop to fill random spots in the spawnPositionArray
 	while(slotsStillToFill > 0):
 		
@@ -42,14 +40,11 @@ func fillSlotsRandomly():
 		if not randomPosition in usedPositions:
 			
 			#Spawn Item to spawn Here(Enemy, chest, coin etc.)
-			var c = test.instance()
+			var c = itemToSpawn.instance()
 			c.position = spawnPositionArray[randomPosition]
 			
+			#Spawns the item
 			add_child(c)
-			
-			print(c.position)
-			
-			index += 1
 			
 			#Saves the position filled into an array to avoid spawning multiple
 			#in the same location
