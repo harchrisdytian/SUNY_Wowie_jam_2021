@@ -24,4 +24,4 @@ bullet_speed = 10.0
 position = Vector2( 962.791, 33.65 )
 collision_layer = 3
 fire_rate = 0.75
-[connection signal="shoot" from="Turret" to="." method="enemy_shoot"]
+[connection signal="shoot" from="Turret" to="." method="shoot"]
