@@ -11,3 +11,5 @@ func shoot(scene,pos,vel):
 	b.position = pos
 	b.velocity = vel
 	add_child(b)
+
+

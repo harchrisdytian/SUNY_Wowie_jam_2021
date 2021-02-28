@@ -11,6 +11,7 @@ extents = Vector2( 26.6785, 27.1663 )
 "Enemies",
 ]]
 script = ExtResource( 1 )
+detect_radius = 100
 fire_rate = 0.5
 EnemyBullet = ExtResource( 3 )
 
