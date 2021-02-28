@@ -3,10 +3,16 @@ extends Node2D
 func _ready():
 	pass
 
-func shoot(scene,pos,vel):
+func shoot(scene,pos,vel,scal):
 	var b = scene.instance()
 	b.position = pos
 	b.velocity = vel
+	b.scale = scal
 	b.connect("hit",$Player,"on_hit")
+	b.connect("hit",self,"on_hit")
 	b.connect("miss",$Player,"on_miss")
 	add_child(b)
+
+func on_hit(scene,pos):
+	print("yay")
+	pass

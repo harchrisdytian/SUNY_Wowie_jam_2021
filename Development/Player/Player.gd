@@ -10,6 +10,7 @@ export(float) var acceleration = 500
 export(float) var friction = 200
 export(PackedScene) var bullet 
 export(float) var bullet_speed = 100 setget set_bullet_speed
+export(float) var bullet_size = 0.3
 #internal
 var velocity = Vector2()
 var movement_axis = Vector2()
@@ -17,6 +18,8 @@ var miss_counter = 0
 
 var current_state = IDLE
 func _ready():
+
+	$Gun.bullet_scale = bullet_size
 	$Gun.bullet = bullet
 	$Gun.connect("shoot",get_parent(),"shoot")
 	self.bullet_speed = bullet_speed
@@ -39,6 +42,10 @@ func _process(delta):
 		velocity = Vector2.ZERO
 		
 	velocity = velocity.clamped(max_speed)
+	if velocity.x > 0:
+		$PlayerAnimations.scale.x = 0.33
+	else:
+		$PlayerAnimations.scale.x = -0.33
 	
 	if velocity.length_squared() > 0:
 		change_state(RUN)
@@ -46,7 +53,6 @@ func _process(delta):
 		change_state(IDLE)
 	
 	if Input.is_mouse_button_pressed(1):
-		print("b")
 		$Gun.shoot()
 	move_and_slide(velocity)
 #	print(velocity)
@@ -55,8 +61,8 @@ func take_damage(value):
 	health = clamp(health - value, 0 ,100)
 	#do damage effect
 
-func on_hit():
-	print()
+func on_hit(pos):
+	print("yay")
 	miss_counter = 0
 	
 func on_miss():

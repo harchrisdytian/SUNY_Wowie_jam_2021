@@ -15,11 +15,13 @@ script = ExtResource( 2 )
 position = Vector2( 96.1666, 94.7523 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+max_speed = 1000.0
+friction = 300.0
 bullet = ExtResource( 3 )
 bullet_speed = 6.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." groups=[
-"enemies",
+"Enemies",
 ]]
 position = Vector2( 182.434, 137.179 )
 
@@ -28,7 +30,7 @@ position = Vector2( -4.24261, 1.41422 )
 shape = SubResource( 1 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." groups=[
-"enemies",
+"Enemies",
 ]]
 position = Vector2( 210.925, 214.656 )
 
@@ -37,7 +39,7 @@ position = Vector2( -4.24261, 1.41422 )
 shape = SubResource( 1 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." groups=[
-"enemies",
+"Enemies",
 ]]
 position = Vector2( 268, 206.448 )
 
