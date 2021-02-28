@@ -40,7 +40,6 @@ __meta__ = {
 [node name="OnMiss_U1_Button" type="Button" parent="MenuBackground" groups=[
 "Button",
 ]]
-modulate = Color( 1, 1, 1, 0.454902 )
 margin_left = 80.644
 margin_top = 121.782
 margin_right = 233.644
@@ -240,8 +239,6 @@ __meta__ = {
 
 [node name="ButtonPrepSound" type="AudioStreamPlayer2D" parent="MenuBackground"]
 stream = ExtResource( 3 )
-
-[node name="ButtonPressSound" type="AudioStreamPlayer2D" parent="."]
 [connection signal="mouse_entered" from="MenuBackground/OnMiss_U1_Button" to="." method="_on_OnMiss_U1_Button_mouse_entered"]
 [connection signal="pressed" from="MenuBackground/OnMiss_U1_Button" to="." method="_on_OnMiss_U1_Button_pressed"]
 [connection signal="mouse_entered" from="MenuBackground/OnMiss_U2_Button" to="." method="_on_OnMiss_U2_Button_mouse_entered"]

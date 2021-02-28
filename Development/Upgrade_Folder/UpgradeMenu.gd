@@ -38,32 +38,12 @@ export var on_death_u2_cost = 200
 export var on_death_u3_cost = 300
 export var on_death_u4_cost = 400
 
-var default_color = Color(1,0,1,1) # current " minty rose " #Magenta#Color(1,0,1,1)
-var disable_color = Color(1, 1, 1, 0.454902)
-
 var adjusted_position = Vector2(-50,-50)
 
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	# set button color
-	$MenuBackground/OnMiss_U1_Button.modulate = default_color
-	$MenuBackground/OnMiss_U2_Button.modulate = default_color
-	$MenuBackground/OnMiss_U3_Button.modulate = default_color
-	$MenuBackground/OnMiss_U4_Button.modulate = default_color
-	
-	$MenuBackground/OnHit_U1_Button.modulate = default_color
-	$MenuBackground/OnHit_U2_Button.modulate = default_color
-	$MenuBackground/OnHit_U3_Button.modulate = default_color
-	$MenuBackground/OnHit_U4_Button.modulate = default_color
-	
-	$MenuBackground/OnDeath_U1_Button.modulate = default_color
-	$MenuBackground/OnDeath_U2_Button.modulate = default_color
-	$MenuBackground/OnDeath_U3_Button.modulate = default_color
-	$MenuBackground/OnDeath_U4_Button.modulate = default_color
-	
-	
 	pass # Replace with function body.
 
 
@@ -262,85 +242,72 @@ func _on_ExitButton_pressed():
 func _on_OnMiss_U1_Button_pressed():
 	emit_signal("OnMiss_U1")
 	$MenuBackground/OnMiss_U1_Button.disabled = true
-	print("You pushed me one time")
-	$MenuBackground/OnMiss_U1_Button.modulate = disable_color
 	pass # Replace with function body.
 
 
 func _on_OnMiss_U2_Button_pressed():
 	emit_signal("OnMiss_U2")
 	$MenuBackground/OnMiss_U2_Button.disabled = true
-	$MenuBackground/OnMiss_U2_Button.modulate = disable_color
 	pass # Replace with function body.
 
 
 func _on_OnMiss_U3_Button_pressed():
 	emit_signal("OnMiss_U3")
 	$MenuBackground/OnMiss_U3_Button.disabled = true
-	$MenuBackground/OnMiss_U3_Button.modulate = disable_color
 	pass # Replace with function body.
 
 
 func _on_OnMiss_U4_Button_pressed():
 	emit_signal("OnMiss_U4")
 	$MenuBackground/OnMiss_U4_Button.disabled = true
-	$MenuBackground/OnMiss_U4_Button.modulate = disable_color
 	pass # Replace with function body.
 
 
 func _on_OnHit_U1_Button_pressed():
 	emit_signal("OnHit_U1")
 	$MenuBackground/OnHit_U1_Button.disabled = true
-	$MenuBackground/OnHit_U1_Button.modulate = disable_color
 	pass # Replace with function body.
 
 
 func _on_OnHit_U2_Button_pressed():
 	emit_signal("OnHit_U2")
 	$MenuBackground/OnHit_U2_Button.disabled = true
-	$MenuBackground/OnHit_U2_Button.modulate = disable_color
 	pass # Replace with function body.
 
 
 func _on_OnHit_U3_Button_pressed():
 	emit_signal("OnHit_U3")
 	$MenuBackground/OnHit_U3_Button.disabled = true
-	$MenuBackground/OnHit_U3_Button.modulate = disable_color
 	pass # Replace with function body.
 
 
 func _on_OnHit_U4_Button_pressed():
 	emit_signal("OnHit_U4")
 	$MenuBackground/OnHit_U4_Button.disabled = true
-	$MenuBackground/OnHit_U4_Button.modulate = disable_color
 	pass # Replace with function body.
 
 
 func _on_OnDeath_U1_Button_pressed():
 	emit_signal("OnDeath_U1")
 	$MenuBackground/OnDeath_U1_Button.disabled = true
-	$MenuBackground/OnDeath_U1_Button.modulate = disable_color
 	pass # Replace with function body.
 
 
 func _on_OnDeath_U2_Button_pressed():
 	emit_signal("OnDeath_U2")
 	$MenuBackground/OnDeath_U2_Button.disabled = true
-	$MenuBackground/OnDeath_U2_Button.modulate = disable_color
 	pass # Replace with function body.
 
 
 func _on_OnDeath_U3_Button_pressed():
 	emit_signal("OnDeath_U3")
 	$MenuBackground/OnDeath_U3_Button.disabled = true
-	$MenuBackground/OnDeath_U3_Button.modulate = disable_color
 	pass # Replace with function body.
 
 
 func _on_OnDeath_U4_Button_pressed():
 	emit_signal("OnDeath_U4")
 	$MenuBackground/OnDeath_U4_Button.disabled = true
-	$MenuBackground/OnDeath_U4_Button.modulate = disable_color
 	pass # Replace with function body.
 
 func _on_reset():
