@@ -10,7 +10,6 @@
 script = ExtResource( 5 )
 
 [node name="Suicidebomber" parent="." instance=ExtResource( 1 )]
-visible = false
 position = Vector2( 0, -0.397217 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
