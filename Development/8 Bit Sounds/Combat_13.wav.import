@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Combat_13.wav-7986c7b6288fa5340ae0f3fc08ccd047.sample"
+
+[deps]
+
+source_file="res://8 Bit Sounds/Combat_13.wav"
+dest_files=[ "res://.import/Combat_13.wav-7986c7b6288fa5340ae0f3fc08ccd047.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
