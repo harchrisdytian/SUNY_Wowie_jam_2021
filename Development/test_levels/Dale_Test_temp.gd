@@ -6,7 +6,7 @@ extends Node2D
 func _ready():
 	$Turret.player = $Player
 
-func shoot(scene,pos,vel):
+func shoot(scene,pos,vel,scal):
 	var b = scene.instance()
 	b.position = pos
 	b.velocity = vel
@@ -30,6 +30,6 @@ func on_hit(scene,pos,lightning):
 		var l = scene.instance()
 		l.global_position = pos
 		add_child(l)
-	add_child(b)
+
 
 
