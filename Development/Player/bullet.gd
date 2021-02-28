@@ -13,6 +13,6 @@ func _process(delta):
 func _on_Bullet_body_entered(body):
 	if body.is_in_group("Enemies"):
 		emit_signal("hit")
-		if lighting_bullet:
+
 	else:
 		emit_signal("miss")

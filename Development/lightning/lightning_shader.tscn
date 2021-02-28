@@ -4,6 +4,7 @@
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
+uniform int lightings = 1;
 
 // plot function 
 float plot(vec2 st, float pct, float half_width){
@@ -42,7 +43,7 @@ void fragment(){
 	float pct ;
 	float buffer;
 	// add more lightning
-	int lightning_number = 5;
+	int lightning_number = lightings;
 	for ( int i = 0; i < lightning_number; i++){
 		t = uv * vec2(2.0,.0) + vec2(float(i), -float(i)) - TIME*3.0;
 		y = fbm(t)*0.5;
@@ -57,6 +58,7 @@ void fragment(){
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = SubResource( 1 )
+shader_param/lightings = 5
 
 [node name="lightning_shader" type="Sprite"]
 material = SubResource( 2 )

@@ -4,24 +4,30 @@ var bodies
 var next
 
 func _process(delta):
-	$lightning_vfxs/lightning_shader.position = ($effect_1.position +$effect_2.position) / 2
-	$lightning_vfxs/lightning_shader.scale.x = $effect_1.position.distance_to($effect_2.position)/64
-	$lightning_vfxs/lightning_shader.look_at($effect_2.position )
+	$lightning_vfxs/lightning_shader.position = ($effects/effect_1.position +$effects/effect_2.position) / 2
+	$lightning_vfxs/lightning_shader.scale.x = $effects/effect_1.position.distance_to($effects/effect_2.position)/64
+	$lightning_vfxs/lightning_shader.look_at($effects/effect_2.position )
+	$lightning_vfxs/lightning_shader2.position = ($effects/effect_2.position +$effects/effect_3.position) / 2
+	$lightning_vfxs/lightning_shader2.scale.x = $effects/effect_2.position.distance_to($effects/effect_3.position)/64
+	$lightning_vfxs/lightning_shader2.look_at($effects/effect_3.position )
+	
 func _ready():
-	pass
-#	var next_body = null
-#	for child_num in range(get_child_count()):
-#		var child = get_child(child_num)
-#		if !child_num == 0:
-#			child.global_position = next_body.global_position
-#		bodies = get_child(child_num).get_overlapping_bodies()
-#		next_body = null
-#		for body in bodies:
-#			if body.is_in_group(enemies):
-#				if body == null:
-#					next_body = body
-#				else:
-#					if body.global_position.distance_squared_to(child) > next_body.distance_squared_to(child) and body.global_position.distance_squared_to(child) > 10:
-#						next_body = body
-#		yield(get_tree().create_timer(0.2),"timeout")
+	var next_body = null
+	for child_num in range($effects.get_child_count()):# loops threw all children
+		bodies = $effects.get_child(child_num).get_overlapping_bodies() #gets all bodies in area
+		if bodies != null: #checks if body
+			var child = $effects.get_child(child_num)#gets current child
+			if next_body != null and !child_num == 0: #checks if it not 
+					child.global_position = next_body.global_position # sets the area to the next enemy
+			next_body = null #resets bodies
+			for body in bodies:#checks each body in range
+				if body.is_in_group('enemies'): #checks if it is an enemy
+					if next_body == null:
+						next_body = body
+					else:
+						
+						if (body.global_position.distance_squared_to(child.global_position) > next_body.global_position.distance_squared_to(child.global_position) 
+							and body.global_position.distance_squared_to(child.global_position) > 10): 
+							next_body = body
+			yield(get_tree().create_timer(0.2),"timeout")
 #
