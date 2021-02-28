@@ -46,6 +46,10 @@ func explode():
 	for idx in range(get_slide_count()):
 		var collision = get_slide_collision(idx)
 		if collision.collider.is_in_group("Player"):
-			print("imma blow you up")
-			queue_free()
+			$CollisionShape2D.disabled = true
+			$Particles2D.emitting = true
+			$DespawnTimer.start()
 
+
+func _on_DespawnTimer_timeout():
+	queue_free()
