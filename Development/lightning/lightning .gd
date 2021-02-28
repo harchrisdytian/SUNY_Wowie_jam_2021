@@ -25,7 +25,7 @@ func _ready():
 			var child = $effects.get_child(child_num)#gets current child
 			next_body = null #resets bodies
 			for body in bodies:#checks each body in range
-				if body.is_in_group('enemies') and not body in enemies: #checks if it is an enemy
+				if body.is_in_group('Enemies') and not body in enemies: #checks if it is an enemy
 					print(child_num) # sets the area to the next enemy
 					if next_body == null:
 						next_body = body
