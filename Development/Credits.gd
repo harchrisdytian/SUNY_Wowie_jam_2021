@@ -16,12 +16,5 @@ func _ready():
 #	pass
 
 
-func _on_testSound_pressed():
-	$testSound/AudioStreamPlayer.play()
-
-
-
-
-
-func _on_creditButton_pressed():
-	get_tree().change_scene("res://Credits.tscn")
+func _on_Button_pressed():
+	get_tree().change_scene("res://Settings.tscn")
