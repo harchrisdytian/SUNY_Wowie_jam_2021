@@ -68,12 +68,11 @@ func take_damage(value):
 	#do damage effect
 
 func on_hit(pos):
-	print("yay")
 	miss_counter = 0
 	
 func on_miss():
 	miss_counter = min(health - 1, 0)
-	print("miss")
+
 
 func change_state(state):
 	if state != current_state:
@@ -83,10 +82,6 @@ func change_state(state):
 				$PlayerAnimations/AnimationPlayer.play("Idle")
 			RUN:
 				$PlayerAnimations/AnimationPlayer.play("Run")
-
-
-
-
 
 
 
