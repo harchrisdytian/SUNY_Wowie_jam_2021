@@ -3,8 +3,6 @@ extends Area2D
 signal miss
 signal hit
 signal critical_miss
-
-var damage = 1
 var crit = false
 var lightnig = preload("res://lightning/lightning .tscn")
 var velocity = Vector2(1,0)
@@ -18,9 +16,8 @@ func _on_Bullet_body_entered(body):
 	print("hit anything")
 	if !body.is_in_group("Player"):
 		if body.is_in_group("Enemies"):
-			if body.has_method("take_damage"):
-				body.take_damage(damage)
-			emit_signal("hit", lightnig, global_position, lighting_bullet)
+			print("helo")
+			emit_signal("hit", lighting_bullet, global_position)
 		else:
 			if crit:
 				emit_signal("critical_miss")

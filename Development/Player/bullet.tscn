@@ -4,6 +4,10 @@
 [ext_resource path="res://Player Assets/Bullet.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
+radius = 77.2257
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 171.141
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 171.141
