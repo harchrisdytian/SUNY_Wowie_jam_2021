@@ -49,6 +49,7 @@ func explode():
 			$CollisionShape2D.disabled = true
 			$Particles2D.emitting = true
 			$DespawnTimer.start()
+			print("boom")
 
 
 func _on_DespawnTimer_timeout():
