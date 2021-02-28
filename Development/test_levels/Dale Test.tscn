@@ -20,6 +20,5 @@ bullet = ExtResource( 4 )
 
 [node name="Turret" parent="." instance=ExtResource( 3 )]
 position = Vector2( 962.791, 33.65 )
-collision_layer = 2
 fire_rate = 0.75
 [connection signal="shoot" from="Turret" to="." method="enemy_shoot"]

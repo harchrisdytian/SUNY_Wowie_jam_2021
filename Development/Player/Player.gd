@@ -9,7 +9,7 @@ export(float) var max_speed = 2000
 export(float) var acceleration = 500
 export(float) var friction = 200
 export(PackedScene) var bullet 
-export(float) var bullet_speed = 100 setget set_bullet_speed
+export(float) var bullet_speed = 10 setget set_bullet_speed
 export(float) var bullet_size = 0.3
 #internal
 var velocity = Vector2()
