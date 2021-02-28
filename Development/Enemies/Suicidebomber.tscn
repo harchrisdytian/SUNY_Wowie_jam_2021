@@ -29,3 +29,4 @@ shape = SubResource( 2 )
 
 [node name="Playerdetectionzone" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, -0.735092 )
+scale = Vector2( 2.16185, 2.16185 )
