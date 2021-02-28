@@ -67,7 +67,7 @@ func take_damage(value):
 	health = clamp(health - value, 0 ,100)
 	#do damage effect
 
-func on_hit(pos):
+func on_hit(pos,fixed,this):
 	miss_counter = 0
 	
 func on_miss():
