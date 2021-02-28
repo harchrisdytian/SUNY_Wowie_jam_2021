@@ -1,14 +1,17 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Player Assets/MainCharacterStaff.png" type="Texture" id=1]
 [ext_resource path="res://Player/Gun.gd" type="Script" id=2]
 
-[node name="Sprite" type="Sprite"]
+[node name="Gun" type="Sprite"]
+position = Vector2( -9.67615, 8.33516 )
+scale = Vector2( 0.11, 0.11 )
 texture = ExtResource( 1 )
+offset = Vector2( 87.965, -75.7741 )
 script = ExtResource( 2 )
 
 [node name="Spawn" type="Position2D" parent="."]
-position = Vector2( 48.4157, 0.478722 )
+position = Vector2( 523.75, -108.333 )
 rotation = 0.766532
 
 [node name="Timer" type="Timer" parent="."]

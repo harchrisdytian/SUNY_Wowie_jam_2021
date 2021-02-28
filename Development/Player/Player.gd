@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+enum{IDLE, RUN}
 export(float) var health = 100
 export(float) var MaxHealth = 100
 export(PackedScene) var guns
@@ -14,6 +15,7 @@ var velocity = Vector2()
 var movement_axis = Vector2()
 var miss_counter = 0
 
+var current_state = IDLE
 func _ready():
 	$Gun.bullet = bullet
 	$Gun.connect("shoot",get_parent(),"shoot")
@@ -21,6 +23,8 @@ func _ready():
 func set_bullet_speed(val):
 	bullet_speed = val
 	$Gun.speed = val
+	
+	
 func _process(delta):
 	#gets the direction of the movement 
 	movement_axis.y = int(Input.is_action_pressed("backwards")) -int(Input.is_action_pressed("forward"))
@@ -35,6 +39,11 @@ func _process(delta):
 		velocity = Vector2.ZERO
 		
 	velocity = velocity.clamped(max_speed)
+	
+	if velocity.length_squared() > 0:
+		change_state(RUN)
+	else:
+		change_state(IDLE)
 	
 	if Input.is_mouse_button_pressed(1):
 		print("b")
@@ -53,4 +62,18 @@ func on_hit():
 func on_miss():
 	miss_counter = min(health - 1, 0)
 	print("miss")
+
+func change_state(state):
+	if state != current_state:
+		current_state = state
+		match state:
+			IDLE:
+				$PlayerAnimations/AnimationPlayer.play("Idle")
+			RUN:
+				$PlayerAnimations/AnimationPlayer.play("Run")
+
+
+
+
+
 

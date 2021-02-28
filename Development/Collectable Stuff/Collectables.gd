@@ -1,7 +1,5 @@
 extends Area2D
 
-#Could add more textures later here if needed
-var texture = {"Coin" : "res://Collectable Stuff/Coin.png"}
 
 func ready():
 	$PickupSound.play()
