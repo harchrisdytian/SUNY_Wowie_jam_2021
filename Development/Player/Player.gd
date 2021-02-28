@@ -19,6 +19,8 @@ var miss_counter = 0
 # giovoni added
 var player_gold = 100 
 
+var OnMiss_U1_active = false
+
 #----------------------------------------------------------------#
 var current_state = IDLE
 func _ready():
@@ -97,6 +99,7 @@ func change_state(state):
 
 
 func _on_UpgradeMenu_OnMiss_U1():
+	# testing effects
 	self.scale.x = 10
 	player_gold -= 50
 	print("player gold = ", player_gold)
