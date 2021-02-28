@@ -1,6 +1,8 @@
 extends CanvasLayer
 
 
+signal OnMiss_U1
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -70,7 +72,7 @@ func _process(delta):
 # The following code would show a description of the upgrade when the player has
 # Their mouse over the Button
 
-func _on_OnMiss_U1__Button_mouse_entered():
+func _on_OnMiss_U1_Button_mouse_entered():
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
 	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
@@ -216,4 +218,11 @@ func _on_ExitButton_mouse_entered():
 
 func _on_ExitButton_pressed():
 	$MenuBackground.visible = false
+	pass # Replace with function body.
+
+# Button Pressed Signals #
+
+
+func _on_OnMiss_U1_Button_pressed():
+	emit_signal("OnMiss_U1")
 	pass # Replace with function body.

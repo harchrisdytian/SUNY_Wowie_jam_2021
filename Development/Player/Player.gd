@@ -16,6 +16,8 @@ var velocity = Vector2()
 var movement_axis = Vector2()
 var miss_counter = 0
 
+var player_gold = 100 # goivonni added
+
 var current_state = IDLE
 func _ready():
 
@@ -83,3 +85,10 @@ func change_state(state):
 
 
 
+
+# Upgrade Menu Functionality added below by Giovonni ##
+func _on_UpgradeMenu_OnMiss_U1():
+	self.scale.x = 10
+	player_gold -= 50
+	print("player gold = ", player_gold)
+	pass # Replace with function body.

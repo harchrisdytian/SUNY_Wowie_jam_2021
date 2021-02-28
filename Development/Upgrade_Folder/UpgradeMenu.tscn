@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Upgrade_Folder/Assets/Fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Upgrade_Folder/UpgradeMenu.gd" type="Script" id=2]
+[ext_resource path="res://Upgrade_Folder/Assets/Sound/Button_Prep.wav" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 36
@@ -36,7 +37,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="OnMiss_U1_ Button" type="Button" parent="MenuBackground" groups=[
+[node name="OnMiss_U1_Button" type="Button" parent="MenuBackground" groups=[
 "Button",
 ]]
 margin_left = 80.644
@@ -235,7 +236,11 @@ text = "Current Gold Is : "
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="mouse_entered" from="MenuBackground/OnMiss_U1_ Button" to="." method="_on_OnMiss_U1__Button_mouse_entered"]
+
+[node name="ButtonPrepSound" type="AudioStreamPlayer2D" parent="MenuBackground"]
+stream = ExtResource( 3 )
+[connection signal="mouse_entered" from="MenuBackground/OnMiss_U1_Button" to="." method="_on_OnMiss_U1_Button_mouse_entered"]
+[connection signal="pressed" from="MenuBackground/OnMiss_U1_Button" to="." method="_on_OnMiss_U1_Button_pressed"]
 [connection signal="mouse_entered" from="MenuBackground/OnMiss_U2_Button" to="." method="_on_OnMiss_U2_Button_mouse_entered"]
 [connection signal="mouse_entered" from="MenuBackground/OnMiss_U3_Button" to="." method="_on_OnMiss_U3_Button_mouse_entered"]
 [connection signal="mouse_entered" from="MenuBackground/OnMiss_U4_Button" to="." method="_on_OnMiss_U4_Button_mouse_entered"]
