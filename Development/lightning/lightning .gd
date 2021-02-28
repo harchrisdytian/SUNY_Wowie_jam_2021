@@ -1,5 +1,6 @@
 extends Node2D
 var enemies = []
+var damage = 1
 var bodies
 var next
 
@@ -20,7 +21,6 @@ func _ready():
 				$effects.get_child(child_num).global_position = next_body.global_position
 		yield(get_tree().create_timer(0.1),"timeout")#gets all bodies in area
 		bodies = $effects.get_child(child_num).get_overlapping_bodies() 
-		print(bodies)
 		if bodies != null: #checks if body
 			var child = $effects.get_child(child_num)#gets current child
 			next_body = null #resets bodies
@@ -32,4 +32,8 @@ func _ready():
 					else:
 						if (body.global_position.distance_squared_to(child.global_position) > next_body.global_position.distance_squared_to(child.global_position)): 
 							next_body = body
-	$effects/effect_1.global_position = next_body.position
+			if next_body != null:
+				if next_body.has_method("take_damage"):
+					next_body.take_damage(damage)
+	if next_body != null:
+		$effects/effect_1.global_position = next_body.position

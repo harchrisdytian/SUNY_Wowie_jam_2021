@@ -10,15 +10,20 @@
 script = ExtResource( 5 )
 
 [node name="Suicidebomber" parent="." instance=ExtResource( 1 )]
-position = Vector2( 0, -0.397217 )
+position = Vector2( 0, -1.39722 )
+collision_layer = 1
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 230.452, 39.107 )
 scale = Vector2( 1, 0.991957 )
-collision_mask = 6
+collision_mask = 7
 bullet = ExtResource( 4 )
+bullet_speed = 10.0
 
 [node name="Turret" parent="." instance=ExtResource( 3 )]
 position = Vector2( 962.791, 33.65 )
+
+collision_layer = 3
+
 fire_rate = 0.75
 [connection signal="shoot" from="Turret" to="." method="enemy_shoot"]
