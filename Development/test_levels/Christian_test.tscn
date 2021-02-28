@@ -21,7 +21,7 @@ bullet_speed = 6.0
 [node name="StaticBody2D" type="StaticBody2D" parent="." groups=[
 "enemies",
 ]]
-position = Vector2( 182.434, 137.179 )
+position = Vector2( 168.949, 158.904 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -4.24261, 1.41422 )
@@ -30,7 +30,7 @@ shape = SubResource( 1 )
 [node name="StaticBody2D2" type="StaticBody2D" parent="." groups=[
 "enemies",
 ]]
-position = Vector2( 210.925, 214.656 )
+position = Vector2( 171.22, 288.822 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2( -4.24261, 1.41422 )

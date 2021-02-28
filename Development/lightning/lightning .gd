@@ -14,20 +14,21 @@ func _process(delta):
 func _ready():
 	var next_body = null
 	for child_num in range($effects.get_child_count()):# loops threw all children
+		
 		bodies = $effects.get_child(child_num).get_overlapping_bodies() #gets all bodies in area
 		if bodies != null: #checks if body
 			var child = $effects.get_child(child_num)#gets current child
-			if next_body != null and !child_num == 0: #checks if it not 
-					child.global_position = next_body.global_position # sets the area to the next enemy
 			next_body = null #resets bodies
 			for body in bodies:#checks each body in range
+					print(child_num) # sets the area to the next enemy
 				if body.is_in_group('enemies'): #checks if it is an enemy
 					if next_body == null:
 						next_body = body
 					else:
-						
-						if (body.global_position.distance_squared_to(child.global_position) > next_body.global_position.distance_squared_to(child.global_position) 
-							and body.global_position.distance_squared_to(child.global_position) > 10): 
+						if (body.global_position.distance_squared_to(child.global_position) > next_body.global_position.distance_squared_to(child.global_position)): 
 							next_body = body
+							enemies.append(body)
+			if next_body != null: #checks if it not 
+					child.global_position = next_body.global_position
 			yield(get_tree().create_timer(0.2),"timeout")
 #
