@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Tileset Assets/Dungeon Tileset + Spikes.png" type="Texture" id=1]
 [ext_resource path="res://Silent Reaction.ttf" type="DynamicFontData" id=2]
@@ -610,6 +610,10 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 size = 44
 font_data = ExtResource( 2 )
 
+[sub_resource type="DynamicFont" id=21]
+size = 33
+font_data = ExtResource( 2 )
+
 [node name="Credits" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -633,4 +637,13 @@ text = "Back"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label" type="Label" parent="."]
+margin_top = 368.0
+margin_right = 1021.0
+margin_bottom = 480.0
+custom_fonts/font = SubResource( 21 )
+text = "Developer Lead: harchrisdytian
+
+JordanPaugh, Shakenbake38, KyleFisher22, Giovonni240, LynxDeveloper"
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
