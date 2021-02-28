@@ -1,14 +1,22 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Enemies/Turret.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Enemies/EnemyBullet.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 26.6785, 27.1663 )
 
 [node name="Turret" type="KinematicBody2D"]
 script = ExtResource( 1 )
-detect_radius = 200
+fire_rate = 0.5
+EnemyBullet = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
 
 [node name="Visibility" type="Area2D" parent="."]
 
@@ -16,6 +24,9 @@ texture = ExtResource( 2 )
 
 [node name="Shoottimer" type="Timer" parent="."]
 wait_time = 0.5
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 53.403, 0 )
 [connection signal="body_entered" from="Visibility" to="." method="_on_Visibility_body_entered"]
 [connection signal="body_exited" from="Visibility" to="." method="_on_Visibility_body_exited"]
 [connection signal="timeout" from="Shoottimer" to="." method="_on_Shoottimer_timeout"]
