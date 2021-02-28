@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+var damage_text = preload("res://Enemies/Damage_text.tscn")
 
 export var Acceleration = 200
 export var friction = 200
@@ -41,6 +42,8 @@ func seek_player():
 
 func damage_taken(value):
 	Health = clamp(Health - value, 0 ,100)
+	var text = damage_text.instance()
+	text.amount = value
 	if Health == 0:
 		queue_free()
 
@@ -53,6 +56,7 @@ func explode():
 			$DespawnTimer.start()
 			print("boom")
 			collision.collider.take_damage(25)
+			$AudioStreamPlayer.play()
 
 
 func _on_DespawnTimer_timeout():
