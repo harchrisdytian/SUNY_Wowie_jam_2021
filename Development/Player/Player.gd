@@ -99,12 +99,10 @@ func change_state(state):
 
 
 func _on_UpgradeMenu_OnMiss_U1():
-	# likely to be reworked
-	var OnMiss_U1_active = true
-	if OnMiss_U1_active == true:
-		self.scale.x = 10
-		player_gold -= 50
-		print("player gold = ", player_gold)
+	# testing effects
+	self.scale.x = 10
+	player_gold -= 50
+	print("player gold = ", player_gold)
 	pass # Replace with function body.
 
 
