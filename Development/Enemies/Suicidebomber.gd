@@ -44,6 +44,7 @@ func damage_taken(value):
 	Health = clamp(Health - value, 0 ,100)
 	var text = damage_text.instance()
 	text.amount = value
+	add_child(text)
 	if Health == 0:
 		queue_free()
 
