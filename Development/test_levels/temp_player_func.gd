@@ -13,6 +13,8 @@ func shoot(scene,pos,vel,scal):
 	b.connect("miss",$Player,"on_miss")
 	add_child(b)
 
-func on_hit(scene,pos):
-	print("yay")
-	pass
+func on_hit(scene,pos,lightning):
+	if lightning:
+		var l = scene.instance()
+		l.global_position = pos
+		add_child(l)
