@@ -16,8 +16,12 @@ var velocity = Vector2()
 var movement_axis = Vector2()
 var miss_counter = 0
 
-var player_gold = 100 # goivonni added
+# giovoni added
+var player_gold = 100 
 
+var OnMiss_U1_active = false
+
+#----------------------------------------------------------------#
 var current_state = IDLE
 func _ready():
 
@@ -82,8 +86,60 @@ func change_state(state):
 
 
 # Upgrade Menu Functionality added below by Giovonni ##
+# These signals are where you would implement the effects of the upgrades after
+# The corresponding button has been pushed
+# for notation purposes ( _on_UpgradeMenu_OnMiss_U1  stands for the 1st upgrade
+# of the OnMiss upgrade group
+
+
+
 func _on_UpgradeMenu_OnMiss_U1():
+	# testing effects
 	self.scale.x = 10
 	player_gold -= 50
 	print("player gold = ", player_gold)
+	pass # Replace with function body.
+
+
+func _on_UpgradeMenu_OnMiss_U2():
+	pass # Replace with function body.
+
+
+func _on_UpgradeMenu_OnMiss_U3():
+	pass # Replace with function body.
+
+
+func _on_UpgradeMenu_OnMiss_U4():
+	pass # Replace with function body.
+
+
+func _on_UpgradeMenu_OnHit_U1():
+	pass # Replace with function body.
+
+
+func _on_UpgradeMenu_OnHit_U2():
+	pass # Replace with function body.
+
+
+func _on_UpgradeMenu_OnHit_U3():
+	pass # Replace with function body.
+
+
+func _on_UpgradeMenu_OnHit_U4():
+	pass # Replace with function body.
+
+
+func _on_UpgradeMenu_OnDeath_U1():
+	pass # Replace with function body.
+
+
+func _on_UpgradeMenu_OnDeath_U2():
+	pass # Replace with function body.
+
+
+func _on_UpgradeMenu_OnDeath_U3():
+	pass # Replace with function body.
+
+
+func _on_UpgradeMenu_OnDeath_U4():
 	pass # Replace with function body.
