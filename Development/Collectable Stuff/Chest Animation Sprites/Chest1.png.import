@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bullet.png-c8afa3a53cbaa530599306a7791722dc.stex"
+path="res://.import/Chest1.png-850a316511f60a0407839b76a27ff444.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player Assets/Bullet.png"
-dest_files=[ "res://.import/Bullet.png-c8afa3a53cbaa530599306a7791722dc.stex" ]
+source_file="res://Collectable Stuff/Chest Animation Sprites/Chest1.png"
+dest_files=[ "res://.import/Chest1.png-850a316511f60a0407839b76a27ff444.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -18,6 +18,7 @@ var velocity = Vector2.ZERO
 
 
 func _physics_process(delta):
+	explode()
 	match state:
 		IDLE:
 			velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
@@ -41,3 +42,14 @@ func seek_player():
 func take_damage(value):
 	Health = clamp(Health - value, 0 ,100)
 
+func explode():
+	for idx in range(get_slide_count()):
+		var collision = get_slide_collision(idx)
+		if collision.collider.is_in_group("Player"):
+			$CollisionShape2D.disabled = true
+			$Particles2D.emitting = true
+			$DespawnTimer.start()
+
+
+func _on_DespawnTimer_timeout():
+	queue_free()
