@@ -4,7 +4,7 @@ extends KinematicBody2D
 export var Acceleration = 200
 export var friction = 200
 export var Max_speed = 1500
-export var Health = 100
+export (float) var Health = 100
 
 enum {
 	IDLE,
@@ -41,6 +41,8 @@ func seek_player():
 
 func take_damage(value):
 	Health = clamp(Health - value, 0 ,100)
+	if Health == 0:
+		queue_free()
 
 func explode():
 	for idx in range(get_slide_count()):
@@ -53,4 +55,7 @@ func explode():
 
 
 func _on_DespawnTimer_timeout():
-	queue_free()
+	Death()
+	
+func Death():
+		queue_free()
