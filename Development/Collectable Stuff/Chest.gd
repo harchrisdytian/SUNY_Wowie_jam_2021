@@ -1,27 +1,28 @@
-extends Area2D
+extends StaticBody2D
 
+signal spawnCoins(scene, pos, scale)
 
 export (PackedScene) var coin
 
 func _ready():
-	test()
+	takeDamage()
 	
 
-
-#On body entered opens the chest
-func _on_Chest_body_entered(body):
+#Take Damage Function
+func takeDamage():
 	#Chest opening animation
 	$ChestAnimatedSprites.play()
+	#Chest sound play
 	$AudioStreamPlayer2D.play()
-	var c = coin.instance()
-	add_child(c)
-
-#This will be the on body enter I just made it a test func to test it in ready
-func test():
-	#Chest opening animation
-	$ChestAnimatedSprites.play()
-	$AudioStreamPlayer2D.play()
+	#Yield spawning untill chest animation ends
 	yield(get_tree().create_timer(.8), "timeout")
+	#Saves instance as a variable
+	#var c = coin.instance()
+	#c.position += Vector2(5,5)
+	#c.scale = Vector2(.04,.04)
+	emit_signal("spawnCoins",coin,global_position + Vector2(5,5),Vector2(.04,.04))
+	#add_child(c)
 	
-	var c = coin.instance()
-	add_child(c)
+	queue_free()
+	
+	

@@ -1,10 +1,12 @@
 extends Node
 
+var main_scene
 var rng = RandomNumberGenerator.new()
 export (int) var amountOfSlotsRandomlyFilled
 var slotsStillToFill = 0
 var spawnPositionArray = []
 export (PackedScene) var itemToSpawn
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -34,7 +36,7 @@ func fillSlotsRandomly():
 	while(slotsStillToFill > 0):
 		
 		#Obtains a random number to randomize the position
-		var randomPosition = rng.randi_range(0,$SpawnLocations.get_child_count())
+		var randomPosition = rng.randi_range(1,$SpawnLocations.get_child_count() -1)
 		
 		#If the random position selected is not prevoiusly choosen 
 		if not randomPosition in usedPositions:
@@ -44,6 +46,9 @@ func fillSlotsRandomly():
 			c.position = spawnPositionArray[randomPosition]
 			
 			#Spawns the item
+			yield(get_tree(),"idle_frame")
+			if c.is_in_group("Chests"):
+				c.connect("spawnCoins", main_scene, "spawnCoins")
 			add_child(c)
 			
 			#Saves the position filled into an array to avoid spawning multiple
