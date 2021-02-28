@@ -21,7 +21,7 @@ func get_timer():
 func shoot():
 	if(can_shoot):
 		$Timer.start()
-#		print("stuff")
+		print("stuff")
 		velocity = Vector2(1,0).rotated(global_rotation) * speed
 		emit_signal("shoot", bullet, $Spawn.global_position, velocity, bullet_scale * Vector2(1,1))
 		can_shoot = false
