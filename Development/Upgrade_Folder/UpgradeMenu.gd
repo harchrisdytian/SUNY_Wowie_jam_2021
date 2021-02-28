@@ -242,72 +242,132 @@ func _on_ExitButton_pressed():
 func _on_OnMiss_U1_Button_pressed():
 	emit_signal("OnMiss_U1")
 	$MenuBackground/OnMiss_U1_Button.disabled = true
+<<<<<<< Updated upstream
+=======
+	$MenuBackground/OnMiss_U1_Button.modulate = disable_color
+	$MenuBackground/ButtonPressSound.play()
+>>>>>>> Stashed changes
 	pass # Replace with function body.
 
 
 func _on_OnMiss_U2_Button_pressed():
 	emit_signal("OnMiss_U2")
 	$MenuBackground/OnMiss_U2_Button.disabled = true
+<<<<<<< Updated upstream
+=======
+	$MenuBackground/OnMiss_U2_Button.modulate = disable_color
+	$MenuBackground/ButtonPressSound.play()
+>>>>>>> Stashed changes
 	pass # Replace with function body.
 
 
 func _on_OnMiss_U3_Button_pressed():
 	emit_signal("OnMiss_U3")
 	$MenuBackground/OnMiss_U3_Button.disabled = true
+<<<<<<< Updated upstream
+=======
+	$MenuBackground/OnMiss_U3_Button.modulate = disable_color
+	$MenuBackground/ButtonPressSound.play()
+>>>>>>> Stashed changes
 	pass # Replace with function body.
 
 
 func _on_OnMiss_U4_Button_pressed():
 	emit_signal("OnMiss_U4")
 	$MenuBackground/OnMiss_U4_Button.disabled = true
+<<<<<<< Updated upstream
+=======
+	$MenuBackground/OnMiss_U4_Button.modulate = disable_color
+	$MenuBackground/ButtonPressSound.play()
+>>>>>>> Stashed changes
 	pass # Replace with function body.
 
 
 func _on_OnHit_U1_Button_pressed():
 	emit_signal("OnHit_U1")
 	$MenuBackground/OnHit_U1_Button.disabled = true
+<<<<<<< Updated upstream
+=======
+	$MenuBackground/OnHit_U1_Button.modulate = disable_color
+	$MenuBackground/ButtonPressSound.play()
+>>>>>>> Stashed changes
 	pass # Replace with function body.
 
 
 func _on_OnHit_U2_Button_pressed():
 	emit_signal("OnHit_U2")
 	$MenuBackground/OnHit_U2_Button.disabled = true
+<<<<<<< Updated upstream
+=======
+	$MenuBackground/OnHit_U2_Button.modulate = disable_color
+	$MenuBackground/ButtonPressSound.play()
+>>>>>>> Stashed changes
 	pass # Replace with function body.
 
 
 func _on_OnHit_U3_Button_pressed():
 	emit_signal("OnHit_U3")
 	$MenuBackground/OnHit_U3_Button.disabled = true
+<<<<<<< Updated upstream
+=======
+	$MenuBackground/OnHit_U3_Button.modulate = disable_color
+	$MenuBackground/ButtonPressSound.play()
+>>>>>>> Stashed changes
 	pass # Replace with function body.
 
 
 func _on_OnHit_U4_Button_pressed():
 	emit_signal("OnHit_U4")
 	$MenuBackground/OnHit_U4_Button.disabled = true
+<<<<<<< Updated upstream
+=======
+	$MenuBackground/OnHit_U4_Button.modulate = disable_color
+	$MenuBackground/ButtonPressSound.play()
+>>>>>>> Stashed changes
 	pass # Replace with function body.
 
 
 func _on_OnDeath_U1_Button_pressed():
 	emit_signal("OnDeath_U1")
 	$MenuBackground/OnDeath_U1_Button.disabled = true
+<<<<<<< Updated upstream
+=======
+	$MenuBackground/OnDeath_U1_Button.modulate = disable_color
+	$MenuBackground/ButtonPressSound.play()
+>>>>>>> Stashed changes
 	pass # Replace with function body.
 
 
 func _on_OnDeath_U2_Button_pressed():
 	emit_signal("OnDeath_U2")
 	$MenuBackground/OnDeath_U2_Button.disabled = true
+<<<<<<< Updated upstream
+=======
+	$MenuBackground/OnDeath_U2_Button.modulate = disable_color
+	$MenuBackground/ButtonPressSound.play()
+>>>>>>> Stashed changes
 	pass # Replace with function body.
 
 
 func _on_OnDeath_U3_Button_pressed():
 	emit_signal("OnDeath_U3")
 	$MenuBackground/OnDeath_U3_Button.disabled = true
+<<<<<<< Updated upstream
+=======
+	$MenuBackground/OnDeath_U3_Button.modulate = disable_color
+	$MenuBackground/ButtonPressSound.play()
+>>>>>>> Stashed changes
 	pass # Replace with function body.
 
 
 func _on_OnDeath_U4_Button_pressed():
 	emit_signal("OnDeath_U4")
 	$MenuBackground/OnDeath_U4_Button.disabled = true
+<<<<<<< Updated upstream
+=======
+	$MenuBackground/OnDeath_U4_Button.modulate = disable_color
+	$MenuBackground/ButtonPressSound.play()
+>>>>>>> Stashed changes
 	pass # Replace with function body.
 
 func _on_reset():
