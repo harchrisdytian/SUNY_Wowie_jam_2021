@@ -7,7 +7,9 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 26.6785, 27.1663 )
 
-[node name="Turret" type="KinematicBody2D"]
+[node name="Turret" type="KinematicBody2D" groups=[
+"Enemies",
+]]
 script = ExtResource( 1 )
 fire_rate = 0.5
 EnemyBullet = ExtResource( 3 )
