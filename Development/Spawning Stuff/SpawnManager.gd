@@ -1,5 +1,6 @@
 extends Node
 
+var main_scene
 var rng = RandomNumberGenerator.new()
 export (int) var amountOfSlotsRandomlyFilled
 var slotsStillToFill = 0
@@ -45,6 +46,9 @@ func fillSlotsRandomly():
 			c.position = spawnPositionArray[randomPosition]
 			
 			#Spawns the item
+			yield(get_tree(),"idle_frame")
+			if c.is_in_group("Chests"):
+				c.connect("spawnCoins", main_scene, "spawnCoins")
 			add_child(c)
 			
 			#Saves the position filled into an array to avoid spawning multiple
