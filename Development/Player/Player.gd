@@ -56,7 +56,7 @@ func take_damage(value):
 	#do damage effect
 
 func on_hit():
-	print("hit")
+	print()
 	miss_counter = 0
 	
 func on_miss():
