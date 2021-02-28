@@ -45,6 +45,20 @@ var disable_color = Color(274)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$MenuBackground/OnMiss_U1_Button.modulate = default_color
+	$MenuBackground/OnMiss_U2_Button.modulate = default_color
+	$MenuBackground/OnMiss_U3_Button.modulate = default_color
+	$MenuBackground/OnMiss_U4_Button.modulate = default_color
+	
+	$MenuBackground/OnHit_U1_Button.modulate = default_color
+	$MenuBackground/OnHit_U2_Button.modulate = default_color
+	$MenuBackground/OnHit_U3_Button.modulate = default_color
+	$MenuBackground/OnHit_U4_Button.modulate = default_color
+	
+	$MenuBackground/OnDeath_U1_Button.modulate = default_color
+	$MenuBackground/OnDeath_U2_Button.modulate = default_color
+	$MenuBackground/OnDeath_U3_Button.modulate = default_color
+	$MenuBackground/OnDeath_U4_Button.modulate = default_color
 	pass # Replace with function body.
 
 
