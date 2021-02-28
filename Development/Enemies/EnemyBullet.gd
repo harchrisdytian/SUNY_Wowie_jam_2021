@@ -12,5 +12,6 @@ func _process(delta):
 
 func _on_EnemyBullet_body_entered(body):
 	if body.is_in_group("Player"):
+		body.take_damage(25)
 		emit_signal("hit")
 		queue_free()
