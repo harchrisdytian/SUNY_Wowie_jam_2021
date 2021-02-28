@@ -1,7 +1,8 @@
 extends Node
 
 func _ready():
-	$SpawnScene.main_scene = self
+	$Coins/SpawnScene.main_scene = self
+	$Chests/SpawnScene.main_scene = self
 func spawnCoins(scene, pos, scale):
 	var c = scene.instance()
 	c.position = pos

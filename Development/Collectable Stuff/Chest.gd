@@ -5,8 +5,7 @@ signal spawnCoins(scene, pos, scale)
 export (PackedScene) var coin
 
 func _ready():
-	takeDamage()
-	
+	pass
 
 #Take Damage Function
 func takeDamage():

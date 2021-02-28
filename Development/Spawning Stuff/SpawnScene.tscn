@@ -44,3 +44,42 @@ position = Vector2( 40, 40 )
 
 [node name="Position2D12" type="Position2D" parent="SpawnLocations"]
 position = Vector2( 40, 40 )
+
+[node name="Position2D13" type="Position2D" parent="SpawnLocations"]
+position = Vector2( 40, 40 )
+
+[node name="Position2D14" type="Position2D" parent="SpawnLocations"]
+position = Vector2( 40, 40 )
+
+[node name="Position2D15" type="Position2D" parent="SpawnLocations"]
+position = Vector2( 40, 40 )
+
+[node name="Position2D16" type="Position2D" parent="SpawnLocations"]
+position = Vector2( 40, 40 )
+
+[node name="Position2D17" type="Position2D" parent="SpawnLocations"]
+position = Vector2( 40, 40 )
+
+[node name="Position2D18" type="Position2D" parent="SpawnLocations"]
+position = Vector2( 40, 40 )
+
+[node name="Position2D19" type="Position2D" parent="SpawnLocations"]
+position = Vector2( 40, 40 )
+
+[node name="Position2D20" type="Position2D" parent="SpawnLocations"]
+position = Vector2( 40, 40 )
+
+[node name="Position2D21" type="Position2D" parent="SpawnLocations"]
+position = Vector2( 40, 40 )
+
+[node name="Position2D22" type="Position2D" parent="SpawnLocations"]
+position = Vector2( 40, 40 )
+
+[node name="Position2D23" type="Position2D" parent="SpawnLocations"]
+position = Vector2( 40, 40 )
+
+[node name="Position2D24" type="Position2D" parent="SpawnLocations"]
+position = Vector2( 40, 40 )
+
+[node name="Position2D25" type="Position2D" parent="SpawnLocations"]
+position = Vector2( 40, 40 )
