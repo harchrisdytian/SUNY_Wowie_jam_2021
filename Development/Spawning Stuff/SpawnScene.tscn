@@ -1,11 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Player Assets/Spawning Stuff/SpawnManager.gd" type="Script" id=1]
+[ext_resource path="res://Spawning Stuff/SpawnManager.gd" type="Script" id=1]
 [ext_resource path="res://Collectable Stuff/Collectable.tscn" type="PackedScene" id=2]
-
-
-
-
 
 [node name="SpawnScene" type="Node"]
 script = ExtResource( 1 )
