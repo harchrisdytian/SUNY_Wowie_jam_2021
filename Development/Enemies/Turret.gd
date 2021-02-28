@@ -35,19 +35,3 @@ func _on_Shoottimer_timeout():
 func _draw():
 	#displays the visibility area
 	draw_circle(Vector2(), detect_radius, vis_color)
-
-
-
-#func _on_Visibility_body_entered(body):
-#	if target:
-#		return
-#	target = body
-#	$Sprite.self_modulate.r = 1.0
-#
-#
-#func _on_Visibility_body_exited(body):
-#	if body == target:
-#		target = null
-#		$Sprite.self_modulate.r = 0.2
-
-
