@@ -34,7 +34,7 @@ func fillSlotsRandomly():
 	while(slotsStillToFill > 0):
 		
 		#Obtains a random number to randomize the position
-		var randomPosition = rng.randi_range(1,$SpawnLocations.get_child_count())
+		var randomPosition = rng.randi_range(0,$SpawnLocations.get_child_count())
 		
 		#If the random position selected is not prevoiusly choosen 
 		if not randomPosition in usedPositions:

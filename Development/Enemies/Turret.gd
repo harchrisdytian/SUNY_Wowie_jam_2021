@@ -2,17 +2,17 @@ extends KinematicBody2D
 
 signal shoot(EnemyBullet,pos,vel)
 
-export (float) var Health = 300
-export (float) var Max_Health = 300 
-export (float) var Min_Health = 0 
+export (int) var detect_radius
 export (float) var fire_rate
 export (PackedScene) var EnemyBullet
+var vis_color = Color(.867, .91, .247, 0.1)
 
 var target 
 var can_shoot = true
 var player
 
 func _ready():
+	$Sprite.self_modulate = Color(0.2, 0, 0)
 	$Shoottimer.wait_time = fire_rate
 
 func _physics_process(delta):
@@ -31,6 +31,6 @@ func shoot():
 func _on_Shoottimer_timeout():
 	can_shoot = true
 
-
-func take_damage(value):
-	Health = clamp(Health - value, Min_Health, Max_Health)
+func _draw():
+	#displays the visibility area
+	draw_circle(Vector2(), detect_radius, vis_color)
