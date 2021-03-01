@@ -19,4 +19,14 @@ func _process(delta):
 
 func _on_ExitButton_pressed():
 	$Player.set_values()
-	Global.goto_scene("res://Levels/Level1.tscn")
+#	print(pick_level())
+	
+	Global.goto_scene(pick_level())
+
+func pick_level():
+	var level = Global.levels
+	
+	randomize()
+	
+	return level[randi()% level.size()]
+	
