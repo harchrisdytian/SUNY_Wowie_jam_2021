@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Enemies/Turret.gd" type="Script" id=1]
 [ext_resource path="res://Enemy Assets/Turret.png" type="Texture" id=2]
 [ext_resource path="res://Enemies/EnemyBullet.tscn" type="PackedScene" id=3]
-[ext_resource path="res://8 Bit Sounds/Shoot 1.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 45.4672, 62.6049 )
@@ -11,10 +10,11 @@ extents = Vector2( 45.4672, 62.6049 )
 [node name="Turret" type="KinematicBody2D" groups=[
 "Enemies",
 ]]
+scale = Vector2( 0.2, 0.2 )
 collision_layer = 2
 script = ExtResource( 1 )
 detect_radius = 100
-fire_rate = 0.5
+fire_rate = 1.0
 EnemyBullet = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -29,8 +29,4 @@ wait_time = 0.5
 
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 82, 0 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
-volume_db = -15.0
 [connection signal="timeout" from="Shoottimer" to="." method="_on_Shoottimer_timeout"]

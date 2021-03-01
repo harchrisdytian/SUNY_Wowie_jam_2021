@@ -5,7 +5,7 @@ func _ready():
 	
 	$Coins/SpawnScene.main_scene = self
 	$Chests/SpawnScene.main_scene = self
-
+	$Turret.player = $Player
 
 func spawnCoins(scene, pos, scale):
 	var c = scene.instance()
@@ -16,7 +16,6 @@ func spawnCoins(scene, pos, scale):
 	#Spawn other 2 coins with slightly different positions
 	#positions
 	
-	$Turret.player = $Player
 
 func shoot(scene,pos,vel,scal,lightning):
 	var b = scene.instance()

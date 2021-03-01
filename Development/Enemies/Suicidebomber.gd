@@ -58,7 +58,7 @@ func explode():
 			$Particles2D.emitting = true
 			$DespawnTimer.start()
 			print("boom")
-			collision.collider.take_damage(25)
+			collision.collider.take_damage(10)
 			$AudioStreamPlayer.play()
 
 
