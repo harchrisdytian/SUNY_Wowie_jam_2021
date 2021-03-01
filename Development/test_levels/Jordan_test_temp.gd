@@ -11,6 +11,10 @@ func spawnCoins(scene, pos, scale):
 	c.position = pos
 	c.scale = scale
 	add_child(c)
+	
+	#Spawn other 2 coins with slightly different positions
+	#positions
+	
 	$Turret.player = $Player
 
 func shoot(scene,pos,vel,scal):

@@ -23,5 +23,3 @@ func takeDamage():
 	#add_child(c)
 	
 	queue_free()
-	
-	
