@@ -20,8 +20,9 @@ func shoot(scene,pos,vel,scal):
 	b.scale = scal
 	
 	b.connect("hit",$Player,"on_hit")
-	b.connect("hit",self,"on_hit")
+	b.connect("hit", self, "on_hit")
 	b.connect("miss",$Player,"on_miss")
+	b.connect("critical_miss",$Player,"on_crit_miss")
 	add_child(b)
 
 func enemy_shoot(scene,pos,vel):
@@ -42,7 +43,8 @@ func on_hit(scene,pos,lightning):
 
 
 
-func combo_changed(combo):
+func combo_changed(combo,crit):
+	
 	yield(get_tree(),"idle_frame")
 	HUD.update_combo(combo)
 

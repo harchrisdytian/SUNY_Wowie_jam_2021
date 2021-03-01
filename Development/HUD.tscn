@@ -66,6 +66,7 @@ __meta__ = {
 }
 
 [node name="Combo" type="Label" parent="."]
+visible = false
 margin_left = 821.755
 margin_top = 45.4472
 margin_right = 960.755
