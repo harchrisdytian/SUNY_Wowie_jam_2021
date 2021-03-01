@@ -65,7 +65,7 @@ position = Vector2( -686, 86 )
 position = Vector2( -235.579, 260.105 )
 
 [node name="Position2D14" parent="Coins/SpawnScene/SpawnLocations" index="13"]
-position = Vector2( 702.105, 681.053 )
+position = Vector2( 706.192, 623.157 )
 
 [node name="Position2D15" parent="Coins/SpawnScene/SpawnLocations" index="14"]
 position = Vector2( -398.947, -684.211 )
@@ -223,7 +223,7 @@ position = Vector2( 700.116, -206.84 )
 position = Vector2( -679.842, -452.387 )
 
 [node name="Position2D14" parent="SuicideBombers/SpawnScene/SpawnLocations" index="13"]
-position = Vector2( -673, 716 )
+position = Vector2( -575.359, 719.883 )
 
 [node name="Position2D15" parent="SuicideBombers/SpawnScene/SpawnLocations" index="14"]
 position = Vector2( -103.3, -362.619 )
@@ -269,7 +269,32 @@ bullet_size = 0.03
 lightning = true
 
 [node name="Turret" parent="." instance=ExtResource( 8 )]
-position = Vector2( -336.642, 688.192 )
+position = Vector2( -670.695, 703.946 )
+
+[node name="Turret2" parent="." instance=ExtResource( 8 )]
+position = Vector2( -671.349, -671.706 )
+
+[node name="Turret3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 689.079, -671.625 )
+
+[node name="Turret4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 704.78, 688.602 )
+
+[node name="Turret5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8.302, 479.876 )
+
+[node name="Turret6" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8.302, -464.462 )
+
+[node name="Turret7" parent="." instance=ExtResource( 8 )]
+position = Vector2( -447.466, 16.0564 )
+
+[node name="Turret8" parent="." instance=ExtResource( 8 )]
+position = Vector2( 465.275, 16.0564 )
+[connection signal="combo_changed" from="Player" to="." method="combo_changed"]
+[connection signal="cool_down" from="Player" to="." method="cool_down"]
+[connection signal="gold_changed" from="Player" to="." method="gold_changed"]
+[connection signal="health_changed" from="Player" to="." method="health_changed"]
 
 [editable path="Coins/SpawnScene"]
 
