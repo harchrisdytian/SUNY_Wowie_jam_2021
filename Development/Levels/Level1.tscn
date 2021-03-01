@@ -52,7 +52,7 @@ position = Vector2( 1016.84, 615.993 )
 position = Vector2( 652.99, -8.40372 )
 
 [node name="Position2D7" parent="Coins/SpawnScene/SpawnLocations" index="6"]
-position = Vector2( 885.135, -170.422 )
+position = Vector2( 887.841, -200.047 )
 
 [node name="Position2D8" parent="Coins/SpawnScene/SpawnLocations" index="7"]
 position = Vector2( 662.99, -177.114 )
@@ -279,36 +279,32 @@ bullet_speed = 3.0
 bullet_size = 0.03
 
 [node name="Turret" parent="." instance=ExtResource( 9 )]
-position = Vector2( 689.137, -159.616 )
+position = Vector2( 688.28, -160.083 )
 
 [node name="Turret2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 863.209, -159.533 )
+position = Vector2( 879.546, -160.26 )
 
 [node name="Turret3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 864.29, 176.236 )
+position = Vector2( 877.788, 176.138 )
 
 [node name="Turret4" parent="." instance=ExtResource( 9 )]
-position = Vector2( 688.213, 175.818 )
+position = Vector2( 688.093, 176.578 )
 
 [node name="Turret5" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1264.76, 816.076 )
+position = Vector2( 1264.62, 800.249 )
 
 [node name="Turret6" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1376.08, 208.062 )
+position = Vector2( 1616.13, 399.957 )
 
 [node name="Turret7" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1616.18, 416.014 )
+position = Vector2( 1392.19, 160.461 )
+
+[node name="Turret8" parent="." instance=ExtResource( 9 )]
+position = Vector2( 479.649, 432.571 )
 [connection signal="combo_changed" from="Player" to="." method="combo_changed"]
 [connection signal="cool_down" from="Player" to="." method="cool_down"]
 [connection signal="gold_changed" from="Player" to="." method="gold_changed"]
 [connection signal="health_changed" from="Player" to="." method="health_changed"]
-[connection signal="shoot" from="Turret" to="." method="enemy_shoot"]
-[connection signal="shoot" from="Turret2" to="." method="enemy_shoot"]
-[connection signal="shoot" from="Turret3" to="." method="enemy_shoot"]
-[connection signal="shoot" from="Turret4" to="." method="enemy_shoot"]
-[connection signal="shoot" from="Turret5" to="." method="enemy_shoot"]
-[connection signal="shoot" from="Turret6" to="." method="enemy_shoot"]
-[connection signal="shoot" from="Turret7" to="." method="enemy_shoot"]
 
 [editable path="Jordan_test"]
 

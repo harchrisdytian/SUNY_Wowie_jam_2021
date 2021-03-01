@@ -16,7 +16,6 @@ signal on_die
 
 func _ready():
 	$Shoottimer.wait_time = fire_rate
-	print(Health)
 
 func _physics_process(delta):
 	update()
