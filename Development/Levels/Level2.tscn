@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://test_levels/Jordan_test_temp.gd" type="Script" id=1]
 [ext_resource path="res://test_levels/Jordan_Test2.tscn" type="PackedScene" id=2]
@@ -8,9 +8,14 @@
 [ext_resource path="res://Player/bullet.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemies/Suicidebomber.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Enemies/Turret.tscn" type="PackedScene" id=8]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=9]
 
 [node name="Level 2" type="Node"]
 script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource( 9 )]
 
 [node name="Jordan_Test2" parent="." instance=ExtResource( 2 )]
 script = null
@@ -288,9 +293,15 @@ position = Vector2( -623.124, -1296.33 )
 
 [node name="Turret7" parent="." instance=ExtResource( 8 )]
 position = Vector2( -111.691, -1104.33 )
+[connection signal="combo_changed" from="Player" to="." method="combo_changed"]
+[connection signal="cool_down" from="Player" to="." method="cool_down"]
+[connection signal="gold_changed" from="Player" to="." method="gold_changed"]
+[connection signal="health_changed" from="Player" to="." method="health_changed"]
 
 [editable path="Coins/SpawnScene"]
 
 [editable path="Chests/SpawnScene"]
 
 [editable path="SuicideBombers/SpawnScene"]
+
+[editable path="Player"]
