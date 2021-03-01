@@ -54,19 +54,22 @@ func take_damage(damage):
 		queue_free()
 
 func explode():
+	yield(get_tree(),"idle_frame")
 	for idx in range(get_slide_count()):
 		var collision = get_slide_collision(idx)
-		if collision.collider.is_in_group("Player"):
-			$CollisionShape2D.disabled = true
-			$Particles2D.emitting = true
-			$DespawnTimer.start()
-			print("boom")
-			collision.collider.take_damage(10)
-			$AudioStreamPlayer.play()
+		if collision != null:
+			if collision.collider.is_in_group("Player"):
+				$CollisionShape2D.disabled = true
+				$Particles2D.emitting = true
+				$DespawnTimer.start()
+				print("boom")
+				collision.collider.take_damage(10)
+				$AudioStreamPlayer.play()
 
 
 func _on_DespawnTimer_timeout():
 	Death()
 	
 func Death():
+		yield(get_tree().create_timer(0.3),"timeout")
 		queue_free()

@@ -1,11 +1,12 @@
 extends Node
 
 var levels = []
+var gold = 3000
 
 var lightning = false
 var dodge = false
 var miss_gold = false
-var regen = false
+var miss_regen = false
 
 var hit_explostion = false
 var hit_speed = false

@@ -19,4 +19,5 @@ func _process(delta):
 
 func _on_ExitButton_pressed():
 	$Player.set_values()
+	yield(get_tree(),"idle_frame")
 	Global.goto_scene("res://Levels/Level1.tscn")

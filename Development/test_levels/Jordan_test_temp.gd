@@ -19,10 +19,13 @@ func _ready():
 	$SuicideBombers/SpawnScene.main_scene = self
 	$Turret.player = $Player
 	$Player.starting_values()
+	$Player.started = true
 	for Turret in get_tree().get_nodes_in_group("Turret"):
 		Turret.player = $Player
 		Turret.connect("shoot", self, "enemy_shoot")
 
+func _process(delta):
+	HUD.gold = $Player.possible_gold
 func spawnCoins(scene, pos, scale):
 	var c = scene.instance()
 	c.position = pos
@@ -83,7 +86,7 @@ func health_changed(health):
 	HUD.update_health(health)
 
 func on_die():
-	print("on_die")
+	$Player.get_gold(20)
 
 func cool_down(effect_id, cooldown_amount):
 	HUD.cooldowns[effect_id] = cooldown_amount
