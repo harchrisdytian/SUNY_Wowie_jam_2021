@@ -177,7 +177,7 @@ position = Vector2( 577.8, 168.604 )
 [node name="Enemies" type="Node" parent="."]
 
 [node name="SpawnScene" parent="Enemies" instance=ExtResource( 1 )]
-amountOfSlotsRandomlyFilled = 15
+amountOfSlotsRandomlyFilled = 20
 itemToSpawn = ExtResource( 5 )
 
 [node name="Position2D" parent="Enemies/SpawnScene/SpawnLocations" index="0"]
