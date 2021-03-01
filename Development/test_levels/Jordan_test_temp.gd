@@ -2,6 +2,7 @@ extends Node
 onready var HUD = $CanvasLayer/HUD
 
 func _ready():
+	
 	$Coins/SpawnScene.main_scene = self
 	$Chests/SpawnScene.main_scene = self
 

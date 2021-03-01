@@ -17,6 +17,11 @@ var velocity = Vector2()
 var movement_axis = Vector2()
 var miss_counter = 0
 
+var lightning = false
+var tripple_shot = false
+var dodge = false
+
+
 # giovoni added
 var player_gold = 4000
 
@@ -71,9 +76,13 @@ func _process(delta):
 	velocity = move_and_slide(velocity)
 #	print(velocity)
 
-func take_damage(value):
-	health = clamp(health - value, 0 ,100)
-	#do damage effect
+func take_damage(damage):
+	print('working')
+	health = max(health - damage,0)
+	emit_signal("health_changed", health)
+	if health == 0:
+		die()
+
 
 func on_hit(pos,fixed,this):
 	miss_counter = 0
@@ -106,11 +115,7 @@ func change_state(state):
 func die():
 	pass# god to death screen here
 	
-func take_damge(damage):
-	health -= max(damage,0)
-	emit_signal("health_changed", health)
-	if health == 0:
-		die()
+
 
 
 	
@@ -119,7 +124,8 @@ func take_damge(damage):
 # The corresponding button has been pushed
 # for notation purposes ( _on_UpgradeMenu_OnMiss_U1  stands for the 1st upgrade
 # of the OnMiss upgrade group
-
+func reset_values():
+	lightning = false
 
 
 func _on_UpgradeMenu_OnMiss_U1():
