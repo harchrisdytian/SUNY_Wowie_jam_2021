@@ -12,7 +12,7 @@ export(PackedScene) var bullet
 export(float) var bullet_speed = 10 setget set_bullet_speed
 export(float) var bullet_size = 0.3
 export(Vector2) var camera_zoom = Vector2(0.5,0.5)
-export(float) var dash_distance = 30
+export(float) var dash_distance = 75
 #internal
 var velocity = Vector2()
 var movement_axis = Vector2()
@@ -66,10 +66,10 @@ func _process(delta):
 	movement_axis.x = int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))
 	movement_axis = movement_axis.normalized()
 
-	if Input.is_action_just_pressed("dash") and dodge and miss_counter > 3:
+	if Input.is_action_just_pressed("dash") and dodge and miss_counter >= 3:
 		position += movement_axis * dash_distance
 		miss_counter -= 3
-		emit_signal("combo_changed",miss_counter)
+		emit_signal("combo_changed",miss_counter,false)
 		
 		
 	velocity += movement_axis * acceleration * delta
@@ -285,6 +285,7 @@ func _on_UpgradeMenu_OnDeath_U2():
 	# - [ Pants of Running ]
 	
 	player_gold -= 250
+	hit_speed
 	pass # Replace with function body.
 
 
@@ -292,6 +293,7 @@ func _on_UpgradeMenu_OnDeath_U3():
 	# Upon respawning, the player earns 15% more gold from killing enemies for 
 	# 30 seconds 
 	# – [ Purse Cleaner ]
+	hit_gold = false
 	player_gold -= 275
 	pass # Replace with function body.
 
@@ -300,16 +302,18 @@ func _on_UpgradeMenu_OnDeath_U4():
 	#  The rate that the player naturally loses health is reduced by 50 % for 
 	# 30 seconds on your next life. 
 	# – [ Good Heart ]
+	regen = true
 	player_gold -= 350
 	pass # Replace with function body.
 
 
 func every_second():
-	if regen_reduction:
+	if regen:
 		take_damage(1)
 	else:
 		take_damage(2)
 
-
+func get_gold(value):
+	pass
 func LightningCooldown_timeout():
 	lightning = true
