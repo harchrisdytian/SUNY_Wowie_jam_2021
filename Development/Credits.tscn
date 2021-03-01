@@ -1,7 +1,7 @@
 [gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Tileset Assets/Dungeon Tileset + Spikes.png" type="Texture" id=1]
-[ext_resource path="res://Silent Reaction.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://fonts/Bungee-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Credits.gd" type="Script" id=3]
 [ext_resource path="res://Upgrade_Folder/Assets/Sound/Button_Press.wav" type="AudioStream" id=4]
 
@@ -613,7 +613,7 @@ extra_spacing_top = 8
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=21]
-size = 28
+size = 23
 font_data = ExtResource( 2 )
 
 [node name="Credits" type="Control"]
@@ -642,34 +642,35 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 351.293
-margin_top = 359.468
-margin_right = 668.293
-margin_bottom = 389.468
+margin_left = 331.773
+margin_top = 367.964
+margin_right = 701.773
+margin_bottom = 391.964
 custom_fonts/font = SubResource( 21 )
-text = "JordanPaugh, Dale Baker, "
+text = "Jordan Paugh, Dale Baker, "
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 318.0
-margin_top = 232.0
-margin_right = 693.0
-margin_bottom = 295.0
+margin_left = 319.022
+margin_top = 233.402
+margin_right = 796.022
+margin_bottom = 257.402
+rect_scale = Vector2( 0.8, 1 )
 custom_fonts/font = SubResource( 21 )
-text = "Project Maanger: Christian Hardy
-"
+text = "Project Manager: Christian Hardy"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label4" type="Label" parent="."]
-margin_left = 345.25
-margin_top = 480.961
-margin_right = 672.25
-margin_bottom = 543.961
+margin_left = 327.203
+margin_top = 485.643
+margin_right = 774.203
+margin_bottom = 536.643
+rect_scale = Vector2( 0.8, 1 )
 custom_fonts/font = SubResource( 21 )
 text = "Kyle Fisher, Giovonni Phillips, 
 Justin Sanchez"

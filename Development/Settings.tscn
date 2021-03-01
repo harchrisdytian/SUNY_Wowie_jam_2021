@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Silent Reaction.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Menu+Settings/Button.gd" type="Script" id=2]
@@ -6,30 +6,30 @@
 [ext_resource path="res://Tileset Assets/Dungeon Tileset + Spikes + Pillars.png" type="Texture" id=4]
 [ext_resource path="res://Upgrade_Folder/Assets/Sound/Button_Press.wav" type="AudioStream" id=5]
 [ext_resource path="res://Settings.gd" type="Script" id=6]
+[ext_resource path="res://fonts/Bungee-Regular.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
-font_data = ExtResource( 1 )
+font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 42
-font_data = ExtResource( 1 )
+size = 35
+font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 40
-font_data = ExtResource( 1 )
+size = 25
+font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 56
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 20
-font_data = ExtResource( 1 )
+font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=6]
-size = 20
-font_data = ExtResource( 1 )
+size = 14
+font_data = ExtResource( 7 )
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -679,9 +679,10 @@ stream = ExtResource( 5 )
 [node name="backButton2" type="Label" parent="backButton"]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -36.0
-margin_right = 228.0
-margin_bottom = 31.0
+margin_left = 2.10529
+margin_top = -37.0526
+margin_right = 230.105
+margin_bottom = 29.9474
 custom_fonts/font = SubResource( 2 )
 text = "Main Menu"
 align = 1
@@ -693,21 +694,13 @@ __meta__ = {
 [node name="controls" type="Label" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 763.39
-margin_top = -386.745
-margin_right = 975.39
-margin_bottom = -321.745
+margin_left = 761.761
+margin_top = -391.632
+margin_right = 973.761
+margin_bottom = -326.632
 custom_fonts/font = SubResource( 3 )
-text = "Controls"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="."]
-margin_left = 256.0
-margin_top = 408.0
-margin_right = 704.0
-margin_bottom = 584.0
+text = "Controls
+-------------"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -718,16 +711,30 @@ margin_top = 444.163
 margin_right = 626.562
 margin_bottom = 532.163
 custom_fonts/font = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="creditButton" type="Label" parent="creditButton"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -0.596863
+margin_top = -31.2489
+margin_right = 227.403
+margin_bottom = 35.7511
+custom_fonts/font = SubResource( 2 )
 text = "Credits"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="move_lables" type="Label" parent="."]
 margin_left = 765.973
-margin_top = 334.881
-margin_right = 868.973
-margin_bottom = 406.881
+margin_top = 339.768
+margin_right = 909.973
+margin_bottom = 411.768
 custom_fonts/font = SubResource( 5 )
 text = "Move:
 Arrow Keys/
@@ -737,9 +744,9 @@ __meta__ = {
 }
 
 [node name="shootLabel" type="Label" parent="."]
-margin_left = 765.576
+margin_left = 760.689
 margin_top = 272.287
-margin_right = 897.576
+margin_right = 908.689
 margin_bottom = 319.287
 custom_fonts/font = SubResource( 6 )
 text = "Shoot: 
