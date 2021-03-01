@@ -18,11 +18,12 @@ func spawnCoins(scene, pos, scale):
 	
 	$Turret.player = $Player
 
-func shoot(scene,pos,vel,scal):
+func shoot(scene,pos,vel,scal,lightning):
 	var b = scene.instance()
 	b.position = pos
 	b.velocity = vel
 	b.scale = scal
+	b.lighting_bullet = lightning
 	
 	b.connect("hit",$Player,"on_hit")
 	b.connect("hit", self, "on_hit")

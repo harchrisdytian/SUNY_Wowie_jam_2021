@@ -17,11 +17,20 @@ var velocity = Vector2()
 var movement_axis = Vector2()
 var miss_counter = 0
 
-var lightning = false
-var tripple_shot = false
-var dodge = false
+export(bool) var lightning = false
+export(bool) var dodge = false
+export(bool) var miss_gold = false
+export(bool) var regen = false
 
+export(bool) var hit_explostion = false
+export(bool) var hit_speed = false
+export(bool) var hit_gold = false
+export(bool) var tripple_shot = false
 
+export(bool) var death_gold = false
+export(bool) var death_respawn = false
+export(bool) var death_respawn_gold = false
+export(bool) var regen_reduction = false
 # giovoni added
 var player_gold = 2000
 
@@ -72,6 +81,8 @@ func _process(delta):
 		change_state(IDLE)
 	
 	if Input.is_mouse_button_pressed(1):
+		$Gun.lightning = lightning
+		$Gun.tripple_shot = tripple_shot
 		$Gun.shoot()
 	velocity = move_and_slide(velocity)
 #	print(velocity)
@@ -126,6 +137,53 @@ func die():
 # of the OnMiss upgrade group
 func reset_values():
 	lightning = false
+	dodge = false
+	miss_gold = false
+	regen = false
+
+	hit_explostion = false
+	hit_speed = false
+	hit_gold = false
+	tripple_shot = false
+
+	death_gold = false
+	death_respawn = false
+	death_respawn_gold = false
+	regen_reduction = false
+
+func starting_values():
+	
+	lightning = Global.lightning
+	dodge = Global.dodge
+	miss_gold = Global.miss_gold
+	regen = Global.regen
+
+	hit_explostion = Global.hit_explostion
+	hit_speed = Global.hit_speed
+	hit_gold = Global.hit_gold
+	tripple_shot = Global.tripple_shot
+
+	death_gold = Global.death_gold
+	death_respawn = Global.death_respawn
+	death_respawn_gold = Global.death_respawn_gold
+	regen_reduction = Global.regen_reduction
+
+func set_values():
+	
+	Global.lightning = lightning
+	Global.dodge = dodge
+	Global.miss_gold = miss_gold
+	Global.regen = regen
+
+	Global.hit_explostion = hit_explostion
+	Global.hit_speed = hit_speed
+	Global.hit_gold = hit_gold
+	Global.tripple_shot = tripple_shot
+
+	Global.death_gold = death_gold
+	Global.death_respawn = death_respawn
+	Global.death_respawn_gold = death_respawn_gold
+	Global.regen_reduction = regen_reduction
 
 
 func _on_UpgradeMenu_OnMiss_U1():
@@ -222,3 +280,10 @@ func _on_UpgradeMenu_OnDeath_U4():
 	# – [ Good Heart ]
 	player_gold -= 350
 	pass # Replace with function body.
+
+
+func every_second():
+	if regen_reduction:
+		take_damage(1)
+	else:
+		take_damage(2)

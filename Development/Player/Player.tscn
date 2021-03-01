@@ -29,3 +29,11 @@ position = Vector2( 5.35142, 22.0737 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 0.3, 0.3 )
+
+[node name="Second_timer" type="Timer" parent="."]
+autostart = true
+
+[node name="RespwanCooldown" type="Timer" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+[connection signal="timeout" from="Second_timer" to="." method="every_second"]

@@ -17,5 +17,4 @@ func _on_settingsButton_pressed():
 
 
 func _on_playButton_pressed():
-#	get_tree().change_scene(#Main Scene)
-	pass
+	Global.goto_scene("res://Levels/Level1.tscn")
