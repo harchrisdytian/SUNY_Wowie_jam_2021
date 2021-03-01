@@ -19,7 +19,7 @@ func _on_settingsButton_pressed():
 
 
 func _on_playButton_pressed():
-	$ButtonPressSound.play()
+	$ButtonPressSound2.play()
 	Global.goto_scene("res://Levels/Level1.tscn")
 	yield(get_tree().create_timer(1), "timeout")
 #	get_tree().change_scene(#Main Scene)
