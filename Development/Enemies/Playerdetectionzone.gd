@@ -15,5 +15,5 @@ func _on_Playerdetectionzone_body_entered(body):
 		player = body
 
 
-func _on_Playerdetectionzone_body_exited(body):
-	player = null
+#func _on_Playerdetectionzone_body_exited(body):
+#	player = null

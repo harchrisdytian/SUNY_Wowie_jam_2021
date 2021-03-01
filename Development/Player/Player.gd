@@ -22,14 +22,21 @@ var player_gold = 4000
 
 var OnMiss_U1_active = false
 
+signal gold_changed(gold)
+signal health_changed(health)
+signal combo_changed(combo)
 #----------------------------------------------------------------#
 var current_state = IDLE
 func _ready():
+	
 	$Camera2D.zoom = camera_zoom
 	$Gun.bullet_scale = bullet_size
 	$Gun.bullet = bullet
 	$Gun.connect("shoot",get_parent(),"shoot")
 	self.bullet_speed = bullet_speed
+	
+	emit_signal("health_changed",health)
+
 func set_bullet_speed(val):
 	bullet_speed = val
 	$Gun.speed = val
