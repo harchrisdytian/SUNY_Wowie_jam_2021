@@ -43,11 +43,9 @@ func on_hit(scene,pos,lightning):
 
 
 func combo_changed(combo):
-	pass # Replace with function body.
+	yield(get_tree(),"idle_frame")
+	HUD.update_combo(combo)
 
-
-func _on_Player_gold_changed(gold):
-	pass # Replace with function body.
 
 
 func gold_changed(gold):
