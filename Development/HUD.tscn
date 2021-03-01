@@ -10,8 +10,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="HealthBar" type="TextureProgress" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = -68.0
-margin_right = 258.0
+margin_left = 14.5612
+margin_top = -77.551
+margin_right = 272.561
+margin_bottom = -9.55103
