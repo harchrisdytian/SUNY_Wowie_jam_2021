@@ -19,11 +19,8 @@ func _on_settingsButton_pressed():
 
 
 func _on_playButton_pressed():
-<<<<<<< Updated upstream
-	Global.goto_scene("res://Levels/Level1.tscn")
-=======
 	$ButtonPressSound.play()
+	Global.goto_scene("res://Levels/Level1.tscn")
 	yield(get_tree().create_timer(1), "timeout")
 #	get_tree().change_scene(#Main Scene)
 	pass
->>>>>>> Stashed changes
