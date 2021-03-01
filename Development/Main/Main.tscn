@@ -10,17 +10,6 @@ script = ExtResource( 3 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 
 [node name="UpgradeMenu" parent="." instance=ExtResource( 2 )]
-on_miss_u1_cost = 50
-on_miss_u2_cost = 150
-on_miss_u4_cost = 500
-on_hit_u1_cost = 250
-on_hit_u2_cost = 300
-on_hit_u3_cost = 400
-on_hit_u4_cost = 500
-on_death_u1_cost = 200
-on_death_u2_cost = 250
-on_death_u3_cost = 275
-on_death_u4_cost = 350
 [connection signal="OnDeath_U1" from="UpgradeMenu" to="Player" method="_on_UpgradeMenu_OnDeath_U1"]
 [connection signal="OnDeath_U2" from="UpgradeMenu" to="Player" method="_on_UpgradeMenu_OnDeath_U2"]
 [connection signal="OnDeath_U3" from="UpgradeMenu" to="Player" method="_on_UpgradeMenu_OnDeath_U3"]
