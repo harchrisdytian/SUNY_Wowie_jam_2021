@@ -1,9 +1,10 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Silent Reaction.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://settingsButton.gd" type="Script" id=2]
 [ext_resource path="res://Tileset Assets/Dungeon Tileset + Spikes + Pillars.png" type="Texture" id=3]
 [ext_resource path="res://Menue_Scene.gd" type="Script" id=4]
+[ext_resource path="res://Upgrade_Folder/Assets/Sound/Button_Press.wav" type="AudioStream" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -731,6 +732,10 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ButtonPressSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = 1.01
 [connection signal="pressed" from="settingsButton" to="." method="_on_settingsButton_pressed"]
 [connection signal="pressed" from="playButton" to="playButton" method="_on_playButton_pressed"]
 [connection signal="pressed" from="quitButton" to="." method="_on_quitButton_pressed"]
