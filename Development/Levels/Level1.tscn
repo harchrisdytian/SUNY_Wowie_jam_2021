@@ -180,9 +180,87 @@ position = Vector2( 577.8, 168.604 )
 amountOfSlotsRandomlyFilled = 15
 itemToSpawn = ExtResource( 5 )
 
+[node name="Position2D" parent="Enemies/SpawnScene/SpawnLocations" index="0"]
+position = Vector2( 898.383, 284.81 )
+
+[node name="Position2D2" parent="Enemies/SpawnScene/SpawnLocations" index="1"]
+position = Vector2( 694.001, 136 )
+
+[node name="Position2D3" parent="Enemies/SpawnScene/SpawnLocations" index="2"]
+position = Vector2( 796.001, -182 )
+
+[node name="Position2D4" parent="Enemies/SpawnScene/SpawnLocations" index="3"]
+position = Vector2( 852.001, -127 )
+
+[node name="Position2D5" parent="Enemies/SpawnScene/SpawnLocations" index="4"]
+position = Vector2( 892.001, 128 )
+
+[node name="Position2D6" parent="Enemies/SpawnScene/SpawnLocations" index="5"]
+position = Vector2( 635.001, -72.0001 )
+
+[node name="Position2D7" parent="Enemies/SpawnScene/SpawnLocations" index="6"]
+position = Vector2( 632.001, -145 )
+
+[node name="Position2D8" parent="Enemies/SpawnScene/SpawnLocations" index="7"]
+position = Vector2( 1378.18, 166.857 )
+
+[node name="Position2D9" parent="Enemies/SpawnScene/SpawnLocations" index="8"]
+position = Vector2( 727.413, -272.94 )
+
+[node name="Position2D10" parent="Enemies/SpawnScene/SpawnLocations" index="9"]
+position = Vector2( 820.591, -278.214 )
+
+[node name="Position2D11" parent="Enemies/SpawnScene/SpawnLocations" index="10"]
+position = Vector2( 1564.26, 511.168 )
+
+[node name="Position2D12" parent="Enemies/SpawnScene/SpawnLocations" index="11"]
+position = Vector2( 1675.02, 265.035 )
+
+[node name="Position2D13" parent="Enemies/SpawnScene/SpawnLocations" index="12"]
+position = Vector2( 1105.4, 595.556 )
+
+[node name="Position2D14" parent="Enemies/SpawnScene/SpawnLocations" index="13"]
+position = Vector2( 1263.63, 813.559 )
+
+[node name="Position2D15" parent="Enemies/SpawnScene/SpawnLocations" index="14"]
+position = Vector2( 1247.81, 187.679 )
+
+[node name="Position2D16" parent="Enemies/SpawnScene/SpawnLocations" index="15"]
+position = Vector2( 774.881, 317.778 )
+
+[node name="Position2D17" parent="Enemies/SpawnScene/SpawnLocations" index="16"]
+position = Vector2( 1659.2, 553.362 )
+
+[node name="Position2D18" parent="Enemies/SpawnScene/SpawnLocations" index="17"]
+position = Vector2( 1624.04, 180.647 )
+
+[node name="Position2D19" parent="Enemies/SpawnScene/SpawnLocations" index="18"]
+position = Vector2( 1406.03, 389.86 )
+
+[node name="Position2D20" parent="Enemies/SpawnScene/SpawnLocations" index="19"]
+position = Vector2( 1288.24, 773.123 )
+
+[node name="Position2D21" parent="Enemies/SpawnScene/SpawnLocations" index="20"]
+position = Vector2( 1166.93, 544.571 )
+
+[node name="Position2D22" parent="Enemies/SpawnScene/SpawnLocations" index="21"]
+position = Vector2( 1033.32, 542.813 )
+
+[node name="Position2D23" parent="Enemies/SpawnScene/SpawnLocations" index="22"]
+position = Vector2( 723.896, 446.118 )
+
+[node name="Position2D24" parent="Enemies/SpawnScene/SpawnLocations" index="23"]
+position = Vector2( 413.35, 427.6 )
+
+[node name="Position2D25" parent="Enemies/SpawnScene/SpawnLocations" index="24"]
+position = Vector2( 389, 94.0001 )
+
 [node name="Player" parent="." instance=ExtResource( 6 )]
 position = Vector2( 128.966, 60.8125 )
 scale = Vector2( 0.25, 0.25 )
+max_speed = 125.0
+acceleration = 400.0
+friction = 200.0
 bullet = ExtResource( 7 )
 bullet_speed = 3.0
 bullet_size = 0.03
@@ -190,3 +268,5 @@ bullet_size = 0.03
 [editable path="Coins/SpawnScene"]
 
 [editable path="Chests/SpawnScene"]
+
+[editable path="Enemies/SpawnScene"]
