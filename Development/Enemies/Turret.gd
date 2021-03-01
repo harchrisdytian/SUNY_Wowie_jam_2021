@@ -31,8 +31,8 @@ func shoot():
 func _on_Shoottimer_timeout():
 	can_shoot = true
 
-func damage_taken(value):
-	Health = clamp(Health - value, 0 ,300)
+func damage_taken(damage):
+	Health = clamp(Health - damage, 0 ,300)
 	if Health == 0:
 		queue_free()
 
