@@ -277,6 +277,7 @@ acceleration = 400.0
 bullet = ExtResource( 7 )
 bullet_speed = 3.0
 bullet_size = 0.03
+lightning = true
 
 [node name="Turret" parent="." instance=ExtResource( 9 )]
 position = Vector2( 688.28, -160.083 )

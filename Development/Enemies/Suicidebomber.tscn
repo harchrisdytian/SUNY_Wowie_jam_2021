@@ -50,6 +50,7 @@ scale = Vector2( 0.3, 0.3 )
 collision_layer = 2
 script = ExtResource( 2 )
 Max_speed = 100
+Health = 100.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.25, 0.25 )
