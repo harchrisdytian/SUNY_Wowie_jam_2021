@@ -315,5 +315,6 @@ func every_second():
 
 func get_gold(value):
 	pass
+
 func LightningCooldown_timeout():
 	lightning = true
