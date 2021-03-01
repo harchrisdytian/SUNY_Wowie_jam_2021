@@ -14,3 +14,7 @@ func _ready():
 
 func _on_settingsButton_pressed():
 	get_tree().change_scene("res://Settings.tscn")
+
+
+func _on_quitButton_pressed():
+	get_tree().quit()

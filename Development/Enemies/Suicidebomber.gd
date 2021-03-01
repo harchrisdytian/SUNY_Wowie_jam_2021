@@ -15,7 +15,8 @@ enum {
 var state = CHASE
 var velocity = Vector2.ZERO
 
-
+func _ready():
+	pass
 
 
 func _physics_process(delta):

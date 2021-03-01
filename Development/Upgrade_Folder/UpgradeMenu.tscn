@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Upgrade_Folder/Assets/Fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Upgrade_Folder/UpgradeMenu.gd" type="Script" id=2]
@@ -22,6 +22,9 @@ size = 36
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
 size = 24
 font_data = ExtResource( 1 )
 
@@ -76,8 +79,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Cost" type="Label" parent="MenuBackground"]
+margin_left = 72.0
+margin_top = 166.0
+margin_right = 143.0
+margin_bottom = 186.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.913725, 0.0156863, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "50 G"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Icon" type="Sprite" parent="MenuBackground"]
-position = Vector2( 107.401, 155.674 )
+position = Vector2( 104, 142 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 5 )
 
@@ -86,7 +105,7 @@ margin_left = 131.644
 margin_top = 121.782
 margin_right = 235.644
 margin_bottom = 189.782
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Loose Change"
 align = 1
 autowrap = true
@@ -106,7 +125,7 @@ __meta__ = {
 }
 
 [node name="Icon2" type="Sprite" parent="MenuBackground"]
-position = Vector2( 104, 254 )
+position = Vector2( 104, 238 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 10 )
 
@@ -115,10 +134,26 @@ margin_left = 131.401
 margin_top = 220.102
 margin_right = 235.401
 margin_bottom = 288.102
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Health Regen"
 align = 1
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost2" type="Label" parent="MenuBackground"]
+margin_left = 72.0
+margin_top = 262.0
+margin_right = 143.0
+margin_bottom = 282.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.913725, 0.0156863, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "150 G"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -135,7 +170,7 @@ __meta__ = {
 }
 
 [node name="Icon3" type="Sprite" parent="MenuBackground"]
-position = Vector2( 105, 350 )
+position = Vector2( 104, 334 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 6 )
 
@@ -144,10 +179,26 @@ margin_left = 129.0
 margin_top = 318.0
 margin_right = 233.0
 margin_bottom = 386.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Quick Step"
 align = 1
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost3" type="Label" parent="MenuBackground"]
+margin_left = 72.0
+margin_top = 358.0
+margin_right = 143.0
+margin_bottom = 378.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.913725, 0.0156863, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "300 G"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -164,20 +215,36 @@ __meta__ = {
 }
 
 [node name="Icon4" type="Sprite" parent="MenuBackground"]
-position = Vector2( 104, 438 )
+position = Vector2( 104, 430 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 7 )
 
 [node name="Icon_Text4" type="Label" parent="MenuBackground"]
-margin_left = 123.708
+margin_left = 129.0
 margin_top = 414.0
-margin_right = 240.708
+margin_right = 246.0
 margin_bottom = 482.0
 rect_scale = Vector2( 0.9, 0.9 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Bring Da Thunder"
 align = 1
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost4" type="Label" parent="MenuBackground"]
+margin_left = 72.0
+margin_top = 454.0
+margin_right = 143.0
+margin_bottom = 474.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.913725, 0.0156863, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "500 G"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -206,7 +273,7 @@ __meta__ = {
 }
 
 [node name="Icon5" type="Sprite" parent="MenuBackground"]
-position = Vector2( 345, 158 )
+position = Vector2( 344, 142 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 8 )
 
@@ -215,10 +282,26 @@ margin_left = 369.0
 margin_top = 126.0
 margin_right = 473.0
 margin_bottom = 194.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Boom Boom"
 align = 1
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost5" type="Label" parent="MenuBackground"]
+margin_left = 312.0
+margin_top = 166.0
+margin_right = 383.0
+margin_bottom = 186.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.913725, 0.0156863, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "250 G"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -235,19 +318,35 @@ __meta__ = {
 }
 
 [node name="Icon6" type="Sprite" parent="MenuBackground"]
-position = Vector2( 344, 254 )
+position = Vector2( 344, 238 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 9 )
 
 [node name="Icon_Text6" type="Label" parent="MenuBackground"]
-margin_left = 368.0
-margin_top = 222.0
-margin_right = 473.0
-margin_bottom = 290.0
-custom_fonts/font = SubResource( 2 )
+margin_left = 369.0
+margin_top = 220.102
+margin_right = 474.0
+margin_bottom = 288.102
+custom_fonts/font = SubResource( 3 )
 text = "Tactical Retreat"
 align = 1
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost6" type="Label" parent="MenuBackground"]
+margin_left = 312.0
+margin_top = 262.0
+margin_right = 383.0
+margin_bottom = 282.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.913725, 0.0156863, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "300 G"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -264,7 +363,7 @@ __meta__ = {
 }
 
 [node name="Icon7" type="Sprite" parent="MenuBackground"]
-position = Vector2( 344, 350 )
+position = Vector2( 344, 334 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 14 )
 
@@ -274,10 +373,26 @@ margin_top = 310.0
 margin_right = 483.0
 margin_bottom = 406.0
 rect_scale = Vector2( 0.9, 0.8 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Money Band Aid"
 align = 1
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost7" type="Label" parent="MenuBackground"]
+margin_left = 312.0
+margin_top = 358.0
+margin_right = 383.0
+margin_bottom = 378.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.913725, 0.0156863, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "400 G"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -294,7 +409,7 @@ __meta__ = {
 }
 
 [node name="Icon8" type="Sprite" parent="MenuBackground"]
-position = Vector2( 344, 438 )
+position = Vector2( 344, 422 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 11 )
 
@@ -303,10 +418,26 @@ margin_left = 369.0
 margin_top = 407.348
 margin_right = 473.0
 margin_bottom = 475.348
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Spread Fire"
 align = 1
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost8" type="Label" parent="MenuBackground"]
+margin_left = 312.0
+margin_top = 446.0
+margin_right = 383.0
+margin_bottom = 466.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.913725, 0.0156863, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "500 G"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -335,19 +466,36 @@ __meta__ = {
 }
 
 [node name="Icon9" type="Sprite" parent="MenuBackground"]
-position = Vector2( 576, 158 )
+position = Vector2( 576, 142 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 12 )
 
 [node name="Icon_Text9" type="Label" parent="MenuBackground"]
-margin_left = 600.0
-margin_top = 126.0
-margin_right = 710.0
-margin_bottom = 222.0
-custom_fonts/font = SubResource( 2 )
+margin_left = 616.0
+margin_top = 118.0
+margin_right = 726.0
+margin_bottom = 214.0
+rect_scale = Vector2( 0.8, 0.9 )
+custom_fonts/font = SubResource( 3 )
 text = "Savings Account"
 align = 1
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost9" type="Label" parent="MenuBackground"]
+margin_left = 544.0
+margin_top = 166.0
+margin_right = 615.0
+margin_bottom = 186.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.913725, 0.0156863, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "200 G"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -359,24 +507,6 @@ margin_left = 558.206
 margin_top = 220.102
 margin_right = 711.206
 margin_bottom = 288.102
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Icon10" type="Sprite" parent="MenuBackground"]
-position = Vector2( 585, 254 )
-scale = Vector2( 1.5, 1.5 )
-texture = ExtResource( 13 )
-
-[node name="Icon_Text10" type="Label" parent="MenuBackground"]
-margin_left = 609.0
-margin_top = 222.0
-margin_right = 713.0
-margin_bottom = 290.0
-custom_fonts/font = SubResource( 2 )
-text = "Purse Cleaner"
-align = 1
-autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -393,18 +523,69 @@ __meta__ = {
 }
 
 [node name="Icon11" type="Sprite" parent="MenuBackground"]
-position = Vector2( 584, 350 )
+position = Vector2( 584, 246 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 15 )
 
+[node name="Icon10" type="Sprite" parent="MenuBackground"]
+position = Vector2( 576, 334 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 13 )
+
 [node name="Icon_Text11" type="Label" parent="MenuBackground"]
-margin_left = 609.0
-margin_top = 318.0
-margin_right = 730.0
-margin_bottom = 388.0
+margin_left = 615.0
+margin_top = 222.0
+margin_right = 736.0
+margin_bottom = 292.0
 rect_scale = Vector2( 0.8, 0.8 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Pants of Running"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost11" type="Label" parent="MenuBackground"]
+margin_left = 552.0
+margin_top = 262.0
+margin_right = 623.0
+margin_bottom = 282.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.913725, 0.0156863, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "250 G"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost10" type="Label" parent="MenuBackground"]
+margin_left = 552.0
+margin_top = 358.0
+margin_right = 623.0
+margin_bottom = 378.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.913725, 0.0156863, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "275 G"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon_Text10" type="Label" parent="MenuBackground"]
+margin_left = 615.0
+margin_top = 312.912
+margin_right = 719.0
+margin_bottom = 380.912
+rect_scale = Vector2( 0.9, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Purse Cleaner"
 align = 1
 autowrap = true
 __meta__ = {
@@ -423,19 +604,35 @@ __meta__ = {
 }
 
 [node name="Icon12" type="Sprite" parent="MenuBackground"]
-position = Vector2( 585, 446 )
+position = Vector2( 584, 430 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 16 )
 
 [node name="Icon_Text12" type="Label" parent="MenuBackground"]
-margin_left = 609.0
-margin_top = 414.0
-margin_right = 713.0
-margin_bottom = 482.0
-custom_fonts/font = SubResource( 2 )
+margin_left = 615.0
+margin_top = 407.348
+margin_right = 719.0
+margin_bottom = 475.348
+custom_fonts/font = SubResource( 3 )
 text = "Good Heart"
 align = 1
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost12" type="Label" parent="MenuBackground"]
+margin_left = 552.0
+margin_top = 454.0
+margin_right = 623.0
+margin_bottom = 474.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.913725, 0.0156863, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "350 G"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
