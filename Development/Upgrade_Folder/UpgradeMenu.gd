@@ -75,6 +75,8 @@ func _process(delta):
 	# to buy an upgrade, the upgrades button should be disabled
 	# liekly to be cut in favor of different solution
 	
+	 $MenuBackground/GoldLabel.text = "Player Gold is :" + str(buying_gold)
+	
 	#____ On_Miss_U_Buttons
 	 if buying_gold < on_miss_u1_cost:
 		 $MenuBackground/OnMiss_U1_Button.disabled = true
@@ -114,7 +116,7 @@ func _process(delta):
 func _on_OnMiss_U1_Button_mouse_entered():
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
-	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	$MenuBackground/DescriptionLabel.text = " When you miss an attack, you earn an additional gold the next time you hit"
 	# Button Sound Effect
 	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
 	$MenuBackground/ButtonPrepSound.play()
@@ -125,7 +127,7 @@ func _on_OnMiss_U2_Button_mouse_entered():
 	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
-	$MenuBackground/DescriptionLabel.text = " Hello you are on my other Button, please stop this !"
+	$MenuBackground/DescriptionLabel.text = " When you miss an attack, your next attack that hits grants a small amount of health"
 	# Button Sound Effect
 	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
 	$MenuBackground/ButtonPrepSound.play()
@@ -136,7 +138,7 @@ func _on_OnMiss_U3_Button_mouse_entered():
 	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
-	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	$MenuBackground/DescriptionLabel.text = " After missing 3 straight attacks, you gain the ability to perform a dash attack"
 	# Button Sound Effect
 	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
 	$MenuBackground/ButtonPrepSound.play()
@@ -147,7 +149,7 @@ func _on_OnMiss_U4_Button_mouse_entered():
 	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
-	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	$MenuBackground/DescriptionLabel.text = " After missing 3 straight attacks, the next attack you hit produces a chain lightning effect"
 	# Button Sound Effect
 	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
 	$MenuBackground/ButtonPrepSound.play()
@@ -158,7 +160,7 @@ func _on_OnHit_U1_Button_mouse_entered():
 	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
-	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	$MenuBackground/DescriptionLabel.text = " When you take damage from an enemy, you emit a pulse of damaging energy"
 	# Button Sound Effect
 	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
 	$MenuBackground/ButtonPrepSound.play()
@@ -169,7 +171,7 @@ func _on_OnHit_U2_Button_mouse_entered():
 	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
-	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	$MenuBackground/DescriptionLabel.text = " When you take damage from an enemy, you movement speed increases for a short amount of time"
 	# Button Sound Effect
 	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
 	$MenuBackground/ButtonPrepSound.play()
@@ -180,7 +182,7 @@ func _on_OnHit_U3_Button_mouse_entered():
 	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
-	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	$MenuBackground/DescriptionLabel.text = " When you take damage from an enemy, you earn twice the damage taken in gold"
 	# Button Sound Effect
 	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
 	$MenuBackground/ButtonPrepSound.play()
@@ -191,7 +193,7 @@ func _on_OnHit_U4_Button_mouse_entered():
 	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
-	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	$MenuBackground/DescriptionLabel.text = " When you take damage from an enemy, your attacks fire off in a spread for a short amount of time"
 	# Button Sound Effect
 	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
 	$MenuBackground/ButtonPrepSound.play()
@@ -202,7 +204,7 @@ func _on_OnDeath_U1_Button_mouse_entered():
 	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
-	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	$MenuBackground/DescriptionLabel.text = " Upon dying on your next life, you gain an additional 50% of the gold you had on you"
 	# Button Sound Effect
 	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
 	$MenuBackground/ButtonPrepSound.play()
@@ -213,7 +215,7 @@ func _on_OnDeath_U2_Button_mouse_entered():
 	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
-	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	$MenuBackground/DescriptionLabel.text = "On your next life, you start of with increased movement speed for a short amount of time "
 	# Button Sound Effect
 	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
 	$MenuBackground/ButtonPrepSound.play()
@@ -224,7 +226,7 @@ func _on_OnDeath_U3_Button_mouse_entered():
 	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
-	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	$MenuBackground/DescriptionLabel.text = "On your next life, you earn a small amount of additional gold when you kill enemies "
 	# Button Sound Effect
 	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
 	$MenuBackground/ButtonPrepSound.play()
@@ -235,7 +237,7 @@ func _on_OnDeath_U4_Button_mouse_entered():
 	$MenuBackground/ButtonPrepSound.play()
 	$MenuBackground/DescriptionLabel.rect_position = adjusted_position + get_viewport().get_mouse_position()
 	$MenuBackground/DescriptionLabel.visible = true
-	$MenuBackground/DescriptionLabel.text = " Hello you are on my Button"
+	$MenuBackground/DescriptionLabel.text = " On your next life, the rate at which you gradualy lose health is reduced"
 	# Button Sound Effect
 	$MenuBackground/ButtonPrepSound.position = $MenuBackground/DescriptionLabel.rect_position
 	$MenuBackground/ButtonPrepSound.play()
