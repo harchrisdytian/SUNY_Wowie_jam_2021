@@ -16,7 +16,7 @@ var state = CHASE
 var velocity = Vector2.ZERO
 
 func _ready():
-	emit_signal("Health_changed", Health)
+	pass
 
 
 func _physics_process(delta):
