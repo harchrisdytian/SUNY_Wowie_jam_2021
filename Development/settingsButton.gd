@@ -13,8 +13,17 @@ func _ready():
 
 
 func _on_settingsButton_pressed():
+	$ButtonPressSound.play()
+	yield(get_tree().create_timer(1), "timeout")
 	get_tree().change_scene("res://Settings.tscn")
 
 
 func _on_playButton_pressed():
+<<<<<<< Updated upstream
 	Global.goto_scene("res://Levels/Level1.tscn")
+=======
+	$ButtonPressSound.play()
+	yield(get_tree().create_timer(1), "timeout")
+#	get_tree().change_scene(#Main Scene)
+	pass
+>>>>>>> Stashed changes
