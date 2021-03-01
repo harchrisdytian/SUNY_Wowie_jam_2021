@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://HUD.gd" type="Script" id=1]
 [ext_resource path="res://fonts/Bungee-Regular.ttf" type="DynamicFontData" id=2]
@@ -42,6 +42,10 @@ anim_speed = 0.38
 anim_speed_random = 1.0
 anim_offset = 0.34
 anim_offset_random = 0.05
+
+[sub_resource type="DynamicFont" id=7]
+size = 30
+font_data = ExtResource( 2 )
 
 [node name="HUD" type="Control"]
 anchor_right = 1.0
@@ -90,3 +94,16 @@ explosiveness = 1.0
 randomness = 1.0
 fract_delta = false
 process_material = SubResource( 6 )
+
+[node name="CoolDowns" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 7 )
+text = "s"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

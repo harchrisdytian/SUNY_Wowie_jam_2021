@@ -43,6 +43,7 @@ var OnMiss_U1_active = false
 signal gold_changed(gold)
 signal health_changed(health)
 signal combo_changed(combo)
+signal cool_down
 #----------------------------------------------------------------#
 var current_state = IDLE
 func _ready():
@@ -314,7 +315,8 @@ func every_second():
 		take_damage(2)
 
 func get_gold(value):
-	pass
+	print("something explict")
 
 func LightningCooldown_timeout():
+	emit_signal("cool_down", 3, 3)
 	lightning = true

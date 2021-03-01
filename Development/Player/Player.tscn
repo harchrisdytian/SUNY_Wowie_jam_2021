@@ -42,5 +42,6 @@ autostart = true
 
 [node name="LightningCooldown" type="Timer" parent="."]
 wait_time = 3.0
+one_shot = true
 [connection signal="timeout" from="Second_timer" to="." method="every_second"]
 [connection signal="timeout" from="LightningCooldown" to="." method="LightningCooldown_timeout"]

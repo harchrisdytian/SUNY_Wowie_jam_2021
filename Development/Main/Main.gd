@@ -19,3 +19,4 @@ func _process(delta):
 
 func _on_ExitButton_pressed():
 	$Player.set_values()
+	Global.goto_scene("res://Levels/Level1.tscn")

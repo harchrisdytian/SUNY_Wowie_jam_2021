@@ -299,6 +299,7 @@ position = Vector2( 1376.08, 208.062 )
 [node name="Turret7" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1616.18, 416.014 )
 [connection signal="combo_changed" from="Player" to="." method="combo_changed"]
+[connection signal="cool_down" from="Player" to="." method="cool_down"]
 [connection signal="gold_changed" from="Player" to="." method="gold_changed"]
 [connection signal="health_changed" from="Player" to="." method="health_changed"]
 [connection signal="shoot" from="Turret" to="." method="enemy_shoot"]

@@ -1,6 +1,16 @@
 extends Node
 onready var HUD = $CanvasLayer/HUD
 var combo = 1
+var effect =["Boom Boom",#0
+			"Money Bandaid",#1
+			"Spread Fire",#2
+			"Bring the Thundah",#3
+			"Tacticle Retreat"]#4
+var cooldowns = [0,#0
+				0,#1
+				0,#2
+				0,#3
+				0]#4
 
 func _ready():
 	
@@ -8,6 +18,7 @@ func _ready():
 	$Chests/SpawnScene.main_scene = self
 	$SuicideBombers/SpawnScene.main_scene = self
 	$Turret.player = $Player
+	$Player.starting_values()
 
 func spawnCoins(scene, pos, scale):
 	var c = scene.instance()
@@ -26,7 +37,7 @@ func shoot(scene,pos,vel,scal,lightning):
 	b.scale = scal
 	b.lighting_bullet = lightning
 	if combo > 0:
-		b.damage = 10 * (1.5 * combo)
+		b.damage = 10 * (combo * combo)
 	else:
 		b.damage = 10
 	b.connect("hit",$Player,"on_hit")
@@ -69,4 +80,8 @@ func health_changed(health):
 	HUD.update_health(health)
 
 func on_die():
-	pass
+	print("on_die")
+
+func cool_down(effect_id, cooldown_amount):
+	HUD.cooldowns[effect_id] = cooldown_amount
+	HUD.update_CoolDowns()
