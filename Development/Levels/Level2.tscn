@@ -257,7 +257,7 @@ position = Vector2( 155.235, 119.778 )
 position = Vector2( 356.462, 48.0497 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 353.389, 251.629 )
+position = Vector2( 335.756, 236.271 )
 scale = Vector2( 0.25, 0.25 )
 max_speed = 125.0
 acceleration = 400.0

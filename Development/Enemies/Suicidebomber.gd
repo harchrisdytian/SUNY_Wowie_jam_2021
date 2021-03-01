@@ -50,6 +50,7 @@ func take_damage(damage):
 	text.amount = damage
 	add_child(text)
 	if Health == 0:
+		emit_signal("on_die")
 		queue_free()
 
 func explode():
