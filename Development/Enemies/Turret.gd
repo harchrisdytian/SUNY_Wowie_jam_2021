@@ -7,6 +7,7 @@ export (int) var detect_radius
 export (float) var fire_rate
 export (PackedScene) var EnemyBullet
 
+var damage_text = preload("res://Enemies/Damage_text.tscn")
 var target 
 var can_shoot = true
 var player
@@ -31,8 +32,11 @@ func shoot():
 func _on_Shoottimer_timeout():
 	can_shoot = true
 
-func damage_taken(value):
-	Health = clamp(Health - value, 0 ,300)
+func take_damage(damage):
+	var text = damage_text.instance()
+	text.amount = damage
+	add_child(text)
+	Health = clamp(Health - damage, 0 ,300)
 	if Health == 0:
 		queue_free()
 

@@ -10,7 +10,7 @@
 script = ExtResource( 5 )
 
 [node name="Suicidebomber" parent="." instance=ExtResource( 1 )]
-position = Vector2( 0, -1.39722 )
+position = Vector2( 9.82178, -3.85266 )
 collision_layer = 1
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
