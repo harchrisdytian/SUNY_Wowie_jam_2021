@@ -22,14 +22,21 @@ var player_gold = 4000
 
 var OnMiss_U1_active = false
 
+signal gold_changed(gold)
+signal health_changed(health)
+signal combo_changed(combo)
 #----------------------------------------------------------------#
 var current_state = IDLE
 func _ready():
+	
 	$Camera2D.zoom = camera_zoom
 	$Gun.bullet_scale = bullet_size
 	$Gun.bullet = bullet
 	$Gun.connect("shoot",get_parent(),"shoot")
 	self.bullet_speed = bullet_speed
+	
+	emit_signal("health_changed",health)
+
 func set_bullet_speed(val):
 	bullet_speed = val
 	$Gun.speed = val
@@ -70,10 +77,11 @@ func take_damage(value):
 
 func on_hit(pos,fixed,this):
 	miss_counter = 0
-	
+	emit_signal("combo_changed",miss_counter)
 func on_miss():
-	miss_counter = min(health - 1, 0)
-	print("miss")
+	miss_counter += 1
+	emit_signal("combo_changed",miss_counter)
+	
 
 func change_state(state):
 	if state != current_state:
@@ -86,10 +94,20 @@ func change_state(state):
 
 
 
+#######
+#making everything work
+#####
+func die():
+	pass# god to death screen here
+	
+func take_damge(damage):
+	health -= max(damage,0)
+	emit_signal("health_changed", health)
+	if health == 0:
+		die()
 
 
-
-
+	
 # Upgrade Menu Functionality added below by Giovonni ##
 # These signals are where you would implement the effects of the upgrades after
 # The corresponding button has been pushed

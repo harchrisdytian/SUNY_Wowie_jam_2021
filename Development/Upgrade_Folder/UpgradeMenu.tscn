@@ -441,11 +441,14 @@ __meta__ = {
 }
 
 [node name="DescriptionLabel" type="Label" parent="MenuBackground"]
+visible = false
 margin_left = 750.082
 margin_top = 96.0761
 margin_right = 949.082
 margin_bottom = 195.076
 text = "Description Label : I should appear only when the mouse is over a button, I will then display a text depending on what Button the mouse in covering"
+align = 1
+valign = 1
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false

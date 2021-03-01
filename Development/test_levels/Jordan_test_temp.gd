@@ -1,8 +1,11 @@
 extends Node
+onready var HUD = $CanvasLayer/HUD
 
 func _ready():
 	$Coins/SpawnScene.main_scene = self
 	$Chests/SpawnScene.main_scene = self
+
+
 func spawnCoins(scene, pos, scale):
 	var c = scene.instance()
 	c.position = pos
@@ -34,3 +37,21 @@ func on_hit(scene,pos,lightning):
 		var l = scene.instance()
 		l.global_position = pos
 		add_child(l)
+		
+
+
+
+
+func combo_changed(combo):
+	yield(get_tree(),"idle_frame")
+	HUD.update_combo(combo)
+
+
+
+func gold_changed(gold):
+	pass # Replace with function body.
+
+
+func health_changed(health):
+	yield(get_tree(),"idle_frame")
+	HUD.update_health(health)
