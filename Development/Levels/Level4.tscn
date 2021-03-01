@@ -193,10 +193,10 @@ position = Vector2( -362.105, -134.737 )
 position = Vector2( 595.526, 59.7368 )
 
 [node name="Position2D3" parent="SuicideBombers/SpawnScene/SpawnLocations" index="2"]
-position = Vector2( 270, 158.421 )
+position = Vector2( -847.995, 588.576 )
 
 [node name="Position2D4" parent="SuicideBombers/SpawnScene/SpawnLocations" index="3"]
-position = Vector2( -265, 197.105 )
+position = Vector2( 510.2, 980.855 )
 
 [node name="Position2D5" parent="SuicideBombers/SpawnScene/SpawnLocations" index="4"]
 position = Vector2( -118.947, 20 )
@@ -272,6 +272,42 @@ bullet_size = 0.03
 
 [node name="Turret" parent="." instance=ExtResource( 4 )]
 position = Vector2( -0.75177, -329.358 )
+scale = Vector2( 0.2, 0.199336 )
+
+[node name="Turret2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 321.742, 703.943 )
+scale = Vector2( 0.2, 0.199336 )
+
+[node name="Turret3" parent="." instance=ExtResource( 4 )]
+position = Vector2( -526.912, 511.805 )
+scale = Vector2( 0.2, 0.199336 )
+
+[node name="Turret4" parent="." instance=ExtResource( 4 )]
+position = Vector2( -463.702, 1088.18 )
+scale = Vector2( 0.2, 0.199336 )
+
+[node name="Turret5" parent="." instance=ExtResource( 4 )]
+position = Vector2( -975.555, 688.649 )
+scale = Vector2( 0.2, 0.199336 )
+
+[node name="Turret6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 897.162, 624.067 )
+scale = Vector2( 0.2, 0.199336 )
+
+[node name="Turret7" parent="." instance=ExtResource( 4 )]
+position = Vector2( -126.902, 799.28 )
+scale = Vector2( 0.2, 0.199336 )
+
+[node name="Turret8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 992.304, 1183.77 )
+scale = Vector2( 0.2, 0.199336 )
+
+[node name="Turret9" parent="." instance=ExtResource( 4 )]
+position = Vector2( -734.927, 239.534 )
+scale = Vector2( 0.2, 0.199336 )
+
+[node name="Turret10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 264.652, -127.797 )
 scale = Vector2( 0.2, 0.199336 )
 
 [editable path="Coins/SpawnScene"]
