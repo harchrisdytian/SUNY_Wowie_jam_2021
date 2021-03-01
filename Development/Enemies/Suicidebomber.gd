@@ -42,10 +42,10 @@ func seek_player():
 		state = CHASE
 
 
-func damage_taken(value):
-	Health = clamp(Health - value, 0 ,100)
+func damage_taken(damage):
+	Health = clamp(Health - damage, 0 ,100)
 	var text = damage_text.instance()
-	text.amount = value
+	text.amount = damage
 	if Health == 0:
 		queue_free()
 
