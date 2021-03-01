@@ -11,6 +11,7 @@ height = 96.567
 [node name="Player" type="KinematicBody2D" groups=[
 "Player",
 ]]
+position = Vector2( -6.34961, 4.76221 )
 scale = Vector2( 1, 0.996678 )
 script = ExtResource( 1 )
 
@@ -35,5 +36,9 @@ autostart = true
 
 [node name="RespwanCooldown" type="Timer" parent="."]
 
-[node name="Timer" type="Timer" parent="."]
+[node name="SpeedCooldown" type="Timer" parent="."]
+
+[node name="LightningCooldown" type="Timer" parent="."]
+wait_time = 3.0
 [connection signal="timeout" from="Second_timer" to="." method="every_second"]
+[connection signal="timeout" from="LightningCooldown" to="." method="LightningCooldown_timeout"]

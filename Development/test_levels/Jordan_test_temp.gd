@@ -1,5 +1,6 @@
 extends Node
 onready var HUD = $CanvasLayer/HUD
+var combo = 1
 
 func _ready():
 	
@@ -24,7 +25,10 @@ func shoot(scene,pos,vel,scal,lightning):
 	b.velocity = vel
 	b.scale = scal
 	b.lighting_bullet = lightning
-	
+	if combo > 0:
+		b.damage = 10 * (1.5 * combo)
+	else:
+		b.damage = 10
 	b.connect("hit",$Player,"on_hit")
 	b.connect("hit", self, "on_hit")
 	b.connect("miss",$Player,"on_miss")
@@ -49,10 +53,10 @@ func on_hit(scene,pos,lightning):
 
 
 
-func combo_changed(combo,crit):
-	
+func combo_changed(combo_val,crit):
+	combo = combo_val
 	yield(get_tree(),"idle_frame")
-	HUD.update_combo(combo)
+	HUD.update_combo(combo_val)
 
 
 

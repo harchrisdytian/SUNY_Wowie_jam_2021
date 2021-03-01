@@ -263,28 +263,13 @@ position = Vector2( 389, 94.0001 )
 [node name="Player" parent="." instance=ExtResource( 6 )]
 position = Vector2( 128.966, 60.8125 )
 scale = Vector2( 0.25, 0.25 )
-health = 100.0
-MaxHealth = 100.0
-mods = [  ]
 max_speed = 125.0
 acceleration = 400.0
-friction = 200.0
 bullet = ExtResource( 7 )
 bullet_speed = 3.0
 bullet_size = 0.03
-camera_zoom = Vector2( 0.5, 0.5 )
-lightning = false
-dodge = false
-miss_gold = false
-regen = false
-hit_explostion = false
-hit_speed = false
-hit_gold = false
-tripple_shot = false
-death_gold = false
-death_respawn = false
-death_respawn_gold = false
-regen_reduction = false
+lightning = true
+dodge = true
 [connection signal="combo_changed" from="Player" to="." method="combo_changed"]
 [connection signal="gold_changed" from="Player" to="." method="gold_changed"]
 [connection signal="health_changed" from="Player" to="." method="health_changed"]

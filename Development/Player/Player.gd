@@ -12,10 +12,12 @@ export(PackedScene) var bullet
 export(float) var bullet_speed = 10 setget set_bullet_speed
 export(float) var bullet_size = 0.3
 export(Vector2) var camera_zoom = Vector2(0.5,0.5)
+export(float) var dash_distance = 30
 #internal
 var velocity = Vector2()
 var movement_axis = Vector2()
 var miss_counter = 0
+var possible_gold
 
 export(bool) var lightning = false
 export(bool) var dodge = false
@@ -31,6 +33,8 @@ export(bool) var death_gold = false
 export(bool) var death_respawn = false
 export(bool) var death_respawn_gold = false
 export(bool) var regen_reduction = false
+
+var can_tripple_shot = false
 # giovoni added
 var player_gold = 2000
 
@@ -62,6 +66,12 @@ func _process(delta):
 	movement_axis.x = int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))
 	movement_axis = movement_axis.normalized()
 
+	if Input.is_action_just_pressed("dash") and dodge and miss_counter > 3:
+		position += movement_axis * dash_distance
+		miss_counter -= 3
+		emit_signal("combo_changed",miss_counter)
+		
+		
 	velocity += movement_axis * acceleration * delta
 	#friction
 	if velocity.length() > friction * delta:
@@ -82,6 +92,9 @@ func _process(delta):
 	
 	if Input.is_mouse_button_pressed(1):
 		$Gun.lightning = lightning
+		if lightning:
+			lightning = false
+			$LightningCooldown.start()
 		$Gun.tripple_shot = tripple_shot
 		$Gun.shoot()
 	velocity = move_and_slide(velocity)
@@ -287,3 +300,7 @@ func every_second():
 		take_damage(1)
 	else:
 		take_damage(2)
+
+
+func LightningCooldown_timeout():
+	lightning = true

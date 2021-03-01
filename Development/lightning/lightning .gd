@@ -1,6 +1,6 @@
 extends Node2D
 var enemies = []
-var damage = 1
+var damage = 25
 var bodies
 var next
 
@@ -37,3 +37,7 @@ func _ready():
 					next_body.take_damage(damage)
 	if next_body != null:
 		$effects/effect_1.global_position = next_body.position
+
+
+func _on_Lifetime_timeout():
+	queue_free()
