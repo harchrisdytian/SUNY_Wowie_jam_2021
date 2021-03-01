@@ -4,7 +4,7 @@ var damage_text = preload("res://Enemies/Damage_text.tscn")
 
 export var Acceleration = 200
 export var friction = 200
-export var Max_speed = 1500
+export var Max_speed = 200
 export (float) var Health = 100
 
 enum {

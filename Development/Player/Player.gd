@@ -11,6 +11,7 @@ export(float) var friction = 200
 export(PackedScene) var bullet 
 export(float) var bullet_speed = 10 setget set_bullet_speed
 export(float) var bullet_size = 0.3
+export(Vector2) var camera_zoom = Vector2(0.5,0.5)
 #internal
 var velocity = Vector2()
 var movement_axis = Vector2()
@@ -24,7 +25,7 @@ var OnMiss_U1_active = false
 #----------------------------------------------------------------#
 var current_state = IDLE
 func _ready():
-
+	$Camera2D.zoom = camera_zoom
 	$Gun.bullet_scale = bullet_size
 	$Gun.bullet = bullet
 	$Gun.connect("shoot",get_parent(),"shoot")
@@ -60,7 +61,7 @@ func _process(delta):
 	
 	if Input.is_mouse_button_pressed(1):
 		$Gun.shoot()
-	move_and_slide(velocity)
+	velocity = move_and_slide(velocity)
 #	print(velocity)
 
 func take_damage(value):
