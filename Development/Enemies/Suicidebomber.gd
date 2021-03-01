@@ -3,8 +3,8 @@ extends KinematicBody2D
 var damage_text = preload("res://Enemies/Damage_text.tscn")
 
 export var Acceleration = 200
-export var friction = 200
-export var Max_speed = 200
+export var friction = 500
+export var Max_speed = 400
 export (float) var Health = 100
 
 enum {
@@ -26,6 +26,7 @@ func _physics_process(delta):
 			seek_player()
 		CHASE:
 			#chases the player 
+			$AnimatedSprite.play()
 			var player = $Playerdetectionzone.player
 			if player != null:
 				var direction = (player.global_position - global_position).normalized()

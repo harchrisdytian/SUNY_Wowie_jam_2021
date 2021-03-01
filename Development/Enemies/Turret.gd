@@ -23,7 +23,7 @@ func _physics_process(delta):
 
 func shoot():
 	if can_shoot:
-		emit_signal("shoot", EnemyBullet, $Position2D.global_position, Vector2(15,0).rotated(rotation))
+		emit_signal("shoot", EnemyBullet, $Position2D.global_position, Vector2(1,0).rotated(rotation))
 		$AudioStreamPlayer.play()
 		$Shoottimer.start()
 		can_shoot = false
