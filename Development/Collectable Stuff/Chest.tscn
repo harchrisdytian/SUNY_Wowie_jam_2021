@@ -23,7 +23,6 @@ extents = Vector2( 12.7424, 11.0629 )
 "Chests",
 "Enemies",
 ]]
-position = Vector2( 162.847, 72.6212 )
 scale = Vector2( 1.5, 1.5 )
 script = ExtResource( 1 )
 coin = ExtResource( 7 )

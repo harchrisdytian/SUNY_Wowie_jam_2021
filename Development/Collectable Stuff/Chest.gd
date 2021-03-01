@@ -8,7 +8,7 @@ func _ready():
 	pass
 
 #Take Damage Function
-func takeDamage():
+func take_damage(damage):
 	#Chest opening animation
 	$ChestAnimatedSprites.play()
 	#Chest sound play
