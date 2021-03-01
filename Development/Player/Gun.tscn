@@ -14,5 +14,13 @@ script = ExtResource( 2 )
 position = Vector2( 523.75, -108.333 )
 rotation = 0.766532
 
+[node name="Spawn2" type="Position2D" parent="."]
+position = Vector2( 588.802, -219.304 )
+rotation = 0.766532
+
+[node name="Spawn3" type="Position2D" parent="."]
+position = Vector2( 394.922, -64.9648 )
+rotation = 0.766532
+
 [node name="Timer" type="Timer" parent="."]
 [connection signal="timeout" from="Timer" to="." method="can_shoot"]
