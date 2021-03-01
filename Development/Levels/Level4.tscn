@@ -309,6 +309,10 @@ scale = Vector2( 0.2, 0.199336 )
 [node name="Turret10" parent="." instance=ExtResource( 4 )]
 position = Vector2( 264.652, -127.797 )
 scale = Vector2( 0.2, 0.199336 )
+[connection signal="combo_changed" from="Player" to="." method="combo_changed"]
+[connection signal="cool_down" from="Player" to="." method="cool_down"]
+[connection signal="gold_changed" from="Player" to="." method="gold_changed"]
+[connection signal="health_changed" from="Player" to="." method="health_changed"]
 
 [editable path="Coins/SpawnScene"]
 
