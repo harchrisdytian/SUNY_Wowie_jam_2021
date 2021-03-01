@@ -60,7 +60,7 @@ func _process(delta):
 	
 	if Input.is_mouse_button_pressed(1):
 		$Gun.shoot()
-	move_and_slide(velocity)
+	velocity = move_and_slide(velocity)
 #	print(velocity)
 
 func take_damage(value):

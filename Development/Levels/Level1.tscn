@@ -184,6 +184,7 @@ itemToSpawn = ExtResource( 5 )
 position = Vector2( 128.966, 60.8125 )
 scale = Vector2( 0.25, 0.25 )
 bullet = ExtResource( 7 )
+bullet_speed = 3.0
 bullet_size = 0.03
 
 [editable path="Coins/SpawnScene"]
