@@ -20,7 +20,6 @@ func _on_Bullet_body_entered(body):
 			if body.has_method("take_damage"):
 				body.take_damage(damage)
 			emit_signal("hit", lightnig, global_position, lighting_bullet)
-
 		else:
 			if crit:
 				print(1)

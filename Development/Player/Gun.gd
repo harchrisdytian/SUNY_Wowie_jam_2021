@@ -8,6 +8,7 @@ var velocity =Vector2()
 var speed = 0
 var bullet_scale
 var tripple_shot
+var lightning
 var can_shoot= true
 func _process(delta):
 	look_at(get_global_mouse_position())
@@ -24,7 +25,8 @@ func shoot():
 		$Timer.start()
 
 		velocity = Vector2(1,0).rotated(global_rotation) * speed
-		emit_signal("shoot", bullet, $Spawn.global_position, velocity, bullet_scale * Vector2(1,1))
+		
+		emit_signal("shoot", bullet, $Spawn.global_position, velocity, bullet_scale * Vector2(1,1),lightning)
 		if tripple_shot:
 			emit_signal("shoot", bullet, $Spawn2.global_position, velocity.rotated(deg2rad(-10)), bullet_scale * Vector2(1,1))
 			emit_signal("shoot", bullet, $Spawn3.global_position, velocity.rotated(deg2rad(10)), bullet_scale * Vector2(1,1))
