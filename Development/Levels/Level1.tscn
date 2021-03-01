@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Spawning Stuff/SpawnScene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://test_levels/Jordan_test.tscn" type="PackedScene" id=2]
@@ -7,9 +7,14 @@
 [ext_resource path="res://Enemies/Suicidebomber.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Player/bullet.tscn" type="PackedScene" id=7]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=8]
 
 [node name="Level1" type="Node"]
 script = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource( 8 )]
 
 [node name="Jordan_test" parent="." instance=ExtResource( 2 )]
 script = null
@@ -260,10 +265,12 @@ position = Vector2( 128.966, 60.8125 )
 scale = Vector2( 0.25, 0.25 )
 max_speed = 125.0
 acceleration = 400.0
-friction = 200.0
 bullet = ExtResource( 7 )
 bullet_speed = 3.0
 bullet_size = 0.03
+[connection signal="combo_changed" from="Player" to="." method="combo_changed"]
+[connection signal="gold_changed" from="Player" to="." method="gold_changed"]
+[connection signal="health_changed" from="Player" to="." method="health_changed"]
 
 [editable path="Coins/SpawnScene"]
 

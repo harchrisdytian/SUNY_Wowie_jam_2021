@@ -15,7 +15,6 @@ func _process(delta):
 
 
 func _on_Bullet_body_entered(body):
-	print("hit anything")
 	if !body.is_in_group("Player"):
 		if body.is_in_group("Enemies"):
 			if body.has_method("take_damage"):
@@ -23,8 +22,10 @@ func _on_Bullet_body_entered(body):
 			emit_signal("hit", lightnig, global_position, lighting_bullet)
 		else:
 			if crit:
+				print(1)
 				emit_signal("critical_miss")
 			else:
+				print(2)
 				emit_signal("miss")
 		queue_free()
 

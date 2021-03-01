@@ -13,6 +13,6 @@ func update_combo(value):
 	if combo_value <= 0:
 		$Combo.hide()
 	else:
-		$combo.show()
+		$Combo.show()
 		$Combo.text = str(value) + "x"
 		

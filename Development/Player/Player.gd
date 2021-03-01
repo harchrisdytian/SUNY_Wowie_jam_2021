@@ -77,10 +77,11 @@ func take_damage(value):
 
 func on_hit(pos,fixed,this):
 	miss_counter = 0
-	
+	emit_signal("combo_changed",miss_counter)
 func on_miss():
-	miss_counter = min(health - 1, 0)
-	print("miss")
+	miss_counter += 1
+	emit_signal("combo_changed",miss_counter)
+	
 
 func change_state(state):
 	if state != current_state:
@@ -93,10 +94,20 @@ func change_state(state):
 
 
 
+#######
+#making everything work
+#####
+func die():
+	pass# god to death screen here
+	
+func take_damge(damage):
+	health -= max(damage,0)
+	emit_signal("health_changed", health)
+	if health == 0:
+		die()
 
 
-
-
+	
 # Upgrade Menu Functionality added below by Giovonni ##
 # These signals are where you would implement the effects of the upgrades after
 # The corresponding button has been pushed
