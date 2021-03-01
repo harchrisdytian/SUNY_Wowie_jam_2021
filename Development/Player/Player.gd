@@ -18,7 +18,7 @@ var movement_axis = Vector2()
 var miss_counter = 0
 
 # giovoni added
-var player_gold = 4000
+var player_gold = 2000
 
 var OnMiss_U1_active = false
 
