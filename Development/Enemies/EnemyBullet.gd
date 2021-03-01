@@ -5,6 +5,10 @@ signal hit
 
 var velocity = Vector2(0,1)
 
+func _ready():
+	$Sprite.modulate = Color(0,0,1)
+	
+
 func _process(delta):
 	position += velocity
 
