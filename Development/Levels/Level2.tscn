@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://test_levels/Jordan_test_temp.gd" type="Script" id=1]
 [ext_resource path="res://test_levels/Jordan_Test2.tscn" type="PackedScene" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Collectable Stuff/Chest.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Player/bullet.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Enemies/Suicidebomber.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Enemies/Turret.tscn" type="PackedScene" id=8]
 
 [node name="Level 2" type="Node"]
 script = ExtResource( 1 )
@@ -16,19 +18,19 @@ script = null
 [node name="Coins" type="Node" parent="."]
 
 [node name="SpawnScene" parent="Coins" instance=ExtResource( 3 )]
-amountOfSlotsRandomlyFilled = 10
+amountOfSlotsRandomlyFilled = 15
 
 [node name="Position2D" parent="Coins/SpawnScene/SpawnLocations" index="0"]
 position = Vector2( -55.0892, -1201.18 )
 
 [node name="Position2D2" parent="Coins/SpawnScene/SpawnLocations" index="1"]
-position = Vector2( 74.7795, -1302.77 )
+position = Vector2( -438.872, -983.893 )
 
 [node name="Position2D3" parent="Coins/SpawnScene/SpawnLocations" index="2"]
 position = Vector2( 70.7407, -67.5413 )
 
 [node name="Position2D4" parent="Coins/SpawnScene/SpawnLocations" index="3"]
-position = Vector2( -536.16, -544.511 )
+position = Vector2( -535.4, -640.986 )
 
 [node name="Position2D5" parent="Coins/SpawnScene/SpawnLocations" index="4"]
 position = Vector2( 522.128, -627.541 )
@@ -40,7 +42,7 @@ position = Vector2( 690.718, -633.901 )
 position = Vector2( 602.563, -460.768 )
 
 [node name="Position2D8" parent="Coins/SpawnScene/SpawnLocations" index="7"]
-position = Vector2( -740.883, -547.309 )
+position = Vector2( 535.11, -1060.11 )
 
 [node name="Position2D9" parent="Coins/SpawnScene/SpawnLocations" index="8"]
 position = Vector2( 603.474, -791.579 )
@@ -55,7 +57,7 @@ position = Vector2( 271.838, -856.028 )
 position = Vector2( 34.4525, -849.578 )
 
 [node name="Position2D13" parent="Coins/SpawnScene/SpawnLocations" index="12"]
-position = Vector2( 146.787, -587.092 )
+position = Vector2( 157.641, -687.388 )
 
 [node name="Position2D14" parent="Coins/SpawnScene/SpawnLocations" index="13"]
 position = Vector2( -546.195, -1232.36 )
@@ -76,7 +78,7 @@ position = Vector2( -358.255, -380.469 )
 position = Vector2( -358.255, -545.483 )
 
 [node name="Position2D20" parent="Coins/SpawnScene/SpawnLocations" index="19"]
-position = Vector2( -355.582, -647.299 )
+position = Vector2( -680.897, -1037.57 )
 
 [node name="Position2D21" parent="Coins/SpawnScene/SpawnLocations" index="20"]
 position = Vector2( 23.301, -408.387 )
@@ -173,12 +175,122 @@ position = Vector2( 215.119, -104.138 )
 [node name="Position2D25" parent="Chests/SpawnScene/SpawnLocations" index="24"]
 position = Vector2( 104.391, -105.423 )
 
+[node name="SuicideBombers" type="Node" parent="."]
+
+[node name="SpawnScene" parent="SuicideBombers" instance=ExtResource( 3 )]
+amountOfSlotsRandomlyFilled = 22
+itemToSpawn = ExtResource( 7 )
+
+[node name="Position2D" parent="SuicideBombers/SpawnScene/SpawnLocations" index="0"]
+position = Vector2( -544.038, -1348.35 )
+
+[node name="Position2D2" parent="SuicideBombers/SpawnScene/SpawnLocations" index="1"]
+position = Vector2( 591.321, -299.724 )
+
+[node name="Position2D3" parent="SuicideBombers/SpawnScene/SpawnLocations" index="2"]
+position = Vector2( 165.083, -289.282 )
+
+[node name="Position2D4" parent="SuicideBombers/SpawnScene/SpawnLocations" index="3"]
+position = Vector2( -859.721, -500.582 )
+
+[node name="Position2D5" parent="SuicideBombers/SpawnScene/SpawnLocations" index="4"]
+position = Vector2( -518.708, -481.978 )
+
+[node name="Position2D6" parent="SuicideBombers/SpawnScene/SpawnLocations" index="5"]
+position = Vector2( -657.364, -1219.54 )
+
+[node name="Position2D7" parent="SuicideBombers/SpawnScene/SpawnLocations" index="6"]
+position = Vector2( -693.546, -733.435 )
+
+[node name="Position2D8" parent="SuicideBombers/SpawnScene/SpawnLocations" index="7"]
+position = Vector2( 562.424, -873.587 )
+
+[node name="Position2D9" parent="SuicideBombers/SpawnScene/SpawnLocations" index="8"]
+position = Vector2( -41.4185, -585.5 )
+
+[node name="Position2D10" parent="SuicideBombers/SpawnScene/SpawnLocations" index="9"]
+position = Vector2( 481.986, -513.128 )
+
+[node name="Position2D11" parent="SuicideBombers/SpawnScene/SpawnLocations" index="10"]
+position = Vector2( 146.158, -1270.93 )
+
+[node name="Position2D12" parent="SuicideBombers/SpawnScene/SpawnLocations" index="11"]
+position = Vector2( 144.749, -953.073 )
+
+[node name="Position2D13" parent="SuicideBombers/SpawnScene/SpawnLocations" index="12"]
+position = Vector2( -682.359, -904.1 )
+
+[node name="Position2D14" parent="SuicideBombers/SpawnScene/SpawnLocations" index="13"]
+position = Vector2( -437.772, -907.642 )
+
+[node name="Position2D15" parent="SuicideBombers/SpawnScene/SpawnLocations" index="14"]
+position = Vector2( -561.662, -264.709 )
+
+[node name="Position2D16" parent="SuicideBombers/SpawnScene/SpawnLocations" index="15"]
+position = Vector2( 636.122, -864.155 )
+
+[node name="Position2D17" parent="SuicideBombers/SpawnScene/SpawnLocations" index="16"]
+position = Vector2( -15.4017, -791.025 )
+
+[node name="Position2D18" parent="SuicideBombers/SpawnScene/SpawnLocations" index="17"]
+position = Vector2( 141.939, -556.122 )
+
+[node name="Position2D19" parent="SuicideBombers/SpawnScene/SpawnLocations" index="18"]
+position = Vector2( 567.424, -444.211 )
+
+[node name="Position2D20" parent="SuicideBombers/SpawnScene/SpawnLocations" index="19"]
+position = Vector2( 150.803, -435.346 )
+
+[node name="Position2D21" parent="SuicideBombers/SpawnScene/SpawnLocations" index="20"]
+position = Vector2( -379.945, -473.019 )
+
+[node name="Position2D22" parent="SuicideBombers/SpawnScene/SpawnLocations" index="21"]
+position = Vector2( -365.54, -239.224 )
+
+[node name="Position2D23" parent="SuicideBombers/SpawnScene/SpawnLocations" index="22"]
+position = Vector2( 47.7562, 156.344 )
+
+[node name="Position2D24" parent="SuicideBombers/SpawnScene/SpawnLocations" index="23"]
+position = Vector2( 155.235, 119.778 )
+
+[node name="Position2D25" parent="SuicideBombers/SpawnScene/SpawnLocations" index="24"]
+position = Vector2( 356.462, 48.0497 )
+
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 372.289, 265.406 )
+position = Vector2( 353.389, 251.629 )
 scale = Vector2( 0.25, 0.25 )
+max_speed = 125.0
+acceleration = 400.0
 bullet = ExtResource( 6 )
+bullet_speed = 3.0
 bullet_size = 0.03
+
+[node name="Turret" parent="." instance=ExtResource( 8 )]
+position = Vector2( 159.715, -79.8008 )
+
+[node name="Turret8" parent="." instance=ExtResource( 8 )]
+position = Vector2( -543.642, -271.82 )
+
+[node name="Turret2" parent="." instance=ExtResource( 8 )]
+position = Vector2( -784.703, -543.767 )
+
+[node name="Turret3" parent="." instance=ExtResource( 8 )]
+position = Vector2( -290.718, -545.744 )
+
+[node name="Turret4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 159.444, -592.409 )
+
+[node name="Turret5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 495.428, -832.06 )
+
+[node name="Turret6" parent="." instance=ExtResource( 8 )]
+position = Vector2( -623.124, -1296.33 )
+
+[node name="Turret7" parent="." instance=ExtResource( 8 )]
+position = Vector2( -111.691, -1104.33 )
 
 [editable path="Coins/SpawnScene"]
 
 [editable path="Chests/SpawnScene"]
+
+[editable path="SuicideBombers/SpawnScene"]
