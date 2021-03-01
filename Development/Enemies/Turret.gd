@@ -12,6 +12,8 @@ var target
 var can_shoot = true
 var player
 
+signal on_die
+
 func _ready():
 	$Shoottimer.wait_time = fire_rate
 	print(Health)

@@ -258,6 +258,7 @@ func _on_ExitButton_mouse_entered():
 
 
 func _on_ExitButton_pressed():
+	print("yay")
 	$MenuBackground.visible = false
 	pass # Replace with function body.
 

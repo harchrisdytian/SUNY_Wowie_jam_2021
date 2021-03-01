@@ -6,6 +6,7 @@ func _ready():
 	
 	$Coins/SpawnScene.main_scene = self
 	$Chests/SpawnScene.main_scene = self
+	$SuicideBombers/SpawnScene.main_scene = self
 	$Turret.player = $Player
 
 func spawnCoins(scene, pos, scale):
@@ -66,3 +67,6 @@ func gold_changed(gold):
 func health_changed(health):
 	yield(get_tree(),"idle_frame")
 	HUD.update_health(health)
+
+func on_die():
+	pass

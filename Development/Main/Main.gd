@@ -15,3 +15,7 @@ func _ready():
 func _process(delta):
 	$UpgradeMenu.buying_gold = $Player.player_gold
 	pass
+
+
+func _on_ExitButton_pressed():
+	$Player.set_values()

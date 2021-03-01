@@ -49,7 +49,10 @@ func fillSlotsRandomly():
 			yield(get_tree(),"idle_frame")
 			if c.is_in_group("Chests"):
 				c.connect("spawnCoins", main_scene, "spawnCoins")
+			if c.is_in_group("Enemies") and not c.is_in_group("Chests"):
+				c.connect("on_die", main_scene, "on_die")
 			add_child(c)
+			
 			
 			#Saves the position filled into an array to avoid spawning multiple
 			#in the same location

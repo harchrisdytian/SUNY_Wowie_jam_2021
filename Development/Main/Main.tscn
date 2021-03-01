@@ -22,3 +22,6 @@ script = ExtResource( 3 )
 [connection signal="OnMiss_U2" from="UpgradeMenu" to="Player" method="_on_UpgradeMenu_OnMiss_U2"]
 [connection signal="OnMiss_U3" from="UpgradeMenu" to="Player" method="_on_UpgradeMenu_OnMiss_U3"]
 [connection signal="OnMiss_U4" from="UpgradeMenu" to="Player" method="_on_UpgradeMenu_OnMiss_U4"]
+[connection signal="pressed" from="UpgradeMenu/MenuBackground/ExitButton" to="." method="_on_ExitButton_pressed"]
+
+[editable path="UpgradeMenu"]

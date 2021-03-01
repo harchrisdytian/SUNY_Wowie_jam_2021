@@ -7,6 +7,7 @@ export var friction = 500
 export var Max_speed = 400
 export (float) var Health = 100
 
+signal on_die
 enum {
 	IDLE,
 	CHASE
