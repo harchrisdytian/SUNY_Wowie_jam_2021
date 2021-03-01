@@ -17,7 +17,7 @@ var movement_axis = Vector2()
 var miss_counter = 0
 
 # giovoni added
-var player_gold = 100 
+var player_gold = 2000
 
 var OnMiss_U1_active = false
 
@@ -98,18 +98,24 @@ func change_state(state):
 
 
 func _on_UpgradeMenu_OnMiss_U1():
-	# testing effects
-	self.scale.x = 10
+	# When a player misses a shot, they earn an additional 1 gold
+	# the next time they hit an enemy
 	player_gold -= 50
 	print("player gold = ", player_gold)
 	pass # Replace with function body.
 
 
 func _on_UpgradeMenu_OnMiss_U2():
+	# When a player misses a shot, the next shot they take they regain 2% of
+	# their health ( assuming that health would naturally degrade over time ) 
+	# (that effect stacks)
+	player_gold -= 150
 	pass # Replace with function body.
 
 
 func _on_UpgradeMenu_OnMiss_U3():
+	#  After 3 consecutive misses, you become able to do a dodge attack
+	player_gold -= 300
 	pass # Replace with function body.
 
 

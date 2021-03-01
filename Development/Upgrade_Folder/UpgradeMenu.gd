@@ -23,6 +23,8 @@ signal OnDeath_U4
 ### var player_gold // I need to get this value from the player scene
 # The gold cost of the various upgrades, values of these numbers are likely to change
 
+#var player = preload("res://Player/Player.gd")
+
 export var on_miss_u1_cost = 100
 export var on_miss_u2_cost = 200
 export var on_miss_u3_cost = 300
@@ -43,6 +45,8 @@ var adjusted_position = Vector2(-50,-50)
 var default_color = Color(1,0,1,1)
 var disable_color = Color(274)
 
+var buying_gold = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$MenuBackground/OnMiss_U1_Button.modulate = default_color
@@ -59,6 +63,9 @@ func _ready():
 	$MenuBackground/OnDeath_U2_Button.modulate = default_color
 	$MenuBackground/OnDeath_U3_Button.modulate = default_color
 	$MenuBackground/OnDeath_U4_Button.modulate = default_color
+	
+	#print(player.player_gold) 
+	
 	pass # Replace with function body.
 
 
@@ -67,38 +74,39 @@ func _process(delta):
 	# Button availability // If the player does not have enough gold 
 	# to buy an upgrade, the upgrades button should be disabled
 	# liekly to be cut in favor of different solution
-	#____ On_Miss_U_Buttons
-	# if player_gold < on_miss_u1_cost:
-		# OnMiss_U1_Button.disabled = true
-	# if player_gold < on_miss_u2_cost:
-		# OnMiss_U2_Button.disabled = true
-	# if player_gold < on_miss_u3_cost:
-		# OnMiss_U3_Button.disabled = true
-	# if player_gold < on_miss_u4_cost:
-		# OnMiss_U4_Button.disabled = true
-		
-	#____ On_Hit_U_Buttons
-	# if player_gold < on_hit_u1_cost:
-		# OnHit_U1_Button.disabled = true
-	# if player_gold < on_hit_u2_cost:
-		# OnHit_U2_Button.disabled = true
-	# if player_gold < on_hit_u3_cost:
-		# OnHit_U3_Button.disabled = true
-	# if player_gold < on_hit_u4_cost:
-		# OnHit_U4_Button.disabled = true
-		
-	#____ On_Death_U_Buttons
-	# if player_gold < on_death_u1_cost:
-		# OnDeath_U1_Button.disabled = true
-	# if player_gold < on_death_u2_cost:
-		# OnDeath_U2_Button.disabled = true
-	# if player_gold < on_death_u3_cost:
-		# OnDeath_U3_Button.disabled = true
-	# if player_gold < on_death_u4_cost:
-		# OnDeath_U4_Button.disabled = true
-	#_________________________________________________________________________#
 	
-	pass
+	#____ On_Miss_U_Buttons
+	 if buying_gold < on_miss_u1_cost:
+		 $MenuBackground/OnMiss_U1_Button.disabled = true
+	 if buying_gold < on_miss_u2_cost:
+		 $MenuBackground/OnMiss_U2_Button.disabled = true
+	 if buying_gold < on_miss_u3_cost:
+		 $MenuBackground/OnMiss_U3_Button.disabled = true
+	 if buying_gold < on_miss_u4_cost:
+		 $MenuBackground/OnMiss_U4_Button.disabled = true
+
+	#____ On_Hit_U_Buttons
+	
+	 if buying_gold < on_hit_u1_cost:
+		 $MenuBackground/OnHit_U1_Button.disabled = true
+	 if buying_gold < on_hit_u2_cost:
+		 $MenuBackground/OnHit_U2_Button.disabled = true
+	 if buying_gold < on_hit_u3_cost:
+		 $MenuBackground/OnHit_U3_Button.disabled = true
+	 if buying_gold < on_hit_u4_cost:
+		 $MenuBackground/OnHit_U4_Button.disabled = true
+
+	#____ On_Death_U_Buttons
+	 if buying_gold < on_death_u1_cost:
+		 $MenuBackground/OnDeath_U1_Button.disabled = true
+	 if buying_gold < on_death_u2_cost:
+		 $MenuBackground/ OnDeath_U2_Button.disabled = true
+	 if buying_gold < on_death_u3_cost:
+		 $MenuBackground/OnDeath_U3_Button.disabled = true
+	 if buying_gold < on_death_u4_cost:
+		 $MenuBackground/OnDeath_U4_Button.disabled = true
+	#_________________________________________________________________________#
+		pass
 
 # The following code would show a description of the upgrade when the player has
 # Their mouse over the Button
