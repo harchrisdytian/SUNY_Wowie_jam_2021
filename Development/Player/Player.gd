@@ -18,7 +18,7 @@ var movement_axis = Vector2()
 var miss_counter = 0
 
 # giovoni added
-var player_gold = 4000
+var player_gold = 2000
 
 var OnMiss_U1_active = false
 
@@ -77,11 +77,17 @@ func take_damage(value):
 
 func on_hit(pos,fixed,this):
 	miss_counter = 0
-	emit_signal("combo_changed",miss_counter)
+	emit_signal("combo_changed",miss_counter,false)
+
 func on_miss():
+	print(3)
 	miss_counter += 1
-	emit_signal("combo_changed",miss_counter)
-	
+	emit_signal("combo_changed",miss_counter,false)
+
+func on_crit_miss():
+	miss_counter +=2
+	emit_signal("combo_changed",miss_counter,true)
+
 
 func change_state(state):
 	if state != current_state:
