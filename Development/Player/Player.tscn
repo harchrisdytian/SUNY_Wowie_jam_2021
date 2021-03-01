@@ -25,3 +25,7 @@ shape = SubResource( 1 )
 
 [node name="Gun" parent="." instance=ExtResource( 3 )]
 position = Vector2( 5.35142, 22.0737 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.3, 0.3 )
