@@ -7,7 +7,9 @@ func _ready():
 	$Coins/SpawnScene.main_scene = self
 	$Chests/SpawnScene.main_scene = self
 	$SuicideBombers/SpawnScene.main_scene = self
-	$Turret.player = $Player
+	for Turret in get_tree().get_nodes_in_group("Turret"):
+		Turret.player = $Player
+		Turret.connect("shoot", self, "enemy_shoot")
 
 func spawnCoins(scene, pos, scale):
 	var c = scene.instance()

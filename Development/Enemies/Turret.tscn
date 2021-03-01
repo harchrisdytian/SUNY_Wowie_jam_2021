@@ -9,6 +9,7 @@ extents = Vector2( 45.4672, 62.6049 )
 
 [node name="Turret" type="KinematicBody2D" groups=[
 "Enemies",
+"Turret",
 ]]
 scale = Vector2( 0.2, 0.2 )
 collision_layer = 2
