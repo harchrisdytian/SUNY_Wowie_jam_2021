@@ -99,7 +99,6 @@ process_material = SubResource( 6 )
 margin_right = 40.0
 margin_bottom = 14.0
 custom_fonts/font = SubResource( 7 )
-text = "s"
 __meta__ = {
 "_edit_use_anchors_": false
 }
