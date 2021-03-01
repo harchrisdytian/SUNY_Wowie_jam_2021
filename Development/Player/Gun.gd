@@ -28,8 +28,8 @@ func shoot():
 		
 		emit_signal("shoot", bullet, $Spawn.global_position, velocity, bullet_scale * Vector2(1,1),lightning)
 		if tripple_shot:
-			emit_signal("shoot", bullet, $Spawn2.global_position, velocity.rotated(deg2rad(-10)), bullet_scale * Vector2(1,1))
-			emit_signal("shoot", bullet, $Spawn3.global_position, velocity.rotated(deg2rad(10)), bullet_scale * Vector2(1,1))
+			emit_signal("shoot", bullet, $Spawn2.global_position, velocity.rotated(deg2rad(-10)), bullet_scale * Vector2(1,1),false)
+			emit_signal("shoot", bullet, $Spawn3.global_position, velocity.rotated(deg2rad(10)), bullet_scale * Vector2(1,1),false)
 		can_shoot = false
 		
 

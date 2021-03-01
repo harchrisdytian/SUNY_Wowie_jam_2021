@@ -1,11 +1,13 @@
 extends Node
 
+
+var gold = 3000
 var levels = ["res://Levels/Level1.tscn", "res://Levels/Level2.tscn", "res://Levels/Level3.tscn", "res://Levels/Level4.tscn"]
 
 var lightning = false
 var dodge = false
 var miss_gold = false
-var regen = false
+var miss_regen = false
 
 var hit_explostion = false
 var hit_speed = false

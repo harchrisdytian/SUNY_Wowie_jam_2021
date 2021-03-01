@@ -2,6 +2,7 @@ extends Control
 
 var max_health
 var combo_value = 0
+var gold =150
 var effects =["Boom Boom",#0
 			"Money Bandaid",#1
 			"Spread Fire",#2
@@ -34,7 +35,9 @@ func update_CoolDowns():
 			$CoolDowns.text += effects[i] + ": " + str(cooldowns[i]) + "\n"
 
 
-
+func _process(delta):
+	$Gold.text = "Gold: " + str(gold) 
+	
 func _on_Timer_timeout():
 
 	for i in range(cooldowns.size()):

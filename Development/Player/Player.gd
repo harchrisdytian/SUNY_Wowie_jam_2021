@@ -17,12 +17,12 @@ export(float) var dash_distance = 75
 var velocity = Vector2()
 var movement_axis = Vector2()
 var miss_counter = 0
-var possible_gold
+var possible_gold =0
 
 export(bool) var lightning = false
 export(bool) var dodge = false
 export(bool) var miss_gold = false
-export(bool) var regen = false
+export(bool) var miss_regen = false
 
 export(bool) var hit_explostion = false
 export(bool) var hit_speed = false
@@ -36,8 +36,8 @@ export(bool) var regen_reduction = false
 
 var can_tripple_shot = false
 # giovoni added
-var player_gold = 2000
-
+var player_gold = 0
+var just_hit  = false
 var OnMiss_U1_active = false
 
 signal gold_changed(gold)
@@ -45,9 +45,10 @@ signal health_changed(health)
 signal combo_changed(combo)
 signal cool_down
 #----------------------------------------------------------------#
+var started = false
 var current_state = IDLE
 func _ready():
-	
+	player_gold = Global.gold
 	$Camera2D.zoom = camera_zoom
 	$Gun.bullet_scale = bullet_size
 	$Gun.bullet = bullet
@@ -92,8 +93,8 @@ func _process(delta):
 		change_state(IDLE)
 	
 	if Input.is_mouse_button_pressed(1):
-		$Gun.lightning = lightning
-		if lightning:
+		if lightning and started and miss_counter >= 3:
+			$Gun.lightning = lightning
 			lightning = false
 			$LightningCooldown.start()
 		$Gun.tripple_shot = tripple_shot
@@ -102,14 +103,28 @@ func _process(delta):
 #	print(velocity)
 
 func take_damage(damage):
-	print('working')
-	health = max(health - damage,0)
+
+	
+	health = max(health - damage, 0)
+	if hit_gold:
+		get_gold(damage * 2)
 	emit_signal("health_changed", health)
-	if health == 0:
+	if health <= 0:
 		die()
 
 
 func on_hit(pos,fixed,this):
+
+	if miss_gold:
+		get_gold(miss_counter * miss_counter)
+	if miss_regen:
+		health += miss_counter *miss_counter
+		print(health)
+	if hit_explostion:
+		explostion()
+	if hit_speed:
+		acceleration *= 1.5
+		emit_signal("cool_down",4,30)
 	miss_counter = 0
 	emit_signal("combo_changed",miss_counter,false)
 
@@ -138,10 +153,18 @@ func change_state(state):
 #making everything work
 #####
 func die():
-	pass# god to death screen here
+	if death_gold:
+		possible_gold *= 1.5
+	Global.gold = possible_gold
+	Global.goto_scene("res://Main/Main.tscn")
 	
 
-
+func explostion():
+	$ExpPart.emitting =true
+	for body in $Explostion.get_overlapping_bodies():
+		if body.is_in_group('Enemies'):
+			if body.has_method("take_damage"):
+				body.take_damage(60)
 
 	
 # Upgrade Menu Functionality added below by Giovonni ##
@@ -153,7 +176,7 @@ func reset_values():
 	lightning = false
 	dodge = false
 	miss_gold = false
-	regen = false
+	miss_regen = false
 
 	hit_explostion = false
 	hit_speed = false
@@ -167,10 +190,11 @@ func reset_values():
 
 func starting_values():
 	
+	print(Global) 
 	lightning = Global.lightning
 	dodge = Global.dodge
 	miss_gold = Global.miss_gold
-	regen = Global.regen
+	miss_regen = Global.miss_regen
 
 	hit_explostion = Global.hit_explostion
 	hit_speed = Global.hit_speed
@@ -183,11 +207,12 @@ func starting_values():
 	regen_reduction = Global.regen_reduction
 
 func set_values():
-	
 	Global.lightning = lightning
 	Global.dodge = dodge
 	Global.miss_gold = miss_gold
-	Global.regen = regen
+	Global.miss_regen = miss_regen
+
+	print(miss_gold)
 
 	Global.hit_explostion = hit_explostion
 	Global.hit_speed = hit_speed
@@ -203,8 +228,9 @@ func set_values():
 func _on_UpgradeMenu_OnMiss_U1():
 	# When a player misses a shot, they earn an additional 1 gold
 	# the next time they hit an enemy - [Loose Change]
+	miss_gold = true
 	player_gold -= 50
-	print("player gold = ", player_gold)
+
 	pass # Replace with function body.
 
 
@@ -212,7 +238,8 @@ func _on_UpgradeMenu_OnMiss_U2():
 	# When a player misses a shot, the next shot they take they regain 2% of
 	# their health ( assuming that health would naturally degrade over time ) 
 	# (that effect stacks) -[Health Regen]
-	miss_gold = true
+	print('stuuf')
+	miss_regen = true
 	player_gold -= 150
 	pass # Replace with function body.
 
@@ -220,7 +247,7 @@ func _on_UpgradeMenu_OnMiss_U2():
 func _on_UpgradeMenu_OnMiss_U3():
 	#  After 3 consecutive misses, you become able to do a dodge attack
 	# - [ Quick Step ]
-	tripple_shot = true
+	dodge = true
 	player_gold -= 300
 	pass # Replace with function body.
 
@@ -248,7 +275,7 @@ func _on_UpgradeMenu_OnHit_U1():
 func _on_UpgradeMenu_OnHit_U2():
 	# When the player takes damage from an enemy, their movement speed 
 	# increases by 150%, for 30 seconds. – [ Tactical Retreat ]
-	hit_speed
+	hit_speed = true
 	player_gold -= 300
 	pass # Replace with function body.
 
@@ -267,6 +294,7 @@ func _on_UpgradeMenu_OnHit_U4():
 	# bullet spread for 10 seconds. This ability would then go on cooldown 
 	# before it can be used again. - [ Spread Fire ]
 	tripple_shot = true
+	print(tripple_shot)
 	player_gold -= 500
 	pass # Replace with function body.
 
@@ -303,20 +331,33 @@ func _on_UpgradeMenu_OnDeath_U4():
 	#  The rate that the player naturally loses health is reduced by 50 % for 
 	# 30 seconds on your next life. 
 	# – [ Good Heart ]
-	regen = true
+	regen_reduction = true
 	player_gold -= 350
 	pass # Replace with function body.
 
 
 func every_second():
-	if regen:
-		take_damage(1)
+	if regen_reduction:
+		take_damage(-1)
 	else:
 		take_damage(2)
 
 func get_gold(value):
-	print("something explict")
-
+	var extra_value = 1
+	if death_respawn:
+		extra_value *= 1.15
+	possible_gold += value 
 func LightningCooldown_timeout():
 	emit_signal("cool_down", 3, 3)
 	lightning = true
+
+	
+
+func _on_RespwanCooldown_timeout():
+	pass # Replace with function body.
+
+
+
+func _on_Justhit_timeout():
+	just_hit = false
+	

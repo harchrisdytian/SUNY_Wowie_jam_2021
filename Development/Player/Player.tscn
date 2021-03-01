@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/PlayerAnimations.tscn" type="PackedScene" id=2]
@@ -8,12 +8,37 @@
 radius = 13.6759
 height = 96.567
 
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.290909, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 0.759766, 0.524101, 0.261169, 1, 0.818359, 0.179903, 0.156639, 1 )
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=2]
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 229.73
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+radial_accel_random = 0.88
+scale = 10.72
+color_ramp = SubResource( 4 )
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 143.964
+
 [node name="Player" type="KinematicBody2D" groups=[
 "Player",
 ]]
 position = Vector2( -6.34961, 4.76221 )
 scale = Vector2( 1, 0.996678 )
 script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
 
 [node name="PlayerAnimations" parent="." instance=ExtResource( 2 )]
 scale = Vector2( 0.33, 0.33 )
@@ -37,11 +62,27 @@ smoothing_speed = 10.0
 autostart = true
 
 [node name="RespwanCooldown" type="Timer" parent="."]
+wait_time = 30.0
+autostart = true
 
-[node name="SpeedCooldown" type="Timer" parent="."]
+[node name="Justhit" type="Timer" parent="."]
+wait_time = 3.0
 
 [node name="LightningCooldown" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
+
+[node name="ExpPart" type="Particles2D" parent="."]
+emitting = false
+amount = 100
+one_shot = true
+process_material = SubResource( 2 )
+
+[node name="Explostion" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Explostion"]
+shape = SubResource( 5 )
 [connection signal="timeout" from="Second_timer" to="." method="every_second"]
+[connection signal="timeout" from="RespwanCooldown" to="." method="_on_RespwanCooldown_timeout"]
+[connection signal="timeout" from="Justhit" to="." method="_on_Justhit_timeout"]
 [connection signal="timeout" from="LightningCooldown" to="." method="LightningCooldown_timeout"]
