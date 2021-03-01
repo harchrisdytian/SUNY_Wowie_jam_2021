@@ -33,3 +33,8 @@ shape = SubResource( 1 )
 position = Vector2( 2.37842, -2.37842 )
 
 [node name="lightning_shader2" parent="lightning_vfxs" instance=ExtResource( 2 )]
+
+[node name="Lifetime" type="Timer" parent="."]
+wait_time = 1.2
+autostart = true
+[connection signal="timeout" from="Lifetime" to="." method="_on_Lifetime_timeout"]

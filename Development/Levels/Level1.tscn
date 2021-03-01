@@ -280,6 +280,8 @@ bullet_size = 0.03
 
 [node name="Turret" parent="." instance=ExtResource( 9 )]
 position = Vector2( 64.917, 128.246 )
+lightning = true
+dodge = true
 [connection signal="combo_changed" from="Player" to="." method="combo_changed"]
 [connection signal="gold_changed" from="Player" to="." method="gold_changed"]
 [connection signal="health_changed" from="Player" to="." method="health_changed"]

@@ -13,8 +13,12 @@ func _ready():
 
 
 func _on_settingsButton_pressed():
+	$ButtonPressSound.play()
+	yield(get_tree().create_timer(1), "timeout")
 	get_tree().change_scene("res://Settings.tscn")
 
 
 func _on_quitButton_pressed():
+	$ButtonPressSound.play()
+	yield(get_tree().create_timer(1), "timeout")
 	get_tree().quit()

@@ -17,4 +17,6 @@ func _ready():
 
 
 func _on_Button_pressed():
+	$ButtonPressSound.play()
+	yield(get_tree().create_timer(1), "timeout")
 	get_tree().change_scene("res://Settings.tscn")
