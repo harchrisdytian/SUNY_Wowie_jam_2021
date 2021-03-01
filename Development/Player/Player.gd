@@ -17,7 +17,7 @@ var movement_axis = Vector2()
 var miss_counter = 0
 
 # giovoni added
-var player_gold = 2000
+var player_gold = 4000
 
 var OnMiss_U1_active = false
 
@@ -120,36 +120,45 @@ func _on_UpgradeMenu_OnMiss_U3():
 
 
 func _on_UpgradeMenu_OnMiss_U4():
+	player_gold -= 500
 	pass # Replace with function body.
 
 
 func _on_UpgradeMenu_OnHit_U1():
+	player_gold -= 250
 	pass # Replace with function body.
 
 
 func _on_UpgradeMenu_OnHit_U2():
+	player_gold -= 300
 	pass # Replace with function body.
 
 
 func _on_UpgradeMenu_OnHit_U3():
+	player_gold -= 400
 	pass # Replace with function body.
 
 
 func _on_UpgradeMenu_OnHit_U4():
+	player_gold -= 500
 	pass # Replace with function body.
 
 
 func _on_UpgradeMenu_OnDeath_U1():
+	player_gold -= 200
 	pass # Replace with function body.
 
 
 func _on_UpgradeMenu_OnDeath_U2():
+	player_gold -= 250
 	pass # Replace with function body.
 
 
 func _on_UpgradeMenu_OnDeath_U3():
+	player_gold -= 275
 	pass # Replace with function body.
 
 
 func _on_UpgradeMenu_OnDeath_U4():
+	player_gold -= 350
 	pass # Replace with function body.
