@@ -56,6 +56,9 @@ margin_left = 448.0
 margin_top = 272.0
 margin_right = 576.0
 margin_bottom = 336.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="playLabel" type="Label" parent="playButton"]
 margin_top = 14.0
