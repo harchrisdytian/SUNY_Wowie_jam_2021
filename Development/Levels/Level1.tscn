@@ -292,6 +292,12 @@ position = Vector2( 688.213, 175.818 )
 
 [node name="Turret5" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1264.76, 816.076 )
+
+[node name="Turret6" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1376.08, 208.062 )
+
+[node name="Turret7" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1616.18, 416.014 )
 [connection signal="combo_changed" from="Player" to="." method="combo_changed"]
 [connection signal="gold_changed" from="Player" to="." method="gold_changed"]
 [connection signal="health_changed" from="Player" to="." method="health_changed"]
@@ -300,6 +306,8 @@ position = Vector2( 1264.76, 816.076 )
 [connection signal="shoot" from="Turret3" to="." method="enemy_shoot"]
 [connection signal="shoot" from="Turret4" to="." method="enemy_shoot"]
 [connection signal="shoot" from="Turret5" to="." method="enemy_shoot"]
+[connection signal="shoot" from="Turret6" to="." method="enemy_shoot"]
+[connection signal="shoot" from="Turret7" to="." method="enemy_shoot"]
 
 [editable path="Jordan_test"]
 
