@@ -211,6 +211,7 @@ func _on_UpgradeMenu_OnMiss_U2():
 	# When a player misses a shot, the next shot they take they regain 2% of
 	# their health ( assuming that health would naturally degrade over time ) 
 	# (that effect stacks) -[Health Regen]
+	miss_gold = true
 	player_gold -= 150
 	pass # Replace with function body.
 
@@ -218,6 +219,7 @@ func _on_UpgradeMenu_OnMiss_U2():
 func _on_UpgradeMenu_OnMiss_U3():
 	#  After 3 consecutive misses, you become able to do a dodge attack
 	# - [ Quick Step ]
+	tripple_shot = true
 	player_gold -= 300
 	pass # Replace with function body.
 
@@ -227,6 +229,7 @@ func _on_UpgradeMenu_OnMiss_U4():
 	# produces a chain lightning attack that jumps to all other enemies within 
 	# range. This ability would then go on cooldown before it can be used again.
 	# - [ Bring Da Thunder ]
+	lightning = true
 	player_gold -= 500
 	pass # Replace with function body.
 
@@ -236,6 +239,7 @@ func _on_UpgradeMenu_OnHit_U1():
 	# around them that damages enemies. This ability would then go on cooldown 
 	# before it can be used again. 
 	# [ BoomBoom ]
+	hit_explostion = true
 	player_gold -= 250
 	pass # Replace with function body.
 
@@ -243,6 +247,7 @@ func _on_UpgradeMenu_OnHit_U1():
 func _on_UpgradeMenu_OnHit_U2():
 	# When the player takes damage from an enemy, their movement speed 
 	# increases by 150%, for 30 seconds. – [ Tactical Retreat ]
+	hit_speed
 	player_gold -= 300
 	pass # Replace with function body.
 
@@ -251,6 +256,7 @@ func _on_UpgradeMenu_OnHit_U3():
 	# When the player takes damage from an enemy, they earn twice the damage
 	#  taken in gold. This ability would then go on cooldown before it can be 
 	# used again. - [ Money Band Aid ]
+	hit_gold = true
 	player_gold -= 400
 	pass # Replace with function body.
 
@@ -259,6 +265,7 @@ func _on_UpgradeMenu_OnHit_U4():
 	# When the player takes damage from an enemy, their shots fire in a 3
 	# bullet spread for 10 seconds. This ability would then go on cooldown 
 	# before it can be used again. - [ Spread Fire ]
+	tripple_shot = true
 	player_gold -= 500
 	pass # Replace with function body.
 
@@ -268,6 +275,7 @@ func _on_UpgradeMenu_OnDeath_U1():
 	# When the player dies, they get an additional 50% of the gold they had on 
 	# them. 
 	# [ Savings Account ]
+	death_gold = true
 	pass # Replace with function body.
 
 
@@ -275,6 +283,7 @@ func _on_UpgradeMenu_OnDeath_U2():
 	# Upon respawning, the player has their movement speed increased by 50% for
 	# 30 seconds.
 	# - [ Pants of Running ]
+	
 	player_gold -= 250
 	pass # Replace with function body.
 
