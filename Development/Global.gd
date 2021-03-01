@@ -27,7 +27,6 @@ func _ready():
 
 func goto_scene(path):
 	call_deferred("_deffered_goto_scene",path)
-	
 func _deffered_goto_scene(path):
 	current_scene.free()
 	var s = ResourceLoader.load(path)
