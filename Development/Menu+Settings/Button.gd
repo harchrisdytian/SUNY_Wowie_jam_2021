@@ -17,4 +17,6 @@ func _ready():
 
 
 func _on_backButton_pressed():
+	$ButtonPressSound2.play()
+	yield(get_tree().create_timer(1), "timeout")
 	get_tree().change_scene("res://Menue_Scene.tscn")
