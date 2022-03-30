@@ -642,8 +642,8 @@ margin_left = -227.319
 margin_top = 113.678
 margin_right = 236.681
 margin_bottom = 179.678
-custom_fonts/font = SubResource( 21 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 21 )
 text = "Egg Assault"
 align = 1
 valign = 1
@@ -738,6 +738,7 @@ __meta__ = {
 [node name="ButtonPressSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 volume_db = 1.01
+
 [connection signal="pressed" from="settingsButton" to="." method="_on_settingsButton_pressed"]
 [connection signal="pressed" from="playButton" to="playButton" method="_on_playButton_pressed"]
 [connection signal="pressed" from="quitButton" to="." method="_on_quitButton_pressed"]

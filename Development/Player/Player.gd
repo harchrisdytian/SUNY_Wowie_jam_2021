@@ -105,7 +105,8 @@ func _process(delta):
 func take_damage(damage):
 
 	
-	health = max(health - damage, 0)
+	health = clamp(health - damage, 0,MaxHealth)
+
 	if hit_gold:
 		get_gold(damage * 2)
 	emit_signal("health_changed", health)

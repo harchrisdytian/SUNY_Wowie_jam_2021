@@ -21,5 +21,5 @@ func take_damage(damage):
 	#c.scale = Vector2(.04,.04)
 	emit_signal("spawnCoins",coin,global_position + Vector2(5,5),Vector2(.04,.04))
 	#add_child(c)
-	yield(get_tree().create_timer(1),"timeout")
+	yield(get_tree().create_timer(1),"timeout")	
 	queue_free()
